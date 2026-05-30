@@ -356,14 +356,14 @@ Revert the ISSUE-002 row in:
 
 ```text
 Founder Acceptance:
-- Pending
+- Accepted
 
 Accepted Status:
-- Pending
+- PASS WITH WARNINGS
 
 Decision:
-- Pending founder review
+- Accepted as PASS WITH WARNINGS
 
 Notes:
-- Founder review is required before ISSUE-003 can start.
+- Founder accepts the non-blocking warnings. ISSUE-003 may proceed after its workpack is approved and executed on its own branch.
 ```
