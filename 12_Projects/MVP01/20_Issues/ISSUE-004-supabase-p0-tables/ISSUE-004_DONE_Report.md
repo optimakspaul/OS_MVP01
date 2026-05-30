@@ -396,14 +396,14 @@ Filing / archive result:
 
 ```text
 Founder Acceptance:
-- Pending
+- Accepted
 
 Accepted Status:
-- Pending
+- PASS WITH WARNINGS
 
 Decision:
-- Pending founder review
+- Accepted as PASS WITH WARNINGS
 
 Notes:
-- ISSUE-005 remains locked until founder acceptance and an approved ISSUE-005 workpack on its own branch.
+- Founder accepts the non-blocking warnings. ISSUE-005 may proceed after its workpack is approved and executed on its own branch.
 ```
