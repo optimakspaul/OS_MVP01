@@ -24,7 +24,7 @@ The following are included in this project baseline:
 - Manual payment tracking.
 - Customer lightweight access.
 - Technician lightweight task / job card.
-- Core PDF generation.
+- Core PDF generation, limited to the ISSUE-013 invoice tracker boundary. Full PDF automation remains reserved.
 - Owner Console Basic.
 - GitHub / CI / deployment governance and issue handoff flow.
 

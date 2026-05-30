@@ -37,7 +37,7 @@
 | ISSUE-010 | Phase 3 | Follow-up WhatsApp | Add manual-assisted WhatsApp follow-up flow | ISSUE-009 | WhatsApp follow-up notes |
 | ISSUE-011 | Phase 3 | Booking Calendar | Add booking calendar foundation | ISSUE-010 | Booking calendar notes |
 | ISSUE-012 | Phase 3 | Job Card | Add technician lightweight job card foundation | ISSUE-011 | Job card notes |
-| ISSUE-013 | Phase 4 | Invoice Tracker | Add manual invoice and payment status tracker | ISSUE-012 | Invoice tracker notes |
+| ISSUE-013 | Phase 4 | Invoice Tracker and Core PDF Generation | Add manual invoice, payment status tracker, and core invoice PDF generation boundary | ISSUE-012 | Invoice tracker notes / core PDF generation boundary notes |
 | ISSUE-014 | Phase 4 | Maintenance Reminder | Add maintenance reminder foundation | ISSUE-013 | Maintenance reminder notes |
 | ISSUE-015 | Phase 4 | Client Portal / Lightweight Access Boundary | Add lightweight client access boundary without full portal expansion | ISSUE-014 | Client access boundary notes |
 | ISSUE-016 | Phase 5 | GitHub Automation | Add issue / label / repo automation governance | ISSUE-015 | GitHub automation notes |

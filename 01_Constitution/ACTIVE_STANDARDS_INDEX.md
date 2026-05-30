@@ -42,7 +42,7 @@ Use these when the issue touches Core, modules, templates, plan tiers, client wo
 | STD-DEV-034 | `03_Development_Standard/STD-DEV-034_Client_Deployment_and_Environment_Provisioning_Standard.md` | Active | Client workspace, launch, environment setup |
 | STD-DEV-039 | `03_Development_Standard/STD-DEV-039_Core_Template_Module_Plan_Boundary_Standard.md` | Active | Core, template, module, plan boundary decisions |
 | STD-DEV-041 | `03_Development_Standard/STD-DEV-041_Optimaks_OS_Product_Architecture_Starter_Growth_Pro_Standard.md` | Active / Legacy naming reference | Optimaks OS architecture and Starter/Growth/Pro scope |
-| STD-DEV-045 | `03_Development_Standard/STD-DEV-045_MVP01_Aircon_OS_L1_L5_Flow_and_Owner_OS_Standard.md` | Active | MVP01 Aircon OS L1-L5 flow mapping, Solo/Flow/Command, Owner OS boundary |
+| STD-DEV-045 | `03_Development_Standard/STD-DEV-045_MVP01_Aircon_OS_L1_L5_Flow_and_Owner_OS_Standard.md` | Active for MVP01 only / Project-specific reference | MVP01 Aircon OS L1-L5 flow mapping, Solo/Flow/Command, Owner OS boundary; do not apply as universal rule to non-MVP01 projects |
 | CLT-009 | `05_Client_Delivery/CLT-009_Client_Onboarding_and_Launch_Intake_Checklist.md` | Active for client delivery | New client onboarding / launch |
 
 ---
@@ -150,7 +150,7 @@ Use them only when the issue explicitly involves strategy, sales, ISO/grant read
 ## v1.7.5-safe Active Additions
 
 - `CONSTITUTION_AMENDMENT_MVP01_AIRCON_OS_L1_L5_FLOW_ARCHITECTURE_v1.7.5` — Active constitution amendment for Aircon OS MVP01.
-- `STD-DEV-045` — MVP01 Aircon OS L1-L5 Flow and Owner OS Standard.
+- `STD-DEV-045` — MVP01 Aircon OS L1-L5 Flow and Owner OS Standard. Active for MVP01 only / project-specific reference, not a universal rule for all projects.
 - `MVP01_AIRCON_OS_L1_L5_FLOW_ARCHITECTURE_v1.7.5.md` — Active roadmap planning reference.
 
 
@@ -191,4 +191,4 @@ Use them only when the issue explicitly involves strategy, sales, ISO/grant read
 | TPL-DEV-045 | `09_Templates/TPL-DEV-045_Project_Change_Control_Log_Template.md` | Active template | Create project change control log |
 | TPL-DEV-046 | `09_Templates/TPL-DEV-046_AGENTS_MD_Project_Baseline_Governance_Insert.md` | Active insert | Insert generic project baseline rule into AGENTS.md |
 
-Important: v1.7.9.4 does not define MVP01. It only defines the universal governance pattern for all MVPs and projects.
+Important: v1.7.9.4 does not define MVP01. It only defines the universal governance pattern for all MVPs and projects. For MVP01 execution, `12_Projects/MVP01/*` is the primary source of truth. `STD-DEV-045` remains a project-specific architectural reference only.

@@ -2,9 +2,9 @@
 
 **Issue ID:** ISSUE-XXX  
 **Issue Name:**  
-**MVP:** MVP01 Starter  
+**Project:** [PROJECT]  
 **Related Flow ID:** FXX  
-**Constitution Version:** v1.7.9.4-project-baseline-governance\
+**Constitution Version:** v1.7.9.4-project-baseline-governance
 **Required Context Level:** Mini / Standard / Full
 
 ---
@@ -93,7 +93,7 @@ Unclear generated files go to _needs_review with reason.
 Create or update:
 
 ```text
-20_Issues/MVP01/ISSUE-XXX-short-name/DONE_REPORT.md
+20_Issues/[PROJECT]/ISSUE-XXX-short-name/DONE_REPORT.md
 ```
 
 
@@ -159,7 +159,7 @@ Handoff Notes:
 Update / reference:
 
 ```text
-12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
 ```
 
 ---

@@ -1,0 +1,2957 @@
+{
+  "version": "v1.7.9.4-clean-logical-reference-fix",
+  "generated_at": "2026-05-30",
+  "issue_000_status_updated": false,
+  "files": [
+    {
+      "path": ".github/ISSUE_TEMPLATE/ai_execution_task.md",
+      "size": 775,
+      "sha256": "ebd17b9fce7c460c76a50fa4877a91069aa3aebb6e3da34cebe0b2e2d53f13db"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/ai_issue_execution_with_recovery.md",
+      "size": 1983,
+      "sha256": "6e1adef28fa5c9da3c6d38e7b4b58168815d0078393121f7a340c0ed88931193"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/ai_issue_release_safety.md",
+      "size": 2030,
+      "sha256": "b7119ac077f02a46480a70e15a4d936de024a44f61e37ac0ff10d25c2b56cf6c"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/bug_report.md",
+      "size": 253,
+      "sha256": "214be83ff965e241d36efaef019d68d6795274d7f4c4ebbfe1b2b293b2f9f2c9"
+    },
+    {
+      "path": ".github/ISSUE_TEMPLATE/change_request.md",
+      "size": 451,
+      "sha256": "0c3b10f58a1dee694b8f7d36df17d172eb62349236fb25756b50e2e1d6301666"
+    },
+    {
+      "path": ".github/pull_request_template.md",
+      "size": 729,
+      "sha256": "28e100daf35e52304017c21a623b2964077707a26b44ca240f7f6cb593d9f46e"
+    },
+    {
+      "path": "00_Admin/DOC-INDEX-001_Document_Index.md",
+      "size": 42489,
+      "sha256": "7547e8677e26f19a98b2266f5572a7f5153c5c783ea859721d4796f1fd2f409b"
+    },
+    {
+      "path": "00_Admin/DOCUMENT_ROLE_MAP.md",
+      "size": 4223,
+      "sha256": "1258fe6330d22b149522438f9afab6f21016884b7507441da741310032d5662d"
+    },
+    {
+      "path": "00_Admin/FILE_TREE.txt",
+      "size": 40094,
+      "sha256": "aeb693c36dcfb6f7ce468aa19aa1cfca74105a253e99b59882dafbb6a1be837b"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.3.txt",
+      "size": 14694,
+      "sha256": "3cd510bde62d059f21f1f05b792a07f7a29e7828a80b82d25cd4cc1d53ca3760"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.4-clean.txt",
+      "size": 16497,
+      "sha256": "eed32a2478ac8c8952dbc4ced97b38d4cec7ee921ffc335999d2385d5662d4ec"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.5-safe.txt",
+      "size": 12661,
+      "sha256": "f229f886074fbc6de595b99cc6a0efcca9b345de934612b5cc8028d6d74ed69a"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.8-safe-clean.txt",
+      "size": 17386,
+      "sha256": "ad7974c2e87d722c65d207e6bd824359d2de7da780b89d9f9b10408bf0bb64cb"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.8-safe-integrated.txt",
+      "size": 17341,
+      "sha256": "780052f19cb36ca9e4c63e2c216e506b8f725f12b2ef3b51b6ed9bad1d332e28"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9-ai-harness-clean.txt",
+      "size": 18357,
+      "sha256": "4a49859b929fca0b3efc463dbe25ba2c1c19da891264bf359d3897d2a7ebbc4b"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9-ai-harness.txt",
+      "size": 18320,
+      "sha256": "c629db7a56a36d84e43c35db019156a293002e653a37825f073e07367eff5d08"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.1-issue-linkage-handoff.txt",
+      "size": 19165,
+      "sha256": "4158c008d035326f45c4c643ff45d7b78310da5686450398fe3563d2e9f312b9"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.2-layout-normalized-deep-audited.txt",
+      "size": 21690,
+      "sha256": "77b7afb7755daef58243a6d133e46e469bd692e42a3a7035d0aba5dee8921bbb"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.2-layout-normalized-logic-audited.txt",
+      "size": 19591,
+      "sha256": "739272f67f7bb53cb702f506e2e488b8e3116d8fb3af27068f605321d7c3e9e4"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.2-layout-normalized.txt",
+      "size": 21690,
+      "sha256": "77b7afb7755daef58243a6d133e46e469bd692e42a3a7035d0aba5dee8921bbb"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.3-agency-skill-registry.txt",
+      "size": 25481,
+      "sha256": "3fd9794d308b09cacc5a5bc69542a8bca96dfc2bb907e61a02c4d8435addaa86"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.4-clean-logical-reference-fix.txt",
+      "size": 40461,
+      "sha256": "4aecbea2cd76e1197d02053a02d9d22c04e3e3f335270dd18d282e8a91078215"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.4-project-baseline-governance-completeness-audited.txt",
+      "size": 40094,
+      "sha256": "aeb693c36dcfb6f7ce468aa19aa1cfca74105a253e99b59882dafbb6a1be837b"
+    },
+    {
+      "path": "00_Admin/FILE_TREE_v1.7.9.4-project-baseline-governance-logic-audited.txt",
+      "size": 39798,
+      "sha256": "03b1e7337397d6080eab2e50c903f5384fdc36e40d09010253d4865da5675238"
+    },
+    {
+      "path": "00_Admin/LAYOUT-001_Folder_Numbering_Normalization_Report.md",
+      "size": 2979,
+      "sha256": "56cc8909526a03c7eaa129d974097a8bd01dc6cb8354faaec5298515af350236"
+    },
+    {
+      "path": "00_Admin/LAYOUT-002_Deep_Reference_Audit_Report.md",
+      "size": 3323,
+      "sha256": "2c285feba4d27ff1281e118958556309f1b11ac6aab8dc4ccb979afc046409a8"
+    },
+    {
+      "path": "00_Admin/LAYOUT-003_Logic_Consistency_Audit_Report.md",
+      "size": 3525,
+      "sha256": "98bbfc8f73e064f80eede902e47bf94bbc1060154cd19d3d57b071fd79ad0658"
+    },
+    {
+      "path": "00_Admin/README.md",
+      "size": 953,
+      "sha256": "df32f803b17536acc40a9e1d88cf4b2c324a2acacc3400ea4beb1e2616103f7e"
+    },
+    {
+      "path": "00_Admin/V1.7.3_SCOPE_DECISION.md",
+      "size": 979,
+      "sha256": "ca282b3d5cceb3b9356eb045e380c10136b224e9594b54d4b77b60aa0e68096c"
+    },
+    {
+      "path": "00_Admin/V1.7.4_CLEANUP_REPORT.md",
+      "size": 1457,
+      "sha256": "4d66b22d1cc11cb8bdd161d6914bb9ae72c6f2ca37492a0958ee201cbf2979d6"
+    },
+    {
+      "path": "00_Admin/V1.7.5_SAFE_RELEASE_REPORT.md",
+      "size": 1252,
+      "sha256": "c1c0abc9e86a55935c065acc46631a43613ef1cfbc61934d87c1a8149508bd8a"
+    },
+    {
+      "path": "00_Admin/V1.7.8_SAFE_CLEAN_RELEASE_REPORT.md",
+      "size": 1861,
+      "sha256": "9baf153fd179cb6f466297419caa406696d2a896b5ce76c1788bb6016b9c2fd6"
+    },
+    {
+      "path": "00_Admin/V1.7.8_SAFE_INTEGRATED_RELEASE_REPORT.md",
+      "size": 1724,
+      "sha256": "048165a9470d9be12b6113cd101e743be5677dfc65bd38bfb7b11cddc44ecb2e"
+    },
+    {
+      "path": "00_Admin/V1.7.9.1_ISSUE_LINKAGE_HANDOFF_RELEASE_REPORT.md",
+      "size": 1449,
+      "sha256": "9f24cac5526c663705b7cfb70dc1aaf325b296bdeac693dd09181126e3fc4117"
+    },
+    {
+      "path": "00_Admin/V1.7.9.3_AGENCY_SKILL_REGISTRY_RELEASE_REPORT.md",
+      "size": 2022,
+      "sha256": "405d0860b37c222503a32cb3111fe2a955dcd18ef156f66de63ad9f419c7d802"
+    },
+    {
+      "path": "00_Admin/V1.7.9.4_COMPLETENESS_AUDIT_REPORT.md",
+      "size": 4024,
+      "sha256": "8eb2b10a159f01a5e0464d431df1247df7e97519d324fd58dd65788f74539655"
+    },
+    {
+      "path": "00_Admin/V1.7.9.4_LOGIC_CONSISTENCY_AUDIT_REPORT.md",
+      "size": 2572,
+      "sha256": "bd829b7f8fdf10782c48e2e1a48456870db0a9627d33a523f95fe89de313b539"
+    },
+    {
+      "path": "00_Admin/V1.7.9.4_PROJECT_BASELINE_GOVERNANCE_RELEASE_REPORT.md",
+      "size": 2115,
+      "sha256": "7405badba7c602b6ee0407ff8d1517c42d025343c3be150f484ed5b2013a8ca2"
+    },
+    {
+      "path": "00_Admin/V1.7.9_AI_HARNESS_CLEAN_METADATA_FIX_REPORT.md",
+      "size": 746,
+      "sha256": "adadd47606c5ffd4c4a3d8b7d7a6ba3789c8b4da2d738e674f5bbd831f49da27"
+    },
+    {
+      "path": "00_Admin/V1.7.9_AI_HARNESS_RELEASE_REPORT.md",
+      "size": 869,
+      "sha256": "119bd5d1bf055b98c2768bcafc55e1dd6d99f03c0d7dd77f7608f9ddf38c0f97"
+    },
+    {
+      "path": "00_Admin/V1.7.9_DIFF_AND_EFFICIENCY_REPORT.md",
+      "size": 1294,
+      "sha256": "86549a2205b3fcfea2d5f62e3f522a3b7d7d892c1586e2edf443ec5290e3a3ea"
+    },
+    {
+      "path": "00_Admin/VERSION_HISTORY.md",
+      "size": 5843,
+      "sha256": "b623ac1612a5875841ee7bbbb176361cdfb75594ddc06466ecc8338170ff95fc"
+    },
+    {
+      "path": "00_Admin/manifest.json",
+      "size": 121686,
+      "sha256": "3ee96e1334e66a96be8e264687aaf897f6adb5993877d8e6afaaf63828b8c5ea"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.5_safe.json",
+      "size": 18854,
+      "sha256": "f30d13a719c3cae2315a8ee3d5a4e3d349c7dd5d07c6ea77960468414559e63d"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.8_safe_clean.json",
+      "size": 56637,
+      "sha256": "8de7d3e364d202f5c931200d6b2a67e111a6a79d409669f3f1cc0dd987d86f21"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.8_safe_integrated.json",
+      "size": 56065,
+      "sha256": "529ddb9d024178d0e2f290cf280820db57bd0ca46f1013a4f87db06edaad2a9f"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9.1_issue_linkage_handoff.json",
+      "size": 60392,
+      "sha256": "da98cf57bf884821b981f73bb234cf7105fe8e4d551a11329fd37060830dacfb"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9.2_layout_normalized_deep_audited.json",
+      "size": 61113,
+      "sha256": "3dd549383d9beb474f9cb0069a12999a619dba8c91017b112b5c722c49de5a2c"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9.2_layout_normalized_logic_audited.json",
+      "size": 63693,
+      "sha256": "8107c315a24133722f69519e3a2ab91b733b74e8552b1b59a625c163e9609e67"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9.3_agency_skill_registry.json",
+      "size": 117577,
+      "sha256": "721842e1ecfa7d7caeeebcecc3dffbf0ee20f2044c29be44acf054346c05dde1"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9.4_project_baseline_governance_completeness_audited.json",
+      "size": 121686,
+      "sha256": "3ee96e1334e66a96be8e264687aaf897f6adb5993877d8e6afaaf63828b8c5ea"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9_ai_harness.json",
+      "size": 20908,
+      "sha256": "132edbebb55ff71f5166d646b66818fbfa3d71cf2764ee5f011dd232ffdae93c"
+    },
+    {
+      "path": "00_Admin/manifest_v1.7.9_ai_harness_clean.json",
+      "size": 57848,
+      "sha256": "73de23e0b40df0ef36de141d292944a1f61cffa4598ff89e92bbc82e26d8631e"
+    },
+    {
+      "path": "01_Constitution/ACTIVE_STANDARDS_INDEX.md",
+      "size": 13338,
+      "sha256": "dee1161035caa16737385b8fd0802f96488bdd026520167e3d50d47971526064"
+    },
+    {
+      "path": "01_Constitution/ACTIVE_STANDARDS_INDEX_v1.7.9.1_Linkage_Insert.md",
+      "size": 449,
+      "sha256": "1d0e5cf4514ec2ec31dc39218a72d481007f61b0d258ffadca4b274d97bdfcb8"
+    },
+    {
+      "path": "01_Constitution/ACTIVE_STANDARDS_INDEX_v1.7.9.4_Project_Baseline_Governance_Insert.md",
+      "size": 2010,
+      "sha256": "1d6a318fae65c21878286d362097d6e92acb8bb659723bcb069fee6b2454facf"
+    },
+    {
+      "path": "01_Constitution/ACTIVE_STANDARDS_INDEX_v1.7.9_Insert.md",
+      "size": 783,
+      "sha256": "1edffb25be6b662e075552f4b8d73e9ac59271531e65bb726919d6ab1f0dd633"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_MVP01_AIRCON_OS_L1_L5_FLOW_ARCHITECTURE_v1.7.5.md",
+      "size": 6498,
+      "sha256": "b4eaca3be15e4dae481717d2185713e32496f56d287e4294e5fb8cb62475694c"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.6_Issue_Exit_Gate_and_Debug_Containment.md",
+      "size": 2304,
+      "sha256": "7e0342d7c90cc8f874d875d47d7ab89e7566a132dae6dcb7cca923454832b3e5"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.7_MVP_Flow_Change_Impact_Review_and_Routing.md",
+      "size": 2712,
+      "sha256": "6705f0bc7fb7c59acbfc1d0b993c273dc7410eec90beb5c1e928fdcd4e0b8de6"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.8_Goal_Execution_Brief_and_Harness_Scope_Control.md",
+      "size": 2085,
+      "sha256": "8edefff042f68f3d70729e619e7574789aa88559844ff0b1f345468baf3ffee6"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.9.1_Issue_Linkage_and_Handoff_Governance.md",
+      "size": 2248,
+      "sha256": "a93c16c9f851292926e5cd35fe12d460b594fe74017fa891c3ac4ef5c1b555e3"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.9.3_External_Agency_Skill_Registry.md",
+      "size": 2810,
+      "sha256": "cb2e1768741cad11a96899d68d058b90d469f0c7ae8b0fe2ef736463c9c3a6b1"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.9.4_Project_Baseline_Governance.md",
+      "size": 4946,
+      "sha256": "4f932034c92a9e079422feef2f9d13f0c714ae8513925f48a8daff11a8dfbd32"
+    },
+    {
+      "path": "01_Constitution/Amendments/CONSTITUTION_AMENDMENT_v1.7.9_AI_Harness_Execution_Governance.md",
+      "size": 5196,
+      "sha256": "1e0786b393db1b31ec2b1fa1be0d8bf2259d6b16778ebe7ea6d3122b3fba4beb"
+    },
+    {
+      "path": "01_Constitution/CURRENT_CONSTITUTION.md",
+      "size": 21086,
+      "sha256": "96ebcdb73ed2fe9fc9b7c2f1a66c5a749b705e9afcd3dc97b6a5701798b0faa2"
+    },
+    {
+      "path": "02_Foundation/FND-001_Company_Positioning.md",
+      "size": 4275,
+      "sha256": "ef08d6e9b4d390f8fcdff73ed59e6de5543d5addd3ac69bf8a5499fef8a474d9"
+    },
+    {
+      "path": "02_Foundation/FND-002_Development_Constitution_Overview.md",
+      "size": 12251,
+      "sha256": "e7883f4ebf7b71024c113f91a55fbfef1dad8b86393cb492854f8b36b33c110d"
+    },
+    {
+      "path": "02_Foundation/FND-003_Service_Model.md",
+      "size": 1267,
+      "sha256": "9c1927b6cb826591f6bb494b8951ec5fa48698c240d10e5d2c5599127c0366eb"
+    },
+    {
+      "path": "02_Foundation/FND-004_Core_Principles.md",
+      "size": 1197,
+      "sha256": "43b3011edb6df6fadee9b41163c32fe2e3893db6718ebbb10231423bd3a5a335"
+    },
+    {
+      "path": "02_Foundation/FND-005_Product_Positioning_and_WAS_Principle.md",
+      "size": 4794,
+      "sha256": "aabd85766d98f3cb024efa6f1858618bef66572a73080b60c58569d0c7446142"
+    },
+    {
+      "path": "02_Foundation/FND-006_Strategic_Constitution_Guardrails.md",
+      "size": 8035,
+      "sha256": "9c4c992ccf9697fa939b5c88d734d095784672b7dddacdb4fcf3244d49327463"
+    },
+    {
+      "path": "02_Foundation/README.md",
+      "size": 1025,
+      "sha256": "51c9bbc03155c163d6403a0c93feba706511c89938e61b96c0805f5694ff394d"
+    },
+    {
+      "path": "03_Development_Standard/README.md",
+      "size": 3463,
+      "sha256": "7b2dca3eb125ee87db018c969ed6047a406b6b146f4d7a30cc22978fd062c3fd"
+    },
+    {
+      "path": "03_Development_Standard/STD-DATA-001_Mock_Demo_and_Client_Data_Governance.md",
+      "size": 1854,
+      "sha256": "246f690ec27a631ddedc5ad9a07c99ca435635e8032209cf1eab506e2d310954"
+    },
+    {
+      "path": "03_Development_Standard/STD-DB-001_Database_Migration_and_RLS_Change_Control.md",
+      "size": 1726,
+      "sha256": "93a16480712e6bc1bd3a888b45869ed91520a1d34bd7bf73559f319250a0a9d8"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEPLOY-001_Preview_Staging_Production_Gate_Standard.md",
+      "size": 1710,
+      "sha256": "5173b7787eb684ca3ff25183c3722062a2d190a2e475d816d5b30c397ab11a82"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-001_Standard_Development_Process.md",
+      "size": 1036,
+      "sha256": "52ad5e257927c17eaab3a9d87907ce308875db9cae1b5cc0f95d0433606007af"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-002_AI_Assisted_Development_Workflow.md",
+      "size": 4026,
+      "sha256": "bc6637457b59e02b44d27928a4b8c917c51b5346e8dcfafcbf029bcb9ed71581"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-003_GitHub_Documentation_SOP.md",
+      "size": 1569,
+      "sha256": "43c1d2dfe005f45559c85944d64e9ebb87f939b2c74f2cd378bbc7917d740f64"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-004_Change_Request_Workflow.md",
+      "size": 1839,
+      "sha256": "7af78b73b640b55f9183837d645b648a1310d6bad0a9c7d2e3b9a71938579f80"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-005_Mobile_Assisted_Development_Workflow.md",
+      "size": 2294,
+      "sha256": "7b3a40c9894a86168b5eeeb5993520bc24cde07560b361c29b1dd30e2ee00f68"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-006_Branch_Commit_Push_Workflow.md",
+      "size": 1480,
+      "sha256": "69bc3fc32a168da1d146457dd3ca66e67b6d2a7ffb6e5179253926c6978b2634"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-007_Staging_Preview_Production_Workflow.md",
+      "size": 1263,
+      "sha256": "babc6cc7dc796024ce91d479955e2a4ee3426c9e3397c90caf82b8c77493c7ac"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-008_Document_Update_Workflow.md",
+      "size": 1306,
+      "sha256": "0ef7041017eecb0ca0fd3e7ee835011da949776819bf130aa08b29fd9d776bd2"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-009_QA_and_Security_Standard.md",
+      "size": 1679,
+      "sha256": "562dcd1e2d2e5388734339b4e000564082332c74ea581b2253975680e18c73d1"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-010_MVP_Module_Integration_Policy.md",
+      "size": 1302,
+      "sha256": "5704a962d5f85f4c1bf58ce706ba2998fe06e8344f383a81cdcef772c686e164"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-011_Codex_Prompt_Standard.md",
+      "size": 1435,
+      "sha256": "1db13a64318493bf3b45d31e7dabe446db87de2105245da105b97d2275607d7f"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-012_Repository_Structure.md",
+      "size": 1478,
+      "sha256": "fdc4ad28ef14027b31d662ced470cd17dbdeebf5e24d63b9f5db8005e3df3c10"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-013_Self_Management_AI_Client_Value_Control_Rule.md",
+      "size": 5055,
+      "sha256": "ce177c42f91c4e6d8066ec4ba2349cccb69c3b67f4ba01fcb18c7aeb30664be9"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-014_Constitution_Upgrade_Trigger_Rule.md",
+      "size": 4069,
+      "sha256": "ca1b783c7111f6d4229a9b69402946dcd87ab871dfd8f88164d00615f94d2b5a"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-015_AI_Assisted_Semi_Automated_Development_Pipeline.md",
+      "size": 9833,
+      "sha256": "65971d98112e4356579d767bb9a1358099bf7521449f88ea5cc0510c7741b622"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-016_MVP_Decomposition_and_Dependency_Rule.md",
+      "size": 9707,
+      "sha256": "228cae3c13a7a6585b4c17b2f6e06df3cbf0e242738242c92a60cb31770326c3"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-017_Small_Core_First_and_Layered_MVP_Execution_Rule.md",
+      "size": 4214,
+      "sha256": "c4436fec8b134bfe5a3cb9a000adb50086579ce973facc2465ec9e806ab741e3"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-018_UI_Backend_Parallel_Development_and_AI_Context_Control_Rule.md",
+      "size": 3132,
+      "sha256": "a183f0821c2cc7708b7f8177801080febbfd9f2efd74b53a0f48f9d5acc5da2a"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-019_Internal_MVP_vs_Client_Delivery_Version_Control_Rule.md",
+      "size": 2698,
+      "sha256": "cedb1855fed0d7700eedd0000025ff4ae14a169b9948b0f7efbce5457fa753fa"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-020_AI_Context_Package_and_Semi_Automated_Execution_Standard.md",
+      "size": 6877,
+      "sha256": "801043d27ac958cb69e67af2dc6b1c3326e375cabdb77fa792a6cd38938480df"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-021_MVP_Layering_Small_Core_and_Dependency_Execution_Standard.md",
+      "size": 4847,
+      "sha256": "bfd5aae8a1ae0ed01a040bfef4906d2f450f20f7114fc65ec18148f237372908"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-022_Internal_MVP_Client_Delivery_and_Monthly_Value_Control_Standard.md",
+      "size": 4435,
+      "sha256": "f0c9c189dd7f39f1b93c836066be55ec5ed5c83a5bb9e7cdf6254b255cd38387"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-023_Industry_Workflow_First_and_SME_OS_Scope_Standard.md",
+      "size": 3653,
+      "sha256": "7e2e9547e1ca9068788a5880b9d9565f3018f70e3388e1572b33cb0f0c8da62e"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-024_AI_Collaboration_GitHub_Execution_Governance.md",
+      "size": 9220,
+      "sha256": "cad901e5b8f4870175dc43fbf6b772898d39a4604d5a2b4bba8ec22b2487b23b"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-025_AI_Research_Intake_and_Multi_Model_Handoff.md",
+      "size": 7792,
+      "sha256": "5127c6e111a90f189b88d16ba9cf9a0bb753f15524d5de9e6d435b454ceae7a7"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-026_AI_Market_Research_and_Strategy_Review_Governance.md",
+      "size": 5784,
+      "sha256": "39bc7ca7eb869b49b35a5dde514141c2386528b449b91bba579c9ed661136737"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-027_Repo_Workspace_and_AI_Execution_Boundary_Standard.md",
+      "size": 4927,
+      "sha256": "2b75bac148082780248e3257130fbdaa405e0cc4190d4ca182127ee097fa379f"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-028_Interruption_Recovery_and_WIP_Preservation_Standard.md",
+      "size": 3849,
+      "sha256": "c4fc5c94f4bf0a143ebfeca242d042d10a1003c082a172f5e06c64faba14ce36"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-029_Rollback_and_Failed_Issue_Recovery_Standard.md",
+      "size": 3413,
+      "sha256": "386e30052ab362b406cc408a780d6fd7c06c629cfd8286c8fbfc2f850c933cdf"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-030_Testing_Level_and_Validation_Standard.md",
+      "size": 2408,
+      "sha256": "6d37481a10f68a3acf7b7bc50b01990b16dd503c45f4e8ea4b7b50dc985e46e5"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-031_Issue_Size_and_Splitting_Standard.md",
+      "size": 1871,
+      "sha256": "67dca8f010c7802ab296e9b1a5a4c042d96b761cd0a1dbbc5deab8c3da8f6b4a"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-032_AI_Issue_Execution_and_DONE_Report_Standard.md",
+      "size": 4566,
+      "sha256": "d1a3a30ec8202a3a3a84aa88feb9a56039197a2b38d5a358d36033ea73f30d19"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-033_Plan_Feature_Toggle_and_Template_Control_Standard.md",
+      "size": 3387,
+      "sha256": "7aa3404d2d845700679f6a472d5684836ce7fed3224bedfdfc8a7b77e409a9c3"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-034_Client_Deployment_and_Environment_Provisioning_Standard.md",
+      "size": 2690,
+      "sha256": "011a74a621777a75cfbb088c201638c074ef2e794447b3c53667473d91789f50"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-035_Batch_and_Issue_Revision_Impact_Control_Standard.md",
+      "size": 2974,
+      "sha256": "e819cea7b128c344d4e2e9d5ffb585854e21d7cbd76aa9ee650418a90cad72f6"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-036_Visual_Concept_to_MVP_Issue_Decomposition_Standard.md",
+      "size": 2258,
+      "sha256": "7574dee9cf54b212fdd9d14ceaf3c8be76599c428714b8dc43a57c2947285487"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-037_AI_Agent_Execution_Slimming_and_Context_Routing_Standard.md",
+      "size": 3527,
+      "sha256": "192a04e52739b40c006f2428e6dbabd6431e9b5243654fa17a8b239bfab05576"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-038_CI_and_Automated_Validation_Gate_Standard.md",
+      "size": 2328,
+      "sha256": "804be8573413b1ece22d71abc82ab7e80d1e865508f74944ec0567d24772b1aa"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-039_Core_Template_Module_Plan_Boundary_Standard.md",
+      "size": 2716,
+      "sha256": "706c570da49460e04835b142a01e527a238c4a4b7e4ba1473ce9c6773fe9a79f"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-040_Commercial_Workflow_PO_Invoice_Payment_and_PDF_Standard.md",
+      "size": 2312,
+      "sha256": "7fded30784a446e9be9730723bef264bb6fe2010f1c2bdfb78da78f5227fdef2"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-041_Optimaks_OS_Product_Architecture_Starter_Growth_Pro_Standard.md",
+      "size": 2523,
+      "sha256": "91091fcb1bad24069e493f7cf13ed3767850d4926ab347b9ebcd53dbdc8764a3"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-042_Flow_First_MVP_and_Issue_Planning_Standard.md",
+      "size": 1903,
+      "sha256": "3c5a2a0ad93a768eed42d5acfc4904b0eb3dcce5d5a3cacb65e66e390d2d6e14"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-043_Issue_Workpack_Filing_and_Purpose_First_Archive_Standard.md",
+      "size": 2675,
+      "sha256": "401e2336e58429005c44dac3dd5c59fd4911401a5a0e70236604103c6b715ca6"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-044_Development_Document_Module_Boundary_and_Social_Media_Documentation_Standard.md",
+      "size": 4439,
+      "sha256": "07aeb31fc364c6bd9d0871774649f2ff5c2264ccf739250b0851c76c87abe88c"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-045_MVP01_Aircon_OS_L1_L5_Flow_and_Owner_OS_Standard.md",
+      "size": 5451,
+      "sha256": "f4ca97f1b97ee2566fdb9722692a109fe4aa3ee9f38eed2e1440a60719f7147d"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-046_AI_Harness_Agent_Behavior_and_Skills_Standard.md",
+      "size": 4851,
+      "sha256": "039ea59d11495e22093f45cbb4fdc6763cdde09423c6e798038e38043e58a135"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-047_File_Ownership_and_Change_Boundary_Map.md",
+      "size": 4519,
+      "sha256": "7dca80eb382c8e5ead1632dddc634d14f0b656be31d3fade9bacd379fe373e29"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-048_AI_Agent_Execution_Mode_Standard.md",
+      "size": 3217,
+      "sha256": "74a494684719a462ad91cbb31000754826c1132b475c63144508ebe85e021890"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-049_MVP_Project_Baseline_and_Issue_Chain_Standard.md",
+      "size": 5931,
+      "sha256": "9590f6d1d49e6f48870b03c2f3e994c3abef7f61edc6944b2fc896a0409e1467"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-050_Issue_Linkage_and_Handoff_Standard.md",
+      "size": 5050,
+      "sha256": "10c052c873e1401c9bee6d601f5bfbd101fcff6520763fd58a65bcdb02a2a3fa"
+    },
+    {
+      "path": "03_Development_Standard/STD-DEV-051_External_Agency_Agent_Skill_Integration_Standard.md",
+      "size": 3705,
+      "sha256": "fba7b89ab11cbf345df6869ae335ac192880ee2c5f4a08aa9d95ac348283e33e"
+    },
+    {
+      "path": "03_Development_Standard/STD-SEC-001_Environment_Secrets_and_API_Key_Governance.md",
+      "size": 2379,
+      "sha256": "fbabf25c6da41770da08af802bc8c008f4ce12b04d58d7e242cdc7188e41c479"
+    },
+    {
+      "path": "04_Governance_Standard/STD-GOV-001_Constitution_Change_Control_Standard.md",
+      "size": 2158,
+      "sha256": "68a8feae4b2930a2d3c44a77063920a10b2647e3a0ca4468ccc5af33b0c85250"
+    },
+    {
+      "path": "04_Governance_Standard/STD-GOV-002_Constitution_Change_Level_Decision_Rule.md",
+      "size": 3838,
+      "sha256": "ee5e7f597bb27705159085e8bde603d46998225df55c1412b9790603da3c5aa5"
+    },
+    {
+      "path": "04_Governance_Standard/constitution-changes/CC-001_v1.5.9-to-v1.6.0_plan-template-client-deployment.md",
+      "size": 3317,
+      "sha256": "4f8f8dadb1c8b96be27d2fadf9c9a6b48f1ef20e3b70ff006165f6c28b95e9e5"
+    },
+    {
+      "path": "04_Governance_Standard/constitution-changes/CC-002_v1.6.0-to-v1.6.1_ai-agent-execution-slimming.md",
+      "size": 1733,
+      "sha256": "d2f58e362b38829474defba06133c37f4109a7da44a6525a1d61a19cf99195ca"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-001_Client_Discovery_Form.md",
+      "size": 1061,
+      "sha256": "326cd34798e65cff1a7878d1ecbdefcfa4f35b7794115334df7f88b998cd475c"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-002_Scope_of_Work_Template.md",
+      "size": 839,
+      "sha256": "b7561c7b997235a181b6324de451e4c5b4baa803a7b1fe5f52f5fe445bccc24a"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-003_Solution_Blueprint_Template.md",
+      "size": 1007,
+      "sha256": "91eac752358bd6746c66d12511636e1b29ed7a6c2aa6c1ff495916c5d10ecb16"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-004_Project_Milestone_Plan.md",
+      "size": 970,
+      "sha256": "fdd1a5a83b9fc12bf61ede1afdd16a84846cf4385722001dfcb44042a034de44"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-005_Client_Handover_Guide.md",
+      "size": 740,
+      "sha256": "d39806dabe2d23ef51560fc59f300610845c1d96e8d3bb9cfd60559eda766175"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-006_Monthly_Maintenance_Report.md",
+      "size": 1684,
+      "sha256": "de6b6ba25daf373441f05eb149906c8a9301dd9c921ccd1fea651afadf251b77"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-007_10_Step_Delivery_Process.md",
+      "size": 1391,
+      "sha256": "2f6d2bf52d559164a111ab5fd474ac053e623e45546b65e23446011b2c487d8b"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-008_Proposal_Contract_Esign_Flow.md",
+      "size": 1125,
+      "sha256": "f98675b88a8886dd6e7918309fbd6ea1619165a530d47a3862101b9847b32d91"
+    },
+    {
+      "path": "05_Client_Delivery/CLT-009_Client_Onboarding_and_Launch_Intake_Checklist.md",
+      "size": 4813,
+      "sha256": "5a9e6f2ba0919b9f53223c93949645c10c9023aeab22f4c358bb8bfaa1fac400"
+    },
+    {
+      "path": "05_Client_Delivery/README.md",
+      "size": 685,
+      "sha256": "987e5672a347ca0425112f04dd63f6bac6b29cb5d873c0a3c817c0c5958cbef9"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-001_Quotation_Template.md",
+      "size": 908,
+      "sha256": "79c7d508276d6a144be229d847a03c1d9c5d89fd91a1a178f7985427b1af5d5a"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-002_Client_Agreement_Checklist.md",
+      "size": 703,
+      "sha256": "7eed522ef85b28a93b3558a85c831d02b622f327e9f0b20db5977b492b2e6235"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-003_Payment_Terms_Policy.md",
+      "size": 791,
+      "sha256": "5b30161e381149921dc4a47da8400da2f1761230b2e6006fa0f4a03e153f8538"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-004_IP_and_Source_Code_Policy.md",
+      "size": 844,
+      "sha256": "eb2f71d59cae2d43772c89f013e92ea43f966961905a7ed86e6a631b07e18c3a"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-005_PDPA_and_Data_Protection_Notice.md",
+      "size": 824,
+      "sha256": "da0ea5c3729d47d30c728e9e839f9f12d667e8238831e69e63f58daa9f9ae5ab"
+    },
+    {
+      "path": "06_Legal_Commercial/LEG-006_VIDEO_VENDOR_PARTNERSHIP_TERMS.md",
+      "size": 3800,
+      "sha256": "819302c5185350699d670a1007e2c8d28ddc5cfb8f5664d9fbc86af744eed36f"
+    },
+    {
+      "path": "06_Legal_Commercial/README.md",
+      "size": 897,
+      "sha256": "20a23dfcf9a018b644a3b3fa90f070e9645002dc533877271489a874bdedba7b"
+    },
+    {
+      "path": "07_ISO_Ready/ISO-001_ISO_Ready_Control_Map.md",
+      "size": 901,
+      "sha256": "66e3fc15b86c9db36f6b9e1deb8590b660cde89d5845fdec85e8aa3151b65540"
+    },
+    {
+      "path": "07_ISO_Ready/ISO-002_Quality_Management_Lite.md",
+      "size": 789,
+      "sha256": "5ab452270211effe0493f387359f678b33aa9fdf00eb205f352d1e3d2ecfca57"
+    },
+    {
+      "path": "07_ISO_Ready/ISO-003_Evidence_and_Audit_Trail.md",
+      "size": 642,
+      "sha256": "fd4cdd8075c9083817af41e9e96dacc8818acf506e370932368e68711a647da8"
+    },
+    {
+      "path": "07_ISO_Ready/ISO-004_Risk_and_Change_Control.md",
+      "size": 674,
+      "sha256": "0280d8d1d89cf83f9cdbc5a808e3dea5ec7ca90fa8b5c78b99cb7847f56ed48c"
+    },
+    {
+      "path": "07_ISO_Ready/README.md",
+      "size": 734,
+      "sha256": "f9423f7bd29a3873cdac1b14b3d98873545b8b35b4825ca4c62753644c30869c"
+    },
+    {
+      "path": "08_Grant_Ready/GRT-001_Grant_Ready_Evidence_Pack.md",
+      "size": 750,
+      "sha256": "42f616596d26714f7836c9524768b1579c1964a14241155d04a70f31eee91bd0"
+    },
+    {
+      "path": "08_Grant_Ready/GRT-002_Case_Study_Template.md",
+      "size": 549,
+      "sha256": "b55f4d784d5f23b5fde5c81586b25769f5fd44e426a1d2b19581c32d9e17f2cb"
+    },
+    {
+      "path": "08_Grant_Ready/GRT-003_Project_Outcome_Report.md",
+      "size": 624,
+      "sha256": "87af0f6ed34ed96bc804d393c0462837061a74f47a967a9cd631edda1058b9f2"
+    },
+    {
+      "path": "08_Grant_Ready/README.md",
+      "size": 711,
+      "sha256": "8614e351d141ce79432f6332b4f57814f238e6318ea90cbbcde606348b53e6be"
+    },
+    {
+      "path": "09_Templates/CHANGE_REQUEST_Template.md",
+      "size": 1090,
+      "sha256": "ae32ff06e981e8f067f0695b58b32ba8ae19e3c16eee636991a4027d45f041c0"
+    },
+    {
+      "path": "09_Templates/CODEX_TASK_PROMPT_Template.md",
+      "size": 817,
+      "sha256": "3aa2bccd4b96b20fdf4a9adc51ea58024efa13af4341d736643abd8a018e80c6"
+    },
+    {
+      "path": "09_Templates/CONSTITUTION_CHANGE_RECORD_TEMPLATE.md",
+      "size": 931,
+      "sha256": "ee19d09de413e075f8a805e28c4b9c45d2a7696ce8b5400b95ac04f53e18abe1"
+    },
+    {
+      "path": "09_Templates/GITHUB_ISSUE_Template.md",
+      "size": 740,
+      "sha256": "bcb9f3ccfb2799c75cd8412c0ac6d5be9c5513c051b02cfb7f1c02717eb85e28"
+    },
+    {
+      "path": "09_Templates/MOBILE_CAPTURE_Template.md",
+      "size": 764,
+      "sha256": "91e84ef8fe1159e0d7eef5e3ee3f9e1a4326c6432e88f639e92dc2d9f7189f6f"
+    },
+    {
+      "path": "09_Templates/PROJECT_CONTEXT_Template.md",
+      "size": 540,
+      "sha256": "09566a9b021ca1f04eae7442020610dc86440d0a2d207312bed5012968134c66"
+    },
+    {
+      "path": "09_Templates/QA_REPORT_Template.md",
+      "size": 647,
+      "sha256": "12b6cede14070e6f77274d19a7dde9b412f5f65372ea348d6beac1056ac6c51d"
+    },
+    {
+      "path": "09_Templates/README.md",
+      "size": 1833,
+      "sha256": "e080fedf23dba101a3c71d09d9d2a7e2a9ea13140420d1763515a865c27aa636"
+    },
+    {
+      "path": "09_Templates/TPL-BIZ-001_Strategy_Review_Template.md",
+      "size": 1222,
+      "sha256": "bf577737adee96f69a0daf0fd76225dd0d2fac5919d2a38e16c8096a133a144d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-006_Daily_Priority_and_Issue_Triage_Template.md",
+      "size": 1460,
+      "sha256": "676297131a2ae1fa6fd792ace31afa87c206b9a0ece169aedfcbf68bcdc0f30b"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-007_AI_Pipeline_Context_Package_Template.md",
+      "size": 2039,
+      "sha256": "49775a05753f8ba56c8d7de9ccab80e2b6e69f15f73ce8c493535eb8afbc41b8"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-008_MVP_Decomposition_Template.md",
+      "size": 2044,
+      "sha256": "5c2e3ced51c924ad59102b8bebc29277487b053671f109012fad58b88be77cd0"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-009_AI_Context_Package_Template.md",
+      "size": 1627,
+      "sha256": "27934b9a73922866828d1cbf82cc4cfae6b04ecb715f9b7165c39963868055f8"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-010_MVP_Layering_Template.md",
+      "size": 1018,
+      "sha256": "bbf04b648601141023c56dd081f1b64716960f81d41d5085f882fd309715d149"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-011_Industry_Workflow_Blueprint_Template.md",
+      "size": 2476,
+      "sha256": "73f0873e4dfaf4ab1ec4861945759d50dd89c003215de0a6c960eb92d7c8b319"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-012_Pull_Request_Review_Template.md",
+      "size": 1420,
+      "sha256": "a91e8613ec4f6eefec818d6f3814429712a3647116436cb96aeb78cdba78c42f"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-013_AI_Issue_Execution_Prompt_Template.md",
+      "size": 2252,
+      "sha256": "67148f9e8a3fd048675b06b54f54555dde9900db244487c1aad1c635b825c10d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-014_Gemini_Research_Digest_Template.md",
+      "size": 1800,
+      "sha256": "2c56c1d432fe43dbecf95c7e2183c58dba97219b066f93db4c1f27387594b2b7"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-015_Issue_Starter_Pack_Governance_Insert.md",
+      "size": 1978,
+      "sha256": "7582326e4e27cd3d8e3227b06726eb9d76e36b89a478c09e60f89dd3f28bda3d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-016_Issue_Progress_Log_Template.md",
+      "size": 1198,
+      "sha256": "e29ae8a0ecc4bebc88436fea4225750a836d670422fbcd6840241770b895c5f9"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-017_AI_Continuation_Prompt_Template.md",
+      "size": 1951,
+      "sha256": "c534a218261f34a187e0f0406429d919fb80df8c1aa77f62883c69aee39e3f76"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-018_AGENTS_MD_Insert.md",
+      "size": 1922,
+      "sha256": "4cf2b6be852a1e4ad6181e60a925827c71d056b4d876a3d050f762e0e3bb2a0d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-019_GEMINI_MD_Insert.md",
+      "size": 1423,
+      "sha256": "26c9535555596853ebfee722fe72d82fbb8b96511790f74f16d5a72ee5acd6f8"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-020_Failed_Issue_Recovery_Report_Template.md",
+      "size": 1137,
+      "sha256": "71b901e5bce3bac0c9dca1a86efa8325dbc4f5ff83ebe4880f57cd6759f266a3"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-021_Merge_Readiness_Report_Template.md",
+      "size": 1167,
+      "sha256": "66fee7a6438b0579f9c80db09210e970b11a729bc41782627d4505febde61f75"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-022_Testing_Result_Report_Template.md",
+      "size": 723,
+      "sha256": "d9e866934ffef4468bcc480272f2f0f192206756cf538b3cd7ed4b63678d4fe3"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-023_AI_CONTEXT_MINI.md",
+      "size": 517,
+      "sha256": "427a60e42932ffa21d6ccd43d1bdd246572204d27118c7515eab16c8b72cff55"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-024_AI_CONTEXT_STANDARD.md",
+      "size": 724,
+      "sha256": "60c7d67cb44883302c4aa26dcd9cde89ecabb6328e3a90ddb1c6d1e06c95ef4a"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-025_AI_CONTEXT_FULL.md",
+      "size": 1133,
+      "sha256": "c426e13fbef54d6fb0b99bd52d2e64abba0b830d8588320c4878cada7f82b765"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-026_MVP_Scope_Template.md",
+      "size": 755,
+      "sha256": "87240accf22346c7cc0a8571664954a09cc01b4397f6efc2386d71ea769944bd"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-027_Flow_Index_Template.md",
+      "size": 495,
+      "sha256": "a75d5ea4493719c2ee0ac5c51b8b88f064c7b2db28371066a317293b8c0ecee3"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-028_Issue_Map_Template.md",
+      "size": 548,
+      "sha256": "f43fd9005eb869bcf4f1331acc35c2611df692c9658f9cbca36cb5580674e1c6"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-029_Issue_Workpack_Template.md",
+      "size": 2689,
+      "sha256": "3c1b8188c043c25a1a4eae2b696e061ee616e4bbcfc81e78a676e82b3a84a00f"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-029_Issue_Workpack_Template_Harness_Insert.md",
+      "size": 805,
+      "sha256": "74d277fbf095831fd70fa401d5382656c5ca5c0870100f83438a602bb395f6a7"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-030_Purpose_First_Filing_Rule_Insert.md",
+      "size": 632,
+      "sha256": "834db6f4b386c80c089b97cbd92967d5acc38af135154de622464b847250a682"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-031_AI_Issue_Execution_Prompt_Template.md",
+      "size": 3827,
+      "sha256": "c00b1b621739901f4de2dc36d3d7da8504d8a635dd73bc686043bfd98c74775d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-032_Issue_DONE_Report_Template.md",
+      "size": 2654,
+      "sha256": "3eb9db5c25924e63e6874048b29bdf3ac4823f8f5906975e991c5d3836146220"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-032_Issue_DONE_Report_Template_Harness_Insert.md",
+      "size": 845,
+      "sha256": "379cd8faa5e8a79d6bb0d9711b40f7c8d611884af27ffe0ac5a3402b79769d20"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-033_AI_Issue_Minimal_Founder_Input_Template.md",
+      "size": 1126,
+      "sha256": "60c8c052610dc29e36a9a3a0fd6ab6409732f00a4e11e6b8891f2da92fcd814d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-034_Goal_Execution_Brief_Harness_Template.md",
+      "size": 1276,
+      "sha256": "c442b790e72e3dfa6e0df8004fa935c2c3155102f3ab61f20026bd5eb95677ee"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-035_AGENTS_MD_AI_Harness_Insert.md",
+      "size": 588,
+      "sha256": "a1c4eb0f5f99077414fd3a494924972a1c864c014228ac294b0e1eceb6dda30a"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-036A_Issue_Pack_Master_Prompt_Short_Reference_v1.7.9.md",
+      "size": 2161,
+      "sha256": "44d7c682a4a7c3e2bf817058127e8276131d5c94233a1702c9389bbbae4f3639"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-036_Issue_Pack_Master_Prompt_v1.7.9.md",
+      "size": 11913,
+      "sha256": "bf787c271f28fc2fabb8f01e498552312d07bb5dc757995172fda5a115633600"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-039_Issue_Linkage_and_Handoff_Insert.md",
+      "size": 1088,
+      "sha256": "c52d878087c03b99a898564f6b984535e1da7f72a86a3e4742932385ee91e8e4"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-040_Agency_Skill_Selection_Insert.md",
+      "size": 1251,
+      "sha256": "49e57055abf7d33cea976121e91e470eada27a0471a4f8571c11dd241bbdd289"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-041_Project_README_Template.md",
+      "size": 1680,
+      "sha256": "0fbc2ab44fd47547e3f2fa6adfed95aefbd43d93d9d78d6ba2f0798355f1e8cd"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-042_Project_Scope_Baseline_Template.md",
+      "size": 946,
+      "sha256": "6b837facdfc7c4a27cb2e4fb976ad1e2f9629bd2b38b0b681f755a1823d39d4d"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-043_Project_Phase_and_Issue_Baseline_Template.md",
+      "size": 1198,
+      "sha256": "91671f1d8db5dc5a6d0d0cd39406afad206510fcdcbecfdc9059de88ba67ef46"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-044_Project_Issue_Chain_Register_Template.md",
+      "size": 1048,
+      "sha256": "2dda9ba2334c1bcba43d1f2547101ef1be1221be1b0ada67d84daf7ee89da4b8"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-045_Project_Change_Control_Log_Template.md",
+      "size": 1200,
+      "sha256": "e834d826e92935c238dea06376bc0a8f7dcc7ef1fece43948d1c80e2fd81e1b2"
+    },
+    {
+      "path": "09_Templates/TPL-DEV-046_AGENTS_MD_Project_Baseline_Governance_Insert.md",
+      "size": 1514,
+      "sha256": "0938f69b9fd2e965031c6f4946063fe11343a94ebe98a77d062ce8879e670c81"
+    },
+    {
+      "path": "10_Checklists/CHK-BIZ-001_Market_Research_Strategy_Review_Checklist.md",
+      "size": 764,
+      "sha256": "d4c400b8ff03b62a5fe2a88f1961f71757f5321148b2e4f83dd760cff230d947"
+    },
+    {
+      "path": "10_Checklists/CHK-DATA-001_Mock_Demo_Data_Checklist.md",
+      "size": 782,
+      "sha256": "75527907aa50f0d37ef16f83cb781729b91efa69a40460fca67d43d194b90310"
+    },
+    {
+      "path": "10_Checklists/CHK-DB-001_Database_RLS_Change_Checklist.md",
+      "size": 892,
+      "sha256": "aebbce5ea921d844c7abc73d09ba0c825f01f599e92c45ad041e7d98d5b0ce60"
+    },
+    {
+      "path": "10_Checklists/CHK-DEPLOY-001_Deployment_Gate_Checklist.md",
+      "size": 833,
+      "sha256": "50a2df0428a93e42dade1c2c6b550eb96a3f9cd19e80e03b15c5079cca642340"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-006_AI_Execution_and_Client_Value_Checklist.md",
+      "size": 1544,
+      "sha256": "08c200c7a8b49c911cc10ee22696adbffc550652a7959eaf8d56ec4b612847e4"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-007_Semi_Automated_Pipeline_Readiness_Checklist.md",
+      "size": 2610,
+      "sha256": "a39be93ad82905f8bab87ff521767b668a10e42365734b2fac5a80be34e12536"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-008_v1.5_AI_and_MVP_Readiness_Checklist.md",
+      "size": 1443,
+      "sha256": "cc0b0e611a820118ca10743284cd95f4f6ecb977ad87f282659376805ccd3fa9"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-009_Workflow_Positioning_and_Scope_Checklist.md",
+      "size": 2177,
+      "sha256": "cc55a074bac424f634a8dc10693959622f7114a3b38ec0d6280ff7f84d1bd9e5"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-010_AI_GitHub_PR_Governance_Checklist.md",
+      "size": 2410,
+      "sha256": "366e11eccd5f4b6ee11a33f7e168345578a52c32e7411304ec3e231fa1b7fe06"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-011_AI_Research_Intake_and_Handoff_Checklist.md",
+      "size": 2104,
+      "sha256": "f6349b09daad7c6227b8b71b219cfe2800f30243389915767365be17edee2f39"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-012_Repo_Workspace_Execution_Checklist.md",
+      "size": 1413,
+      "sha256": "4f718a96fa1b98b59e446e831a04acabbffa2b2b9ec7387db4654bd13615c90e"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-013_Interruption_Recovery_Checklist.md",
+      "size": 1619,
+      "sha256": "aaabe35e69deaf842e5f90c8308d4a732148e9a63e182d8e72dbace385d78782"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-014_Merge_Readiness_Checklist.md",
+      "size": 1416,
+      "sha256": "e882d1b96782c0992e6bc781fda04947f05882367004482b6ffa54a9d883543b"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-015_Rollback_Readiness_Checklist.md",
+      "size": 1035,
+      "sha256": "5a433b3713a0d9774168071c1eb4200a927e2183cf841aff54ed0007c4a1e9a0"
+    },
+    {
+      "path": "10_Checklists/CHK-DEV-020_Harness_Review_Checklist.md",
+      "size": 974,
+      "sha256": "165545e7b0ca82a57d3803438c7a8d175774f495463cf64e45d15f73ce6ffa67"
+    },
+    {
+      "path": "10_Checklists/CHK-MKT-001_SHORT_VIDEO_DELIVERY_CHECKLIST.md",
+      "size": 2760,
+      "sha256": "882669fff7ab29d36671e5e446d4d5cd26df51b774c161b451c67d86fe87ec20"
+    },
+    {
+      "path": "10_Checklists/CHK-QA-001_Testing_Level_Checklist.md",
+      "size": 1162,
+      "sha256": "e91a610597b76927636e8ce9c36cd42983a374628e24f26961b271b73e4d8edc"
+    },
+    {
+      "path": "10_Checklists/CHK-SEC-001_Secrets_and_ENV_Safety_Checklist.md",
+      "size": 1065,
+      "sha256": "865fe83721f242306df65650d44f5d1cff57fbc69d2ecc168384cfa2e25c32c1"
+    },
+    {
+      "path": "10_Checklists/DEP-001_Deployment_Checklist.md",
+      "size": 893,
+      "sha256": "565856594f25341a00431c7c0a5b1d6807829dac3f57dd5c66e05ec679f626a7"
+    },
+    {
+      "path": "10_Checklists/HAN-001_Handover_Checklist.md",
+      "size": 576,
+      "sha256": "20d68f4c75565dadb34d38ff143caab3a45dc64b1fdc7e63b433a35d1be6c794"
+    },
+    {
+      "path": "10_Checklists/MOB-001_Mobile_Testing_Checklist.md",
+      "size": 674,
+      "sha256": "5a6368ae2163ad8417fb8165b2f468cc5f952de20001f0899af011fef1226bbb"
+    },
+    {
+      "path": "10_Checklists/PDPA-001_Data_Protection_Checklist.md",
+      "size": 613,
+      "sha256": "536610580d4c35392c812fb40a450e4b7fd577d2b9e27e5144e3647206c0abd5"
+    },
+    {
+      "path": "10_Checklists/QA-001_QA_Checklist.md",
+      "size": 987,
+      "sha256": "ebb654a97deac1cf8327fb8064eda0c076e23716e7aee159882456736ee3bda4"
+    },
+    {
+      "path": "10_Checklists/README.md",
+      "size": 1076,
+      "sha256": "273dad9b80cea4a3eaf1c33940dd1014a67c33b97d70a5dfcd2ee6e9b083d985"
+    },
+    {
+      "path": "11_Registers/README.md",
+      "size": 718,
+      "sha256": "3a5a2a682dc5bd6b90aefdc086f81ee609844159157793ebdb95d8140ed4eddc"
+    },
+    {
+      "path": "11_Registers/REG-CHANGE-001_Change_Request_Register.csv",
+      "size": 90,
+      "sha256": "6cd0c8f61d9da144bac3db368edcdf9154a4fefe6eee97d20d3eab4b38337b39"
+    },
+    {
+      "path": "11_Registers/REG-LESSONS-001_Lessons_Learned_Register.csv",
+      "size": 77,
+      "sha256": "6a51bdb5ae9685fc04202715e320e6717fdef89d8c0d06765a154b9bd427dfcd"
+    },
+    {
+      "path": "11_Registers/REG-RISK-001_Risk_Register.csv",
+      "size": 80,
+      "sha256": "9a6581da96a6ab379acb6518c8f35caef75e9ecb0c198ffc03cd10c248296632"
+    },
+    {
+      "path": "11_Registers/REG-THIRD-PARTY-001_Third_Party_Service_Register.csv",
+      "size": 82,
+      "sha256": "39825533b630e22658396238096c0b445665da334fd61b3700201de3c29b302d"
+    },
+    {
+      "path": "11_Registers/TEST-AIRCON-001_Aircon_Test_Case_Register.md",
+      "size": 845,
+      "sha256": "aa1fe32e4cdf88ef440a514a7a2ba4d00885299e4ec91eec42d289b66b1e645d"
+    },
+    {
+      "path": "11_Registers/TEST-CORE-001_Core_Test_Case_Register.md",
+      "size": 820,
+      "sha256": "8038d2b43ee638fb87225b9b8dfb061905876a5744265bdff79d9355d8f4e2cd"
+    },
+    {
+      "path": "12_Projects/ACRA-RADAR_Project_Context.md",
+      "size": 934,
+      "sha256": "3aadcc0c9a084fdfb339e92a613621a3d12de188aac8d36c81ea2fd1daf65701"
+    },
+    {
+      "path": "12_Projects/AIRCON-OS_Project_Context.md",
+      "size": 1156,
+      "sha256": "6e8a8460c7052fc952b38e407d49481931d8ac2e8aeb7cf093bb10a1666b87ca"
+    },
+    {
+      "path": "12_Projects/MVP01/MVP01_CHANGE_CONTROL_LOG.md",
+      "size": 1381,
+      "sha256": "fc2b04d2a3ef5fef21717bb795666f589f7a5c76b9d425f3d3bd7cc3daffe7c8"
+    },
+    {
+      "path": "12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md",
+      "size": 5065,
+      "sha256": "535d9177869ec8d2d3ac6e6f9b8873bc696bb778a4bf88611325cfbfd117e12f"
+    },
+    {
+      "path": "12_Projects/MVP01/MVP01_PHASE_AND_ISSUE_BASELINE.md",
+      "size": 4665,
+      "sha256": "b2acb3221d3dbc1183f585192053393716843a57b4f7fcd3d4bf15d37e0576e1"
+    },
+    {
+      "path": "12_Projects/MVP01/MVP01_SCOPE_BASELINE.md",
+      "size": 2884,
+      "sha256": "45408b709844a33e215a36e0002236f3f787fffe6a761aaa6c6375fd7686bb07"
+    },
+    {
+      "path": "12_Projects/MVP01/README_MVP01.md",
+      "size": 2104,
+      "sha256": "7358723b30518a71f8501feb9daeaa0b188b5cf951013cb4caa91ffaf816fc7a"
+    },
+    {
+      "path": "12_Projects/OPTIMAKS-OS_Project_Context.md",
+      "size": 892,
+      "sha256": "9623d5414a28261cece395862a0a88a7858524239b5107c6db0b26687c7d985a"
+    },
+    {
+      "path": "12_Projects/README.md",
+      "size": 1160,
+      "sha256": "bdc34c16abf08257553631cc978b0bab239801195d3f836b98c64d9b3627d454"
+    },
+    {
+      "path": "12_Projects/_Templates/00_MVP_Dependency_Map_TEMPLATE.md",
+      "size": 1941,
+      "sha256": "16fac6b00488513103d866112854af0683d6a68c431666a00dbabf60cbfe7fd0"
+    },
+    {
+      "path": "13_Roadmap/MVP01_AIRCON_OS_L1_L5_FLOW_ARCHITECTURE_v1.7.5.md",
+      "size": 4650,
+      "sha256": "29f6a90045e9f31a0917477dfdb3e4a0b9f7bc4a1fbbf1c71d1dea629b558162"
+    },
+    {
+      "path": "13_Roadmap/MVP01_FLOW_INDEX_v1.7.3.md",
+      "size": 994,
+      "sha256": "4a40eb4a6b5cb097901c42217f24acec7190fc238ced5002da6f23754758545a"
+    },
+    {
+      "path": "13_Roadmap/MVP01_ISSUE_MAP_v1.7.3.md",
+      "size": 916,
+      "sha256": "5f4a606acdfdc7be722941666e7e1045190482c0c6ba6997463749d41da7e4af"
+    },
+    {
+      "path": "13_Roadmap/MVP01_STARTER_SCOPE_v1.7.3.md",
+      "size": 680,
+      "sha256": "e848f515b7be859ddabc181cbd74479256ed8df5c3b2ee3d986cd5d1f7a159ac"
+    },
+    {
+      "path": "13_Roadmap/ROADMAP-001_Constitution_Roadmap.md",
+      "size": 2096,
+      "sha256": "bafa4ef683addf7c1453b58e2cf95962ed1d6013e94e52edb9054622d12ed41d"
+    },
+    {
+      "path": "14_Archive/README.md",
+      "size": 195,
+      "sha256": "15457b99979964ee37cdf62852222f0cd2c730453d201287449ed5ab8ad1dac9"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/DOCUMENT_REVIEW_REPORT_v1.4.3.md",
+      "size": 6375,
+      "sha256": "1870c5ec359a6f70dbad3205e78ea0c752056d4f143f0d044238539a7143ccd1"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/FILE_TREE_v1.4.3.txt",
+      "size": 4693,
+      "sha256": "31b2ae26899468acb0fd5b7beb19337aa7f9385da81a279169e443e1831443b3"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/README_v1.4.3_UPDATE_INSTRUCTIONS.md",
+      "size": 1427,
+      "sha256": "312ce81b21c7b449c6ad78bc6cf73d71853c471d097aa475266b46bd4a7ca9c8"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/REFERENCE_FULL_SINGLE_FILE_v1.3.md",
+      "size": 25086,
+      "sha256": "5342587945be7165bc79b4186aef9b4d586a43ecac2f0e1c4970db6650e880ef"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/REFERENCE_FULL_SINGLE_FILE_v1.4.3.md",
+      "size": 50507,
+      "sha256": "56f9e5766aa9064b91af86823100f2065110a922761116fbeeead2de6d99320c"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/00_Admin/VERSION_DELTA_SUMMARY_v1.3_to_v1.4.3.md",
+      "size": 3278,
+      "sha256": "fa2c92d5ef8127afe8d744a679cb03e2299936d81b6a605dcc7e2dc8cb75aa7e"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/02_Development_Standard/STD-DEV-015_AI_Assisted_Semi_Automated_Development_Pipeline.md",
+      "size": 9687,
+      "sha256": "cd7908828f98346b8d38c02f614ab2c3edab956625a58d0ca401089d746632e1"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/02_Development_Standard/STD-DEV-016_MVP_Decomposition_and_Dependency_Rule.md",
+      "size": 9707,
+      "sha256": "228cae3c13a7a6585b4c17b2f6e06df3cbf0e242738242c92a60cb31770326c3"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/02_Development_Standard/STD-DEV-017_Small_Core_First_and_Layered_MVP_Execution_Rule.md",
+      "size": 4214,
+      "sha256": "c4436fec8b134bfe5a3cb9a000adb50086579ce973facc2465ec9e806ab741e3"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/02_Development_Standard/STD-DEV-018_UI_Backend_Parallel_Development_and_AI_Context_Control_Rule.md",
+      "size": 2970,
+      "sha256": "eb3165461b47d56ae442355aa7693ec098384c2b87b39bd507416e67a9e7dec8"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/02_Development_Standard/STD-DEV-019_Internal_MVP_vs_Client_Delivery_Version_Control_Rule.md",
+      "size": 2698,
+      "sha256": "cedb1855fed0d7700eedd0000025ff4ae14a169b9948b0f7efbce5457fa753fa"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/07_Templates/TPL-DEV-007_AI_Pipeline_Context_Package_Template.md",
+      "size": 1892,
+      "sha256": "9db1ee39d6b65be8b86d3865b34b09305584a244549933b5abba19dc48f4ed4c"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/07_Templates/TPL-DEV-008_MVP_Decomposition_Template.md",
+      "size": 2044,
+      "sha256": "5c2e3ced51c924ad59102b8bebc29277487b053671f109012fad58b88be77cd0"
+    },
+    {
+      "path": "14_Archive/v1.3_to_v1.4.3_Superseded/08_Checklists/CHK-DEV-007_Semi_Automated_Pipeline_Readiness_Checklist.md",
+      "size": 2610,
+      "sha256": "a39be93ad82905f8bab87ff521767b668a10e42365734b2fac5a80be34e12536"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/CHANGELOG.md",
+      "size": 1490,
+      "sha256": "c9ae2ac6c5f1ecf5f046bc39e22dd4e8ad837d8efe10e5ac8a3d661a491c3801"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/CLEANUP_FUSION_REPORT_v1.5.md",
+      "size": 3059,
+      "sha256": "e0c583b8b7ee46057d6c1ae52549e7a9fce21287b80eaae09bb2d3755745a134"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/COMMIT_SUMMARY_AND_DESCRIPTION_v1.5.8.md",
+      "size": 2755,
+      "sha256": "22efc8fc67bb9dabbebbfcfe86d420aa9d1cbf23d7e476aa1527ea328068e0de"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/DOCUMENT_REVIEW_REPORT_v1.4.3.md",
+      "size": 6375,
+      "sha256": "1870c5ec359a6f70dbad3205e78ea0c752056d4f143f0d044238539a7143ccd1"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/FILE_TREE_v1.4.3.txt",
+      "size": 4693,
+      "sha256": "31b2ae26899468acb0fd5b7beb19337aa7f9385da81a279169e443e1831443b3"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/FILE_TREE_v1.6.0.txt",
+      "size": 13205,
+      "sha256": "56e5211bbee5fc388d47f9c7c8221de9ad68bb8f9ded2c15186d6f3b88395573"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/FILE_TREE_v1.6.1.txt",
+      "size": 13803,
+      "sha256": "f12f094b8140edf44994d225ed1c52abfa570d49a75a63300a8ff4ed73fa9d70"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/GITHUB_DESKTOP_CLEANUP_GUIDE.md",
+      "size": 2642,
+      "sha256": "c68f694c9e1ab38bf420254a9fe16dd935f9eedf6fc75738b91f72e4add5c1e1"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/README_v1.4.3_UPDATE_INSTRUCTIONS.md",
+      "size": 1427,
+      "sha256": "312ce81b21c7b449c6ad78bc6cf73d71853c471d097aa475266b46bd4a7ca9c8"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/REFERENCE_FULL_SINGLE_FILE_v1.3.md",
+      "size": 25086,
+      "sha256": "5342587945be7165bc79b4186aef9b4d586a43ecac2f0e1c4970db6650e880ef"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/REFERENCE_FULL_SINGLE_FILE_v1.4.3.md",
+      "size": 50507,
+      "sha256": "56f9e5766aa9064b91af86823100f2065110a922761116fbeeead2de6d99320c"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.1_SCOPE_DECISION.md",
+      "size": 2945,
+      "sha256": "ce903f8c86b5c1e8a59ae4f05fbc0848635491477f7cae3dfbf0a0f08a543260"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.2_SCOPE_DECISION.md",
+      "size": 2271,
+      "sha256": "52adeb443f867736617bd43c13249cfa3fb32fd60c74f87d4452208327928262"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.3_SCOPE_DECISION.md",
+      "size": 3212,
+      "sha256": "64b6e7afd2294a24aaddbaa42333d2b1332889df4c57c4a367d5c1fdd890b142"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.4_SCOPE_DECISION.md",
+      "size": 2721,
+      "sha256": "6acb42e65c8a98a66b489e5d91a883b94da13f10695111e40e193bd4ebea0bb3"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.4_VALIDATION_REPORT.md",
+      "size": 510,
+      "sha256": "a7a984049c027e35ccadc3a13c166b50c0b421af6bab95827c2b05e266a2e290"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.5_SCOPE_DECISION.md",
+      "size": 2476,
+      "sha256": "06b8d559db1b8d0e8156bd4b66d2c1d14b49f121ac17e5049ec68360cd64904b"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.6_SCOPE_DECISION.md",
+      "size": 2578,
+      "sha256": "c704670afa8f95f7772e8606ec3bd77a7ceba74be1d62744394f5e87ac8febbb"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.7_SCOPE_DECISION.md",
+      "size": 1894,
+      "sha256": "e69fb853e4779be329f099873204fbf7ec833f6713ec69b2d0cf0cf1426afb41"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.8_SCOPE_DECISION.md",
+      "size": 5877,
+      "sha256": "3f4c0b504c9e34f7df4f44e73aa61209931935600e921b5d37502534eaa920d6"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.9_CONSOLIDATION_REPORT.md",
+      "size": 2047,
+      "sha256": "1b2a95ce3181420a16bebd65539d8602225993c4247dbce7f8e1ab374db284c6"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.5.9_SCOPE_DECISION.md",
+      "size": 2396,
+      "sha256": "de46996101b181e12fb8ff5c3532137ffc328f4a85918d4c72e3bd8e288bd511"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.6.0_CONSOLIDATION_REPORT.md",
+      "size": 2618,
+      "sha256": "5a711fe57c1b1629c9407c28661b4e34266639d4797b1b59921656c0b7f6e0db"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.6.0_SCOPE_DECISION.md",
+      "size": 3813,
+      "sha256": "77e91c7108d16c692b11fd17492472a5e59a47a16b27659acee72b9d2e0a5c08"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.6.1_CONSOLIDATION_REPORT.md",
+      "size": 1909,
+      "sha256": "ce3b69f24385eed81ce74a42e2a7855f316743763d98bfac1973449c3e60b509"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/V1.6.1_SCOPE_DECISION.md",
+      "size": 1085,
+      "sha256": "03ce23e4ff0746efd7a5070672f3cf7133e05ebc75339bb969c4a90072dd1a8f"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_admin_historical_files/VERSION_DELTA_SUMMARY_v1.3_to_v1.4.3.md",
+      "size": 3278,
+      "sha256": "fa2c92d5ef8127afe8d744a679cb03e2299936d81b6a605dcc7e2dc8cb75aa7e"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/GITHUB_MERGE_GUIDE_v1.5.9.md",
+      "size": 1350,
+      "sha256": "b2db2269e9dc97cda81223c646905cbc2332eab17494d28789e345bd4ff88018"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/constitution/ACTIVE_STANDARDS_INDEX.md",
+      "size": 4617,
+      "sha256": "04391fe59afa773420d1770f34428404879ff8fe13bb5c56a9c0fa353fa32f15"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/constitution/CURRENT_CONSTITUTION.md",
+      "size": 8379,
+      "sha256": "02720375bb8b6b2ba0cbb8e7c2ff6e7eabc1bcd2f84f7e6c50484b2a8793f8d2"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/governance/CONSTITUTION_CHANGE_CONTROL.md",
+      "size": 2158,
+      "sha256": "68a8feae4b2930a2d3c44a77063920a10b2647e3a0ca4468ccc5af33b0c85250"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/governance/CONSTITUTION_CHANGE_LEVEL_DECISION_RULE.md",
+      "size": 3838,
+      "sha256": "ee5e7f597bb27705159085e8bde603d46998225df55c1412b9790603da3c5aa5"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/governance/constitution-changes/CC-001_v1.5.9_consolidation.md",
+      "size": 1306,
+      "sha256": "e1bfd142d6479c2209f9a25092f42f854802e41029aebf2d13201be8658b9b6f"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/docs/ops/AI_ISSUE_EXECUTION_REPO_PLACEMENT_GUIDE.md",
+      "size": 1160,
+      "sha256": "74ae012359efc2ed56a79545a3ea5c73e99787579589b10f155e5308a2630431"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/qa/V159_AI_ISSUE_EXECUTION_QA_CHECKLIST.md",
+      "size": 740,
+      "sha256": "dca51c88a36546b3efb554a3b8e6263294765f8807ba2213ae398c816ba5eff8"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/templates/AI_ISSUE_EXECUTION_PROMPT_TEMPLATE.md",
+      "size": 2398,
+      "sha256": "057282944fa8065ee1be814fc334101b4cafc38ed37d747e640ba1082f571d91"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/templates/CONSTITUTION_CHANGE_RECORD_TEMPLATE.md",
+      "size": 931,
+      "sha256": "ee19d09de413e075f8a805e28c4b9c45d2a7696ce8b5400b95ac04f53e18abe1"
+    },
+    {
+      "path": "14_Archive/v1.7.4_clean_archived_legacy_paths/templates/ISSUE_DONE_REPORT_TEMPLATE.md",
+      "size": 1121,
+      "sha256": "00f1114a76f7c278272d6b2e5d64ea1d110eeba166db6c02868db8f1f46c1c2b"
+    },
+    {
+      "path": "15_Strategy/README.md",
+      "size": 1992,
+      "sha256": "145cde68407df9d76b481ac8985d96845fbaedd392a1f2e6902a44de899fa279"
+    },
+    {
+      "path": "15_Strategy/STR-001_MARKET_POSITIONING.md",
+      "size": 3363,
+      "sha256": "0c18745563a2c34542d16edfad6bfbeacb6a2a331669fb45dae7c13a42c346be"
+    },
+    {
+      "path": "15_Strategy/STR-002_COMPETITOR_REVIEW_SG_SME.md",
+      "size": 4509,
+      "sha256": "10cd116e51094eed7c38798072aa5e91c7302848048c2bf4cf6277f5790947fc"
+    },
+    {
+      "path": "15_Strategy/STR-003_PRICING_PACKAGES.md",
+      "size": 3127,
+      "sha256": "9ae1439f8ebd0e5cce9002211d9c65758143c6388b69cceb14cc711007bc1c11"
+    },
+    {
+      "path": "15_Strategy/STR-004_GTM_30_DAY_PLAN.md",
+      "size": 2531,
+      "sha256": "584f5a2399a6e6968ae7d96cd0a92940a2c3c1b5d363da1012012c3cc98f6467"
+    },
+    {
+      "path": "15_Strategy/STR-005_AI_MARKET_RESEARCH_STRATEGY_REVIEW_WORKFLOW.md",
+      "size": 2411,
+      "sha256": "bd385f493f15f9a9e99db5a026ad93385ee35e2d6292e66a26b1fa0127f3798f"
+    },
+    {
+      "path": "15_Strategy/STR-006_SWOT_ANALYSIS.md",
+      "size": 5722,
+      "sha256": "7d2327c1ab93752d1c06fe82f1afd6573b4032d30f8e50bac7751062e95f9960"
+    },
+    {
+      "path": "15_Strategy/STR-007_PORTER_FIVE_FORCES.md",
+      "size": 4927,
+      "sha256": "df3c0e1688c3dc9fa2167eb3e8bfd4dae6b9b941bd8dabae04ae0fb1465034c7"
+    },
+    {
+      "path": "15_Strategy/STR-008_LANCHESTER_STRATEGY.md",
+      "size": 5131,
+      "sha256": "b992ded8cd2d4fa298c56863ae6b109a72ee7ef9fe14dd4b6759b6e78df49155"
+    },
+    {
+      "path": "15_Strategy/STR-009_SHORT_VIDEO_VENDOR_STRATEGY.md",
+      "size": 5192,
+      "sha256": "9cfff9896545b6820744d84da3843c5ab74d08edcc090ea7036363fd4ef90e04"
+    },
+    {
+      "path": "16_Product_Strategy/PRD-001_SERVICE_OS_PRODUCT_SCOPE.md",
+      "size": 2130,
+      "sha256": "5638d1dd8fcdd14a8d7f418aafaebb66d5b4d90aca7e33ae052387bd1a09110d"
+    },
+    {
+      "path": "16_Product_Strategy/PRD-002_AIRCON_TEMPLATE_SCOPE.md",
+      "size": 1919,
+      "sha256": "c09918214bdc6c812b4d13a92e831d281d7d94d5563c1d9f629935edcad16841"
+    },
+    {
+      "path": "16_Product_Strategy/PRD-003_SHORT_VIDEO_LEAD_KIT_SCOPE.md",
+      "size": 5805,
+      "sha256": "0d3b7a89f2c890259bb71b93d47ef5c8e01a731d480faa51c1fae8ff93f82cd0"
+    },
+    {
+      "path": "16_Product_Strategy/PROD-005_Social_Media_Documentation_Boundary_and_Future_Module_Notes.md",
+      "size": 1126,
+      "sha256": "35f60e550c2d44916c520e2f12866673f0f0e06ef3f40b55ad862966b491c46b"
+    },
+    {
+      "path": "16_Product_Strategy/PROD-006_Product_Decision_Log.md",
+      "size": 850,
+      "sha256": "61bf91c9db85466a5b767a35c5bb8bd1aa910b8807c04f96da4feb5618fabafc"
+    },
+    {
+      "path": "16_Product_Strategy/README.md",
+      "size": 847,
+      "sha256": "0f50e13d0d559a1827c8c941892516e4f7a6a527940044e23b53451722b7ea76"
+    },
+    {
+      "path": "17_Sales_GTM/README.md",
+      "size": 765,
+      "sha256": "2d650077445f3ebe7d2e76463c51ea423948f93930a6ae5ead41271cc441bace"
+    },
+    {
+      "path": "17_Sales_GTM/SAL-001_COLD_OUTREACH_PLAYBOOK.md",
+      "size": 3683,
+      "sha256": "4ea37c0afad4865dda6ced10b803e4e2709587d6120123f6d1e48d9dc9170020"
+    },
+    {
+      "path": "17_Sales_GTM/SAL-002_DISCOVERY_QUESTIONS.md",
+      "size": 2003,
+      "sha256": "e67da315ba08d58f2365e35d2cc023112e18d5dbe346dbf688e9d2c13f456e64"
+    },
+    {
+      "path": "17_Sales_GTM/SAL-003_DEMO_SCRIPT.md",
+      "size": 2269,
+      "sha256": "f39675e5adf666bc286b33f36ebf40ec8084beaea875ee6b52435569a4554f86"
+    },
+    {
+      "path": "17_Sales_GTM/SAL-004_SHORT_VIDEO_ADDON_SALES_SCRIPT.md",
+      "size": 3624,
+      "sha256": "cbd75002da9f6698fbea34f8ff83b68b9e2e997fb6dfa4a72e001e7c98891bda"
+    },
+    {
+      "path": "18_Partner_Governance/PART-001_VIDEO_VENDOR_EVALUATION_MATRIX.md",
+      "size": 4348,
+      "sha256": "6cd48b59ab861e22b52842898c3f11385832ebbbe95c5ec4a65ee158f0277468"
+    },
+    {
+      "path": "18_Partner_Governance/PART-002_VIDEO_VENDOR_OUTREACH_TEMPLATE.md",
+      "size": 3938,
+      "sha256": "52b2564a12395ffbb8553224d0ffd60167ae952e896fa6c4277eae3677b63869"
+    },
+    {
+      "path": "18_Partner_Governance/README.md",
+      "size": 845,
+      "sha256": "d508362e163668f19e3b4d7b48210de1c89935642f114f862c3e1f86f1c61b49"
+    },
+    {
+      "path": "19_Preflight/PREP-000_Environment_and_Access_Preparation.md",
+      "size": 2568,
+      "sha256": "9a7ca32b2c040441fe9e3f85b0933048258e43368321ed250a299b3ce49b37b9"
+    },
+    {
+      "path": "19_Preflight/PREP_000_ENVIRONMENT_ACCESS_PREPARATION_TEMPLATE.md",
+      "size": 1686,
+      "sha256": "8ca502d15c1478c50bd022961a6fb6273e4f681c8460091af6e94e356db73c99"
+    },
+    {
+      "path": "20_Issues/PREP-000/PREP-000_ACCESS_CHECKLIST.md",
+      "size": 912,
+      "sha256": "b462f780607a67ea55d7d526524d4e4d9df64f10ce49ce4e5f2ab484827f60a9"
+    },
+    {
+      "path": "20_Issues/PREP-000/PREP-000_DONE.md",
+      "size": 1178,
+      "sha256": "3449f246945685ee7fd17cdf659c79696f7a81136713d238b2dfd9ce7af153bb"
+    },
+    {
+      "path": "20_Issues/PREP-000/PREP-000_ENV_CHECKLIST.md",
+      "size": 898,
+      "sha256": "0fd3026a6a43d7eeeceebe26ac7a58e12f8a3a1d31580e0e61c9467c6a239d65"
+    },
+    {
+      "path": "20_Issues/_TEMPLATE/ISSUE-XXX_DONE.md",
+      "size": 1505,
+      "sha256": "cfee9a6d89079dd5e4ced9fd45d54a643adea5947f3d20606bd231fb1db76d2e"
+    },
+    {
+      "path": "21_Patch_Notes/PATCH-v1.7.9.4-clean-logical-reference-fix.md",
+      "size": 1630,
+      "sha256": "6c586728eca4876d38a3cfff8345f4d8f97831378736540d566d8741c9b08952"
+    },
+    {
+      "path": "21_Patch_Notes/README_APPLY_ORDER.md",
+      "size": 477,
+      "sha256": "0fa70a455f128057a25832aefdabd69bdccd23414ddc764ad5be1a93580d785e"
+    },
+    {
+      "path": "21_Patch_Notes/README_v1.7.9.4_PROJECT_BASELINE_GOVERNANCE_APPLY_ORDER.md",
+      "size": 1993,
+      "sha256": "b2f2ffa19fe2e043513d58cb295ccf43879de89114e31c0ab8d22a98265c01cf"
+    },
+    {
+      "path": "22_Skills/OPTIMAKS_APPROVED_AGENCY_AGENT_MAP.md",
+      "size": 2402,
+      "sha256": "691739cc538780518f85441021a5d77e3c9edc72e9f3b712e64d7790cc8ed43c"
+    },
+    {
+      "path": "22_Skills/OPTIMAKS_SKILL_REGISTRY.md",
+      "size": 5291,
+      "sha256": "a139da5b716d7faf5150815bc99375ffb5017aeca938c2f038f0e91ffd03a9db"
+    },
+    {
+      "path": "22_Skills/README.md",
+      "size": 1553,
+      "sha256": "c424ee08a09eb3050fa25c79ee4d93c731afd7ca5f9d3c71bc7926380f74d833"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.gitattributes",
+      "size": 121,
+      "sha256": "d9ea08aefa78eba98874b32c9fb7cfce75aa4c264af23d29a6759cfb628b4a66"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.github/FUNDING.yml",
+      "size": 21,
+      "sha256": "2b837639535c88caaaeae8d2fa6c367ab7b17578146b04e5e77c255811b8711b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.github/ISSUE_TEMPLATE/bug-report.yml",
+      "size": 713,
+      "sha256": "e3eb8155f9c3de4dbfd6ce4a419eef76f67b67237ddd446ef5fea804d6958389"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.github/ISSUE_TEMPLATE/new-agent-request.yml",
+      "size": 1082,
+      "sha256": "3e0f5fb285d7f0f604b33c8f879252e9fe7e28b61fc24804fc1fcd5b37805385"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.github/PULL_REQUEST_TEMPLATE.md",
+      "size": 449,
+      "sha256": "4ca121e44adfa5ea1ed78076dc337fc097324ce91da2e282407d3de8e97cb029"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.github/workflows/lint-agents.yml",
+      "size": 1634,
+      "sha256": "41295917e8b1452045de143e6d2eab238ffc3ec5a339d11adc4d10c728d2c3ac"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/.gitignore",
+      "size": 1210,
+      "sha256": "04218d6453abf68017b26e92d8b2951094f6ae4fc5e7bfe55d11335f372ed239"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/CONTRIBUTING.md",
+      "size": 14305,
+      "sha256": "84f13b5a5e1d2d06de1e30f3d678c76be3aa1da714dc2d2c9f173e42a83df30b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/CONTRIBUTING_zh-CN.md",
+      "size": 9677,
+      "sha256": "e16fcef34292c79f0c3034f1bf399863cb821dbdd87be742653c6cfdfc93f937"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/LICENSE",
+      "size": 1079,
+      "sha256": "9a45258434d5cedf0af73c9ad4771373701225038d246c49219026c33677f66f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/README.md",
+      "size": 58258,
+      "sha256": "a6a4162937f9eabfb1f2eb0f41f9d9b86d71dce84ce24ed28455b6f9d8123dc8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/SECURITY.md",
+      "size": 1085,
+      "sha256": "39430fea66309d265516e4cbecc1f3f5a7b9ccf26c73ed2cddc70b4fee6cc12f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/academic/academic-anthropologist.md",
+      "size": 7878,
+      "sha256": "2668602164abf574cb4e432a0cd40727a943de0b59864abb5b73956a0eb26146"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/academic/academic-geographer.md",
+      "size": 7740,
+      "sha256": "4acf4a6ee6ae96ce562323c8ce508db9f2eb0ece016fc754214be9587c071c0d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/academic/academic-historian.md",
+      "size": 7272,
+      "sha256": "2c59c10dceec033d9e92990b6156553471b7b94dd8e0c64fe27148f612be8955"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/academic/academic-narratologist.md",
+      "size": 6797,
+      "sha256": "12d7a6fa6134c014e3734f8203f0b8634e627cffe5985fa1b69d25c4a69094b5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/academic/academic-psychologist.md",
+      "size": 7833,
+      "sha256": "193b7dba6d04346d15ee21753fd1cdb69dc1a21a5ac30d5d62726654820a5633"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-brand-guardian.md",
+      "size": 11641,
+      "sha256": "d1d5c78af85d4d35be94b93d5c011d17e3cf5dcb69b2037a3ebf3059803b893e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-image-prompt-engineer.md",
+      "size": 11160,
+      "sha256": "63a564d01dc5812c494cd8aa034ce1217031d8fe8b3eca1323316879769ff13f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-inclusive-visuals-specialist.md",
+      "size": 6799,
+      "sha256": "b1c535f1b18bc64865eee0b4a1b58d019e92762e5dd995e30417f63d86b95583"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-ui-designer.md",
+      "size": 13339,
+      "sha256": "3130768958d3b3d38178aaec91cf789e01ecca4984c8674d4aaea446b6cba240"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-ux-architect.md",
+      "size": 15758,
+      "sha256": "151f7386682b77a6c1455374d427237a3d46eadfa1248964466b0412848f7117"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-ux-researcher.md",
+      "size": 13030,
+      "sha256": "25f59c4333df2d0f1170ff7a1b11ea8415fd3d0ef80c3e0985209aeb4018680f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-visual-storyteller.md",
+      "size": 7416,
+      "sha256": "f4950c9d65b5d105ec48ebce4b7621154e3bf89871dbbf07af245476930eb4dd"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/design/design-whimsy-injector.md",
+      "size": 15851,
+      "sha256": "d517c959118a25ce8514c086603d5990f70a901832af8ac29fece80d9e445ff0"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-ai-data-remediation-engineer.md",
+      "size": 10691,
+      "sha256": "5aa193052f15283493eeb9749bc346d09c02407f26760fe0d08f8bd9242ede79"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-ai-engineer.md",
+      "size": 7383,
+      "sha256": "f25a69aad25acd35dd1d62e33d5a814f4a26b075d90f968b4d778452e53924d8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-autonomous-optimization-architect.md",
+      "size": 7953,
+      "sha256": "6904f627eff4a2035ecc245b3ee65f326b484083a08c3e284ad4106bdc57d2d8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-backend-architect.md",
+      "size": 9542,
+      "sha256": "15f9e1361f63a5551eb690bd31d82b5ba18c5797d8d038e66aebd87d6cce17e5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-cms-developer.md",
+      "size": 19520,
+      "sha256": "e072ac6e3d485483818880846b145c85b5224045a68c45dddc4e087940d57ba4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-code-reviewer.md",
+      "size": 3076,
+      "sha256": "7509fcc3ea1dda46511b2801996305bf3d4a125576f9655ff0b63df25602f446"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-codebase-onboarding-engineer.md",
+      "size": 9569,
+      "sha256": "07aa548b45887c3ad768efad5fdbf6e57bea639df4f1b74c7e383142f454e2a1"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-data-engineer.md",
+      "size": 14687,
+      "sha256": "d46e5ebdb81f5f3e7e0296fa8355583f13693e47cce0e1c8e834c6ff956e861a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-database-optimizer.md",
+      "size": 5533,
+      "sha256": "a58860b44590ed643ca02b6faf738b889c99bd889df78c695f519b5288ea018d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-devops-automator.md",
+      "size": 12879,
+      "sha256": "5d3c3d12c605a8c07fadfd109697249f98bc8e3d1901247c390641ef9fb013e8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-email-intelligence-engineer.md",
+      "size": 16550,
+      "sha256": "bef84b77b2ce3f2cbe29faa72ec0d58576bbcad390ee2c1bdcccaca38b4b125f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-embedded-firmware-engineer.md",
+      "size": 6562,
+      "sha256": "8453982bc1ae4b5c43244fd1b702279b5a7a00ecf6d471b9a75a7a01433e5327"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-feishu-integration-developer.md",
+      "size": 21127,
+      "sha256": "836667ab301da70a2da5d6241c44f2134fe059f839b4efeac7f6ceece632b76a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-filament-optimization-specialist.md",
+      "size": 14269,
+      "sha256": "428f6a6be2318a123678b2838600e33c5e193afecbe8f828fa97c779eaf85fbf"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-frontend-developer.md",
+      "size": 9283,
+      "sha256": "35961da50f408e00eb6189c87825ac5e62e6b1bf9de3dee198a95536c6d2619e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-git-workflow-master.md",
+      "size": 3342,
+      "sha256": "b2ab151fa5dc31035ba5f40f9b104f61cc8ef45dab8a8249ad15675141550d77"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-incident-response-commander.md",
+      "size": 21121,
+      "sha256": "1df5c8f558f99a8d3e6455cf6a6badbd1e0c2b2cccb02682843ee7ca11a13929"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-minimal-change-engineer.md",
+      "size": 11231,
+      "sha256": "9999cc74e7b3936af892ef2c2793d105bb92f6c47789aa23db6df92bf68b45e5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-mobile-app-builder.md",
+      "size": 17034,
+      "sha256": "5b6d3d6ba2db86095abb00f6e8a4961c776b88784effbf74e1a1b1ee52f1d7e9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-rapid-prototyper.md",
+      "size": 15492,
+      "sha256": "327598e2cee41b78866720e20ee76d84e674b4a95ed92773b40c942153cba88a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-security-engineer.md",
+      "size": 17731,
+      "sha256": "d6ce02769f3dbe732badc886e34531c8eb9393aa19b170651e256d482232c629"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-senior-developer.md",
+      "size": 6252,
+      "sha256": "63b8da6c12b95f54bbdbcd0666abeb9519a98b35395233e1b1d8e5c102c82599"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-software-architect.md",
+      "size": 3719,
+      "sha256": "08239f789f83fbd9b117fe78a34af1ad640af2851685caa9d40e00f9cbf31586"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-solidity-smart-contract-engineer.md",
+      "size": 21714,
+      "sha256": "1f68b7857b83c613324dd9685a7692b4427330f5680675b8781d8f66f088dc9b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-sre.md",
+      "size": 3882,
+      "sha256": "85b305e495506913f50c7cb28de42444a85fbc4898cd3ad4e1dc9b358b4ab5e8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-technical-writer.md",
+      "size": 14210,
+      "sha256": "70c8a29cddf7de486b41185693b4961af3fcccbc632b8df13ec43572859edc43"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-threat-detection-engineer.md",
+      "size": 24873,
+      "sha256": "83bfaabe485d51965ba6474de3eb6e00f67fd7f76e5b34ca1d3fb385a8fa3d97"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-voice-ai-integration-engineer.md",
+      "size": 27288,
+      "sha256": "de80469db772d96f3d6d55d3e040360e3a19b45197b2dbd446cb3fcd5a4645f6"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/engineering/engineering-wechat-mini-program-developer.md",
+      "size": 15566,
+      "sha256": "dcda22b2d93c1bbfb5d29a78bba031ad40552af54713d89c49ece2d70d08a02c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/README.md",
+      "size": 2402,
+      "sha256": "4337886744e068c62fe24795c60aed43e82f13c56526646445c48e02b3cab3f9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/nexus-spatial-discovery.md",
+      "size": 40664,
+      "sha256": "828bd93b1fbb2218e5eee049c618448be2e081cd46983e928dbecd7afcbcc2df"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/workflow-book-chapter.md",
+      "size": 2101,
+      "sha256": "a0382f06c7536579be480c737d56257c3247b55fbacfc6fdc219f870053a8f3f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/workflow-landing-page.md",
+      "size": 3389,
+      "sha256": "05942259ec3fa56d32dc882e27646c75d69bdd8cb8333212ac9589eaba729bac"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/workflow-startup-mvp.md",
+      "size": 4594,
+      "sha256": "e540cc1c11e16ea5726dbfe2122e8832e020b865f957fdeb44a2216ab5873308"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/examples/workflow-with-memory.md",
+      "size": 9090,
+      "sha256": "12d75f810271871ea4aec14feb3705ea51fb0bb2519ef1e651c68777475c2453"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/finance/finance-bookkeeper-controller.md",
+      "size": 15247,
+      "sha256": "5510a24274d8f7897ca3f4df2c3318262138a2c82827b37dd2489dcfca8de75a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/finance/finance-financial-analyst.md",
+      "size": 13448,
+      "sha256": "3547907cd52e6108a4c666fd576d5e42715ac337586a3958a722deee4c1f77bb"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/finance/finance-fpa-analyst.md",
+      "size": 16614,
+      "sha256": "5fa9137c80e0b91fbe62815e7981d7b6a2ca5bafe43013c56d1b847a3c963141"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/finance/finance-investment-researcher.md",
+      "size": 15678,
+      "sha256": "4851318dcd82fdfd68403656450761b439a01c6071b8755e49dbd215149bc2c1"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/finance/finance-tax-strategist.md",
+      "size": 13731,
+      "sha256": "37ea1a246e1290f473ef59abe1bba9ecc4f346c9867522fefcc11d37cd0265ab"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/blender/blender-addon-engineer.md",
+      "size": 10954,
+      "sha256": "f6bf42625647999d9ebc606c6e7c9c57a8c9a6d20c65a9e96918dbfbb063dcd9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/game-audio-engineer.md",
+      "size": 12298,
+      "sha256": "d7a2eebd8c20021e543222bc962cb5a111924c5438e9f771a6db42d74cd19232"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/game-designer.md",
+      "size": 8433,
+      "sha256": "203c4d7f0358a628ea21e3b9c16980f28003bd035b5cfd41a2daec04f6b84e5a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/godot/godot-gameplay-scripter.md",
+      "size": 15538,
+      "sha256": "0cce0fc75b3a7eeec7221f4a6ac0ff7876fb2468cdb8fab5931951c26f18d539"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/godot/godot-multiplayer-engineer.md",
+      "size": 13918,
+      "sha256": "d72e7798c03e6fa27b3b38147857c10c50a9b1b86ce4c3865f473ea5c860f137"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/godot/godot-shader-developer.md",
+      "size": 13392,
+      "sha256": "1362da1ba227aea6dadf5373455bdbb989f10f172731b47243cedc52db406415"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/level-designer.md",
+      "size": 10340,
+      "sha256": "79c1d41b7dfc477f6f364ba8b6dec02dc0c081235fe8f8b61c8b062b5dc3b344"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/narrative-designer.md",
+      "size": 13160,
+      "sha256": "7a5489c7b0502aa167030018137e3f349d2c32505c0ad7b9ec1de066a9a93f0d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/roblox-studio/roblox-avatar-creator.md",
+      "size": 14116,
+      "sha256": "6bdb5af6fe5c390da43f7bdcc4d73b6fbdef2a8b19bd6d30bf1fef6b4258f16a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/roblox-studio/roblox-experience-designer.md",
+      "size": 14863,
+      "sha256": "569f75a1b6448a30159d3ca7323eb590bc45e2355e3ee89a733d45a5d8986793"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/roblox-studio/roblox-systems-scripter.md",
+      "size": 15204,
+      "sha256": "6d7e11b07aba99eecc45a8b031c5b8618f96f36699a5e1d3409d05323d7feab6"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/technical-artist.md",
+      "size": 11220,
+      "sha256": "8a669de1fa3455c456092feefbf945d3b0ae18072b873d002d190b16ed1f678d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unity/unity-architect.md",
+      "size": 12244,
+      "sha256": "15502fbcd46fcd7559bcd85d15b512317ceed27ffb90fc54e79f3c32bf682c1a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unity/unity-editor-tool-developer.md",
+      "size": 14889,
+      "sha256": "8b368fe6ee0a4c0c71d10324cd8de4378c7bdaae9bc871a5561199b4a802b5dc"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unity/unity-multiplayer-engineer.md",
+      "size": 14947,
+      "sha256": "61561d24650216ef1907979e1b25e2f77e33537ad2694e8264a1fcdeeeed3a89"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unity/unity-shader-graph-artist.md",
+      "size": 13080,
+      "sha256": "3e2033f179a95da207627d1d7521395d434ac76c30a3b20f08f90a05b7405c52"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unreal-engine/unreal-multiplayer-architect.md",
+      "size": 14039,
+      "sha256": "666a4d07a6cfaf9d7fb2278dd8eb9de832599d4bb6f65743f305eb6a6546c044"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unreal-engine/unreal-systems-engineer.md",
+      "size": 15507,
+      "sha256": "ca34c6be64ee4f60f926a823bee626ab92dced93042a730f99f6fe08c4b7636f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unreal-engine/unreal-technical-artist.md",
+      "size": 11854,
+      "sha256": "54bdd46bc872ba21fbcf7e02492c9f5bef82a6d3a35ee3de757d3b678edd6b82"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/game-development/unreal-engine/unreal-world-builder.md",
+      "size": 14011,
+      "sha256": "7d2bf21ac77089b99f1fa36f6102fa938c9014c3107e9dcb9069b896e2b4001e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/README.md",
+      "size": 5852,
+      "sha256": "773438bdf196320e76a2f221748565d8e8b9786afb3e8bb9cd03409993273b0b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/aider/README.md",
+      "size": 691,
+      "sha256": "26dc041627fb39709bfe9b258cbfb248434af200793a5e971e70e009089f5f64"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/antigravity/README.md",
+      "size": 1009,
+      "sha256": "087ed2a8a90d6ab994ad4080238a55b950363b4f70a7bff3965bad94888ddebd"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/claude-code/README.md",
+      "size": 712,
+      "sha256": "b37cfa2648c93b32f737904f98c5babb060355f985bd166e0738b908f1d7e4d9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/cursor/README.md",
+      "size": 729,
+      "sha256": "c59a7e8a40a6b79d79b857a5b0c8e19a965087463bedcc06e5abe673e5cc41a4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/gemini-cli/README.md",
+      "size": 734,
+      "sha256": "9f54cd4d8b4ef54a552bbd7ab06f79f1f9b3fd92aeb5ae8c47c720829af1b9ac"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/github-copilot/README.md",
+      "size": 759,
+      "sha256": "81c59088b32258ba22ae553997f7b9e9c2d33268871ab914747ce5d1015ec7f4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/kimi/README.md",
+      "size": 2027,
+      "sha256": "01aebb21981f1b340fa26c56ffd71abb698c93d487cd1244443e250896b9c514"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/mcp-memory/README.md",
+      "size": 3760,
+      "sha256": "e3252682132b4aa6f95f17fb4888cf8722b8bd9c747af403e3d6651b1dd57cf4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/mcp-memory/backend-architect-with-memory.md",
+      "size": 10940,
+      "sha256": "961975de8bff54a089ddc9b86dd86e8f3ac1a9c37aff9c68aed0afd45bfb5eab"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/mcp-memory/setup.sh",
+      "size": 2227,
+      "sha256": "7fd9166f7410f3708486b26301166728befacde39fc561a492f3ce6e7c529928"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/openclaw/README.md",
+      "size": 697,
+      "sha256": "4a2a0d6fb6d2ec7a360d3e023ab5e333c3508e4a6d4312120e28eba1aef6d00a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/opencode/README.md",
+      "size": 1493,
+      "sha256": "e70b040b1296eb409f1c7d1da2303494640eafe23371f299ad4178b8cdb3bcf7"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/qwen/README.md",
+      "size": 957,
+      "sha256": "486a95c5a8a66d09627bcb762da090f9285e5a1cc1d2e0e11f314689bbbbfb0f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/integrations/windsurf/README.md",
+      "size": 510,
+      "sha256": "00d8863ed811f69fa50f12aa7db1253cea90507dcdd8f02485b70f84428c970a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-agentic-search-optimizer.md",
+      "size": 15674,
+      "sha256": "1fce74cb42bc8461d67111afc440550cf673212d4325879ad9e7c417a70c7299"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-ai-citation-strategist.md",
+      "size": 9380,
+      "sha256": "7cd2e456680669ece9f3b8c59a2c543d6c66f47ec957f773059fc4aba575d6a8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-app-store-optimizer.md",
+      "size": 13086,
+      "sha256": "ed7c05b3a3e0965c4b937a8a76310f30817cecb133cc9ceb772beee13068f2d5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-baidu-seo-specialist.md",
+      "size": 12968,
+      "sha256": "895a5e8440066ad0b8fa6fe79a91c7750d246a233b01bf7932584b74e9c5becb"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-bilibili-content-strategist.md",
+      "size": 11647,
+      "sha256": "4268a7b51025967fbb4a80c0aeb5e4a80abaad9344f5dec164a8d1fb6ea62d06"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-book-co-author.md",
+      "size": 5083,
+      "sha256": "09ea2fb4770180b072c92100be84b808367c40ef8a3f2119cfd059206aa4c717"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-carousel-growth-engine.md",
+      "size": 14840,
+      "sha256": "04ef895d1d9f1dd539d7d03403616b892609a9fb8a844496b36bbecf7f3e57c7"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-china-ecommerce-operator.md",
+      "size": 16791,
+      "sha256": "aa6743c68cce9dd00fd31751e9e3c2bea3987857cad332c68c7f68e683e98ba7"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-china-market-localization-strategist.md",
+      "size": 16913,
+      "sha256": "7f6351003b0d6525c7f44870078252d4616287953e33dcace3c8b7da2e9e4325"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-content-creator.md",
+      "size": 3129,
+      "sha256": "676c536de09bd37195d5761ab4806037116cb5a03ffd41be152736b359d99e35"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-cross-border-ecommerce.md",
+      "size": 17415,
+      "sha256": "073dba84e8159c763c073fcf16f14d57685611c50555a7cde346df85a25c6293"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-douyin-strategist.md",
+      "size": 6954,
+      "sha256": "87e3b91287fc97ad0dedb2f407a49d551b52b8513c8c61d06c1a93d837a7ae46"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-growth-hacker.md",
+      "size": 3044,
+      "sha256": "3b1157ed09dc0402e3c83f3ea218654b7dc4f9074a649f728e5c8bd48b25ea7e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-instagram-curator.md",
+      "size": 6563,
+      "sha256": "bab95910975a95409eca10e28c44cf762cd46f9d8b7d551bcb347ef0f39e68fd"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-kuaishou-strategist.md",
+      "size": 13889,
+      "sha256": "d28742e505fa7bf6b39a88ccb6c2052ee5b4f569d17cebb81401fa8810a5ad49"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-linkedin-content-creator.md",
+      "size": 13361,
+      "sha256": "344896bff33acf0b5107bbba3c84ee1fb310f3652b44c7e53553c934c735ed4f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-livestream-commerce-coach.md",
+      "size": 17166,
+      "sha256": "2d53e67cd70d825aeeddc9fd8b3b4a496887893b64df85c19903a2e7dbcb101f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-podcast-strategist.md",
+      "size": 18038,
+      "sha256": "37fb126529afb4aa6f4409ca02307330d26b01f695dfbaade017d569169d936b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-private-domain-operator.md",
+      "size": 16176,
+      "sha256": "7d8372b562324d4cca9765ee95dfc9e31b52287306e8a8e1dafdd1ded10744d4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-reddit-community-builder.md",
+      "size": 7498,
+      "sha256": "03bb723420800754bcbf23994cba707c45123f7eefe3e1964188cf92ecc2b7d7"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-seo-specialist.md",
+      "size": 17975,
+      "sha256": "b2aa467176bb3489f9098e0c79399f9de162aee17a54cb0d30ed2163024e661f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-short-video-editing-coach.md",
+      "size": 30779,
+      "sha256": "4634520ab5e84b26bb6658f4f8c0f737ed7dd0b5c631b9211482a4cf4037ccbf"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-social-media-strategist.md",
+      "size": 7414,
+      "sha256": "7c698a9280872666b2726b7ca305c6d4890fcb95a098c7c316beb9bf5fdb4274"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-tiktok-strategist.md",
+      "size": 7559,
+      "sha256": "980ca09138f63ec2d934e111af4fa59d76a483bb23220a5f862aa4e9f0c9124a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-twitter-engager.md",
+      "size": 7760,
+      "sha256": "df58c7df04fb808d282d7a551c84e039bebdf4a17318a09b84fa285a118f54ab"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-video-optimization-specialist.md",
+      "size": 6245,
+      "sha256": "9cf82969be8898c96192617becf5e38e8de6b79650c362d840c53d2c10f2e8b9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-wechat-official-account.md",
+      "size": 9832,
+      "sha256": "b74a42aff9b960cb2a221e362d2006865924ffece9e3514df81f1116322d2dce"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-weibo-strategist.md",
+      "size": 15697,
+      "sha256": "7a79f1ec3894ab2e32cb0b0b729b77fda176defaffdb59f4feae29e56a767917"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-xiaohongshu-specialist.md",
+      "size": 9609,
+      "sha256": "c0afe07b77d7795ff6c5ea928360f0e545d51a6df231d42d6282168ace027154"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/marketing/marketing-zhihu-strategist.md",
+      "size": 12006,
+      "sha256": "35f6fd759a67860f92d1ae5245bdf45f5eb524277453a28011899aeb450f5c4c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-auditor.md",
+      "size": 5546,
+      "sha256": "f69cc71d1485fa345d802c3fd6f36844c7bbf953dbc53997d194dd8fce51fb39"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-creative-strategist.md",
+      "size": 5151,
+      "sha256": "c87bda47c8316e3a0df32e950e974356b5e94884f5fd27930e4624a67b8654fb"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-paid-social-strategist.md",
+      "size": 5440,
+      "sha256": "b87c3877028835325d1c316b28f8d615a42c37bf315f0ddb8aaf379f69b9327c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-ppc-strategist.md",
+      "size": 4984,
+      "sha256": "832d7c5738e37c6415f1c71289c46925b2168cfe5736d564a093c0db564297b0"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-programmatic-buyer.md",
+      "size": 5271,
+      "sha256": "36c35a23457a63501be4ef8710cc360f7917db4e5ef71bd34c36101c96833113"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-search-query-analyst.md",
+      "size": 4930,
+      "sha256": "fb4ef9ea24d500ff10732fd723116953d935898e9ca93493902f2b402e3e43d1"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/paid-media/paid-media-tracking-specialist.md",
+      "size": 5315,
+      "sha256": "f31230e1e6d82128188c7cec35c3a2abd4639c2af3319ec4642fff1108cd6a9e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/product/product-behavioral-nudge-engine.md",
+      "size": 5335,
+      "sha256": "61f8a4a6a502ac0239c1a555d859051f0ecc83189f5f26048e2a448becf1c722"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/product/product-feedback-synthesizer.md",
+      "size": 7260,
+      "sha256": "7db6770a51c396a77a7535a068195e996aa0d0afba7e82b564278aaabdefafad"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/product/product-manager.md",
+      "size": 22687,
+      "sha256": "4a3fe4661e72e5173877bcba7c362392181774b20efc27ac1789171e98676c9d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/product/product-sprint-prioritizer.md",
+      "size": 9464,
+      "sha256": "da5233770ca85a3931b72d80b37dd09616a54fd24075c607667853acf65b000a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/product/product-trend-researcher.md",
+      "size": 10482,
+      "sha256": "4adef8e84b1a8a1c78602372faa0a66e131328216e2a2f91f75235cdbcbda85d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-management-experiment-tracker.md",
+      "size": 9455,
+      "sha256": "8f1410bfa054c8ac2eee3084b9bfdb3adb1e8a2f3e015c2876d0ecf07136c22f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-management-jira-workflow-steward.md",
+      "size": 13498,
+      "sha256": "e45c68423c1df0c20452916a5caafe7f41a97b56ca5af8872af966212ccbf389"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-management-project-shepherd.md",
+      "size": 9825,
+      "sha256": "0feb647366d78b61c1633b12e370ffb1dea52facb9d750ef6c952de1e996031c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-management-studio-operations.md",
+      "size": 9926,
+      "sha256": "8a2e5098d94688d191a128b6b2fdbbf3724bfcd2f4944766de6e25a0709f1517"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-management-studio-producer.md",
+      "size": 10905,
+      "sha256": "d942feab0f50ea7b8e98cb73bdaf05226d2a6c53c6359c7380149f7545bb199d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/project-management/project-manager-senior.md",
+      "size": 5308,
+      "sha256": "70fb27cab174c97375293311211d5563c5ac257fba274450d1ca9c05b540ef2d"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-account-strategist.md",
+      "size": 14844,
+      "sha256": "dd9b2c37c41827286ef91d64057a5b0ff4795c2e57bd44695436feeb5a3f0423"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-coach.md",
+      "size": 21009,
+      "sha256": "83f0be3daa7e78b24bfb41c7514d5f2936e9690c42ab7a0d8b5bc66a8b829f62"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-deal-strategist.md",
+      "size": 13698,
+      "sha256": "fdd92f2ced04ad842e25fd9ebcc341372ce2630d4ec152a29c53f7b8535b855e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-discovery-coach.md",
+      "size": 13591,
+      "sha256": "8244a25e5b8785058b19ef92dca9e543a2c990e4dde1166d194f14514e3ae278"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-engineer.md",
+      "size": 13948,
+      "sha256": "355014b3ecf52aaa1209a5d7b089e5e65c3aad7874eef513e60b6da79fec572e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-outbound-strategist.md",
+      "size": 10744,
+      "sha256": "4f6c8abf9c936fbe5f4b66fc8044096e3dd5199f8f8ae9d0309ad92bc0653174"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-pipeline-analyst.md",
+      "size": 18765,
+      "sha256": "d105ed717423298d754e58300566003ef464d79268183a43b5853cf67d11f61c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/sales/sales-proposal-strategist.md",
+      "size": 14295,
+      "sha256": "84c42e0ae7e11e6b239b7f921bdb0c33398102f94998c2eaa41114a3a46dc4c9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/convert.sh",
+      "size": 18283,
+      "sha256": "fdc87fc7dbe0e213d3765511e4ab9e8a738ccabfe66781932c862a317220aee5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/i18n/README.md",
+      "size": 1842,
+      "sha256": "fcf424cd7af5444f49f580995745b54be6ebd7cc6c85566877c41236026b7684"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/i18n/agent-names-zh.json",
+      "size": 22358,
+      "sha256": "1ff1ca27d8af247999f0f0c1590b15c54ab7114342765ed9181b393b5073a836"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/i18n/localize-agents-zh.ps1",
+      "size": 1617,
+      "sha256": "10f7956f4b2de59a11c0053b1aa580f26c8ceaf135f158aaf39cde23c051594c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/install.sh",
+      "size": 23880,
+      "sha256": "8e4f795be4aba1b049910b8326135de0d5ea3ae17b87e9e88b37bc8449d1ea22"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/scripts/lint-agents.sh",
+      "size": 4142,
+      "sha256": "27cd1223513bc71e64f3de62cc28e43c08e6ea565cf1676c3773d1f9087081c6"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/macos-spatial-metal-engineer.md",
+      "size": 12141,
+      "sha256": "b0bdd78da0cdbd1ee0055401ddaba4d7cb750e3107d219b6f12794c1a023e69f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/terminal-integration-specialist.md",
+      "size": 4110,
+      "sha256": "f6033fc95d538112f99a55adf305c403d79b8c1b5986e3c363ab5b3a50970306"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/visionos-spatial-engineer.md",
+      "size": 3400,
+      "sha256": "9cc9a9440cdeabdb54d2a6a1ba446120e1cf8d8157125117bd03504f6f6c45aa"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/xr-cockpit-interaction-specialist.md",
+      "size": 1795,
+      "sha256": "c8473bd555ad22da7d4978e94a3aec07ae9519b2080572b409639deb9a8e7110"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/xr-immersive-developer.md",
+      "size": 1847,
+      "sha256": "a9aa13187bfb774f3eb734ae9869ef249ec3290674f0bb3c1368b69bfa25a2b0"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/spatial-computing/xr-interface-architect.md",
+      "size": 1700,
+      "sha256": "995b459992ab42162269a3bc607131371206742df9c55a4ef614e0171f34e92b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/accounts-payable-agent.md",
+      "size": 6795,
+      "sha256": "3b943d48884c7ef13cdd6a354714be1a22bc2aae0b17ccbe6daffeb3744a90d2"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/agentic-identity-trust.md",
+      "size": 18398,
+      "sha256": "55de131a5c790dfb84edd9855d8fd2911d4d676d07f7f6c8e90d36705e73427b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/agents-orchestrator.md",
+      "size": 15725,
+      "sha256": "3f900ee286eba5a809388ecc22ad860c4a3ef9ed7ff25488e80eac18f3a0f317"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/automation-governance-architect.md",
+      "size": 5831,
+      "sha256": "8aab89104fec352f1f601ec5e6db11c9628d0b2072e6324484fd7e4c8462f55e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/blockchain-security-auditor.md",
+      "size": 21130,
+      "sha256": "b35bcd083889ccea487535e30c66bde83f0d06527ae4dd12acec32b285c5ec66"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/compliance-auditor.md",
+      "size": 7213,
+      "sha256": "ebb550ceef8011be23fe5a6fab0a7b3f77c2433f4d6aa22617a7eb87db97274f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/corporate-training-designer.md",
+      "size": 15673,
+      "sha256": "e70733229e87dde01bd404f502d2f5b491821f681d7230b314b18d98111b898c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/customer-service.md",
+      "size": 19184,
+      "sha256": "71d5b8ccd6fb6c5861230169a708ec5d8c0af628de44fc293ae256181573424f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/data-consolidation-agent.md",
+      "size": 2393,
+      "sha256": "7e7de097ff27e3aa2732a9f1ab0bd7acaaef73dabf53fc7be6c90c8ab6afab11"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/government-digital-presales-consultant.md",
+      "size": 22759,
+      "sha256": "0676fd83a462828901c64df516034b0912468c85abb751d3e484038d3288b848"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/healthcare-customer-service.md",
+      "size": 22100,
+      "sha256": "b2e4117a8b449a94409235f74315b52909716985dd94b82b87413a54ca471d73"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/healthcare-marketing-compliance.md",
+      "size": 35322,
+      "sha256": "942cc3b43da5f0e6103b7e5087941df4247c602228b2c4b0c6487140e89b176e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/hospitality-guest-services.md",
+      "size": 27773,
+      "sha256": "1c5819c560d3902eca44a4fb372bae9e882e5b9e8455e51aa3e8d9662a5d184a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/hr-onboarding.md",
+      "size": 23923,
+      "sha256": "28a52c26f27ab24d7fe11f5e48cfe712f6d27da142ec97911683b4a3ad92332c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/identity-graph-operator.md",
+      "size": 14122,
+      "sha256": "f37b705283147e3b92b76d61a3a60bdfe67bad9d6e364d11565329b8a107b3b4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/language-translator.md",
+      "size": 16086,
+      "sha256": "afd1e4b5fb1bb8fa9b8b5770774e0d7b003722681f664147ce7b9dddbcd52a4c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/legal-billing-time-tracking.md",
+      "size": 27280,
+      "sha256": "27f84055643150459f4de3102ba05c17696e5967a0efc64426fb600ab3c5d12c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/legal-client-intake.md",
+      "size": 25630,
+      "sha256": "b0b1cce8a30f08ada6d630b010b1af99f765f5eca667436af6592545667f4c79"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/legal-document-review.md",
+      "size": 24728,
+      "sha256": "02bf51dbc9d8ffc93a8b053a09ec61ee2a3a9905e395fbd24389a532d20d1dba"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/loan-officer-assistant.md",
+      "size": 28515,
+      "sha256": "3d6bfdb598187fb19fba6ab4b50ff357870cda04ea846aa975649d04788df84b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/lsp-index-engineer.md",
+      "size": 11197,
+      "sha256": "3f720a81cdcdaa63136b6fd7817f198d95a517ca1dfcfaa9ec81a5469a1cff95"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/real-estate-buyer-seller.md",
+      "size": 31124,
+      "sha256": "00e2f54e76be38c85c4eb406135a0944a3f610d287e6747fbfac37a12c82920a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/recruitment-specialist.md",
+      "size": 29401,
+      "sha256": "fa1349988c278d0ecf652d7e286b3cac6acd388e10ba2e7d92c59d448303ccf8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/report-distribution-agent.md",
+      "size": 2653,
+      "sha256": "f5796b3cb693123e6c59f7058c100fe817b744f819d3e281442964714f72bac5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/retail-customer-returns.md",
+      "size": 27700,
+      "sha256": "5cd60860a6ea57a95ec6d14246d6b0032e0e13ba0220ec4a79527fdc0ccd0f9c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/sales-data-extraction-agent.md",
+      "size": 2697,
+      "sha256": "202a6f04df452385fd1185a6bb23a0c9a47e624088eac14179bed4975f0b268a"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/sales-outreach.md",
+      "size": 20656,
+      "sha256": "84d4ca90d4bed4649904c8f239f8e13f373274c8bceb6fd7eb2479e6f9e28c90"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-chief-of-staff.md",
+      "size": 18190,
+      "sha256": "c0d053f19f32d369b6e9a4ded3a3b93efd792648b88b28f0ecd37a899b91b7b3"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-civil-engineer.md",
+      "size": 17068,
+      "sha256": "37c9c37511345799235dcb41a4bd92c5577614c392b9a1fa3a1afee112e5de3b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-cultural-intelligence-strategist.md",
+      "size": 6643,
+      "sha256": "91f1d2ef19bcf05f8d3b2758049d2dee909939a18ec2d086f192358179455abc"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-developer-advocate.md",
+      "size": 14829,
+      "sha256": "92617477989c99f57cda5d6d91ac5fea3a56db422a3f3825c4a438ad244079d3"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-document-generator.md",
+      "size": 2437,
+      "sha256": "cd2ca961e0f7baa18942aaaa315e333ea4315604bbb6a182d7daa31b76dfc3a3"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-french-consulting-market.md",
+      "size": 11156,
+      "sha256": "4ce5acf38babd2b02bb8172732aaff26f35cbc9167f9c087aaef8bae7db18709"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-korean-business-navigator.md",
+      "size": 14071,
+      "sha256": "71eb41ef3705fe155eee87d99e0ec7a52a237af442dd66e3421e225b76580f21"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-mcp-builder.md",
+      "size": 12062,
+      "sha256": "3880031674ae2458552ad3c4da99c122469e85351ed57969db7f6f767befd7cb"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-model-qa.md",
+      "size": 20143,
+      "sha256": "835a26b93003cfb8819201001dad37267971f5702320abcf1720f697e00cf4bd"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-salesforce-architect.md",
+      "size": 9904,
+      "sha256": "0c53f86382134c21d6dec8a9344b5b94cdefc62c87e07cb4bb13e293fc436a83"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/specialized-workflow-architect.md",
+      "size": 26488,
+      "sha256": "ab907eef380fdba85a5c352afc7f233dbd10ef9007253c34c61801b5183a36c5"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/study-abroad-advisor.md",
+      "size": 16984,
+      "sha256": "afd4b1033e76671b4d7a17a74329d7d81f491351004c77876a2615137140b84f"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/supply-chain-strategist.md",
+      "size": 32397,
+      "sha256": "4e3c93bcfefd72b958432d8dbe562c6ca5add80d39a5eec061a83e9e0fe984c3"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/specialized/zk-steward.md",
+      "size": 10890,
+      "sha256": "b52f6a6129d5cfdd74395a9ad85a97d166ed476e14e4744ad3f09b166c132483"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/EXECUTIVE-BRIEF.md",
+      "size": 5800,
+      "sha256": "628907121b4fa6306ddb12efc1259a679309cea90c8c97383909a81c60b94952"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/QUICKSTART.md",
+      "size": 8388,
+      "sha256": "8a1f9053e6e31a0628b4e002b0dc620f95c30dca79890d09b1e5acac76207af2"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/coordination/agent-activation-prompts.md",
+      "size": 13158,
+      "sha256": "9db4323a005d28d27ae16771892c2d4b2062fa151ce499f059bb262b82c9c1c3"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/coordination/handoff-templates.md",
+      "size": 10073,
+      "sha256": "297dff8ea47b35e02b5d53cefb31aa05e1d880a1440c4c90ef9dec6156b68931"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/nexus-strategy.md",
+      "size": 55287,
+      "sha256": "59d4b4ad9c69305f8610ad53b66737f33e53cfc83a0a8985e1192b51c46290b6"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-0-discovery.md",
+      "size": 6150,
+      "sha256": "0ae7d5cfc479e0d2818bf5a8559d59f90ee446b03d754b355594a1c0c62b294e"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-1-strategy.md",
+      "size": 8094,
+      "sha256": "8509ef04a669ec01752ebf8da5048ec538fd0c3c1e85029f83a2ea90d8888bdd"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-2-foundation.md",
+      "size": 8916,
+      "sha256": "16c02d3c0debc95732ac4b9a7187d02e832ba55683d9bd605395a958be0f5e94"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-3-build.md",
+      "size": 9641,
+      "sha256": "b9b2383e0c6e135d3bcd59a8ab995f234c420c6c04900fabff19e083a92468d2"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-4-hardening.md",
+      "size": 10546,
+      "sha256": "0db1b7dc62dccc30579f06e8f2b480f7b04fcd153fca7df43aa2470f46907386"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-5-launch.md",
+      "size": 8280,
+      "sha256": "afae11996e699041f9c094e9a07452c866ce12d959bb93a89526307617e7205b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/playbooks/phase-6-operate.md",
+      "size": 9802,
+      "sha256": "5681569052513c334bcb2219374776ea3f7c78eedfbde587b1a051372d0c476b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/runbooks/scenario-enterprise-feature.md",
+      "size": 6256,
+      "sha256": "40e20eac5c6eb54f4a5017b1f8d9f56bba44ae9afc82bfb2c678f971c7d5fb2b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/runbooks/scenario-incident-response.md",
+      "size": 6789,
+      "sha256": "b08fe23eddcc6f5038a4a8e33930f7d40d67b6916144076667eb6d50ce604fff"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/runbooks/scenario-marketing-campaign.md",
+      "size": 7072,
+      "sha256": "979c985e5cbb6a42aae2bfbd02494712fac75f8fceac5d7f9ca704b071ef7f57"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/strategy/runbooks/scenario-startup-mvp.md",
+      "size": 5631,
+      "sha256": "90eb81f4338453ce3064d33434967cf028f6a3a668fccb436c64424d1e00ff26"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-analytics-reporter.md",
+      "size": 15796,
+      "sha256": "8d4a4d0835f9ecb577d81dacbafcb96841b9b0d1f2af1f9273359502a14fcb5c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-executive-summary-generator.md",
+      "size": 8992,
+      "sha256": "298891fcf297de5d9b343e9ab9b63864317de63256b15c0c72e6cec172f8f0ff"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-finance-tracker.md",
+      "size": 19249,
+      "sha256": "73b83d0b0ec4ce53c0335f57473b0e1dcb3b46af22ecd58d9680465b9717b5d9"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-infrastructure-maintainer.md",
+      "size": 22365,
+      "sha256": "64d705a9e58f73868136d781f83ceaf12dfc1721cdb5bfb31b2c03441d69bf5c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-legal-compliance-checker.md",
+      "size": 26545,
+      "sha256": "0544f2219d52742f9ba436c193b34eb48c47cee8fcba38aef2b478dcb5e19284"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/support/support-support-responder.md",
+      "size": 24683,
+      "sha256": "4dcd962743e940d1cdd119dcc748d4a434b6b32775aa11ea68fbd2209ee0852c"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-accessibility-auditor.md",
+      "size": 15300,
+      "sha256": "982a14c0d0a9b30834ecd6e04811e4f900baf7950e18c68cc97142354cc803e7"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-api-tester.md",
+      "size": 12526,
+      "sha256": "7812267518ff10c81a642aeb2d9e755408d540ebacee3c9bfdfd6d34735eb5e1"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-evidence-collector.md",
+      "size": 8354,
+      "sha256": "d7e95b64033230aa07c386546d24fca68e4f606c47be1a7698cafc09d4ef5b12"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-performance-benchmarker.md",
+      "size": 12213,
+      "sha256": "db3cc9a462baa31ec8d1cde1e58c49f8adfb10b5bb581b10f96b4d802c7645ab"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-reality-checker.md",
+      "size": 9969,
+      "sha256": "748334839b21f5b2b1f746153f7e8921feaf676333191bcd9e45b8e6f75d322b"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-test-results-analyzer.md",
+      "size": 14602,
+      "sha256": "f080e1e8a5ddadc90dbcb845317afcf56e9889e0ed6568732605d37851cf21d8"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-tool-evaluator.md",
+      "size": 17542,
+      "sha256": "98e9a2b4491ffa1979d45ca5e1ddb9233fe35b98cc44c66c9d8a0b258ee9a2f4"
+    },
+    {
+      "path": "22_Skills/external/agency-agents-main/testing/testing-workflow-optimizer.md",
+      "size": 22050,
+      "sha256": "021ba71e2455071983ce1a6044783bec224b025b864757ce76b2bd4d40c00211"
+    },
+    {
+      "path": "99_Examples/CC-001_AI_Issue_Execution_Standard.md",
+      "size": 717,
+      "sha256": "7fe144fcf033c2b67390c12e5cfe171ed87ea17ac789b1b1052c1ea5e6ac5505"
+    },
+    {
+      "path": "99_Examples/CC-002_Constitution_Change_Control.md",
+      "size": 708,
+      "sha256": "0a0f4a7f633641d8b1440cfd59955fd70dcebe2b8203684a96e13a51ca4841bc"
+    },
+    {
+      "path": "AGENTS.md",
+      "size": 11654,
+      "sha256": "7a2cc248053f7d56faab3aee59fc4058b4d2d0e4e4820ba70d972108f49bf825"
+    },
+    {
+      "path": "CHANGELOG.md",
+      "size": 11051,
+      "sha256": "3796133791c2921126b72c87697f12cb615e99d5e76467c7c857b72d043bf85a"
+    },
+    {
+      "path": "GITHUB_UPLOAD_CHECKLIST.md",
+      "size": 2668,
+      "sha256": "22450b36c65dfff35f62df47f4a6cbb8045405c601717e5522292d6e1d634185"
+    },
+    {
+      "path": "README.md",
+      "size": 4155,
+      "sha256": "576968c68dbe2fa1bdb640e31c4bf7e5dee4cca046108c994acb71f6ac5ca5fe"
+    }
+  ]
+}

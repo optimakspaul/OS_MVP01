@@ -582,7 +582,7 @@ Every generated issue pack must include issue-to-issue traceability according to
 ```text
 STD-DEV-050_Issue_Linkage_and_Handoff_Standard.md
 TPL-DEV-039_Issue_Linkage_and_Handoff_Insert.md
-12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
 ```
 
 `ISSUE-XXX_Workpack.md` must include:

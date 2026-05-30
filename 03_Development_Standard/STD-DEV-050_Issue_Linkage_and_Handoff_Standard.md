@@ -43,8 +43,8 @@ Issue linkage must exist in four layers:
 2. ISSUE-XXX_DONE_Report.md
    → Handoff to Next Issue section
 
-3. 12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
-   → MVP-level issue dependency and status register
+3. 12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
+   → project-level issue dependency and status register
 
 4. GitHub Issue / PR / branch / commit message
    → External traceability and merge history
@@ -125,11 +125,17 @@ If the issue is not ready for the next issue, the next issue must not start unle
 
 ---
 
-## 6. MVP Issue Chain Register Requirement
+## 6. Project Issue Chain Register Requirement
 
-Each MVP must maintain an issue chain register.
+Each MVP / project must maintain an issue chain register.
 
-For MVP01, the required register is:
+The generic required register location is:
+
+```text
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
+```
+
+For MVP01, the active project instance is:
 
 ```text
 12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
@@ -244,7 +250,7 @@ A dependent issue may proceed after `PASS WITH WARNINGS` only if:
 
 ## 11. Harness Review Rule
 
-After 3–5 20_Issues, the `MVP01_ISSUE_CHAIN_REGISTER.md` should be used to support the Harness Review.
+After 3–5 `20_Issues/[PROJECT]/ISSUE-XXX-short-name/` executions, the relevant `[PROJECT]_ISSUE_CHAIN_REGISTER.md` should be used to support the Harness Review. For MVP01, use `MVP01_ISSUE_CHAIN_REGISTER.md`.
 
 Review should identify:
 
@@ -255,7 +261,7 @@ File boundary problems
 Validation gaps
 Tool routing mistakes
 Automation candidates related to STD-DEV-049
-Checklist updates for CHK-DEV-020
+Checklist updates for CHK-DEV-020_Harness_Review_Checklist.md
 ```
 
 ---

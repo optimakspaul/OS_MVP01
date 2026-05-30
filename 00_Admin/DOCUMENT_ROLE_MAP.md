@@ -29,7 +29,7 @@ AGENTS.md
 12_Projects/[PROJECT]/[PROJECT]_PHASE_AND_ISSUE_BASELINE.md
 12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
 12_Projects/[PROJECT]/[PROJECT]_CHANGE_CONTROL_LOG.md
-20_Issues/ISSUE-XXX/
+20_Issues/[PROJECT]/ISSUE-XXX-short-name/
 ```
 
 ---
@@ -107,7 +107,7 @@ Do not load these for normal MVP coding.
 
 ---
 
-## 6. Archive / Reference Context
+## 7. Archive / Reference Context
 
 Use only for historical review, diff, recovery, or explanation.
 
@@ -120,7 +120,7 @@ Use only for historical review, diff, recovery, or explanation.
 
 ---
 
-## 7. External Skill Context
+## 8. External Skill Context
 
 Use only when an issue explicitly selects or reviews external agency skills.
 
@@ -134,7 +134,7 @@ Do not load the full external agency library by default.
 
 ---
 
-## 8. Practical Rule
+## 9. Practical Rule
 
 ```text
 If the task is coding, load the smallest coding context.

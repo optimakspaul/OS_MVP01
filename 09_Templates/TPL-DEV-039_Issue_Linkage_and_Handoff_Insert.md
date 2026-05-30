@@ -72,7 +72,7 @@ Risks Carried Forward:
 Every issue should reference:
 
 ```text
-12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
 ```
 
 The register should be updated after issue review / merge.

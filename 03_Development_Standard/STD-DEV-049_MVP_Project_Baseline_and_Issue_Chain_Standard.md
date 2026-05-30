@@ -40,7 +40,7 @@ README_[PROJECT].md
 [PROJECT]_CHANGE_CONTROL_LOG.md
 ```
 
-Recommended folder structure:
+Recommended baseline folder structure:
 
 ```text
 12_Projects/
@@ -49,14 +49,20 @@ Recommended folder structure:
     ├── [PROJECT]_SCOPE_BASELINE.md
     ├── [PROJECT]_PHASE_AND_ISSUE_BASELINE.md
     ├── [PROJECT]_ISSUE_CHAIN_REGISTER.md
-    ├── [PROJECT]_CHANGE_CONTROL_LOG.md
-    └── issues/
-        ├── ISSUE-000/
-        ├── ISSUE-001/
-        └── ...
+    └── [PROJECT]_CHANGE_CONTROL_LOG.md
 ```
 
-If the repository uses a different project folder number, the same rule applies under the active project folder.
+Recommended issue execution record structure:
+
+```text
+20_Issues/
+└── [PROJECT]/
+    ├── ISSUE-000-short-name/
+    ├── ISSUE-001-short-name/
+    └── ...
+```
+
+`12_Projects/[PROJECT]/` stores the project baseline contract. `20_Issues/[PROJECT]/ISSUE-XXX-short-name/` stores actual issue execution records, workpacks, prompts, DONE reports, and handoff evidence.
 
 ---
 

@@ -3,7 +3,7 @@
 **Current Active Constitution Version:** `v1.7.9.4-project-baseline-governance`
 **Release Name:** Project Baseline Governance Patch  
 **Status:** Active  
-**Effective Date:** 2026-05-28  
+**Effective Date:** 2026-05-30  
 **Canonical Source:** `01_Constitution/CURRENT_CONSTITUTION.md`  
 **AI Agent Entrypoint:** `AGENTS.md`  
 **Supersedes Active Baseline:** v1.7.9.3-agency-skill-registry  
@@ -92,13 +92,19 @@ Risks Carried Forward
 Issue Chain Register updated?
 ```
 
-The actual MVP issue dependency map must be maintained in:
+The actual project issue dependency map must be maintained in:
+
+```text
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
+```
+
+For MVP01, the active project instance is:
 
 ```text
 12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
 ```
 
-This patch does not change product scope. It strengthens traceability and prevents 20_Issues from becoming isolated work units.
+This patch does not change product scope. It strengthens traceability and prevents `20_Issues/[PROJECT]/ISSUE-XXX-short-name/` records from becoming isolated work units.
 
 ## v1.7.9 AI Harness Execution Principle
 
@@ -705,7 +711,13 @@ Next Issue Handoff
 Risks Carried Forward
 ```
 
-MVP01 must maintain a project-level issue chain register:
+Every active project must maintain a project-level issue chain register:
+
+```text
+12_Projects/[PROJECT]/[PROJECT]_ISSUE_CHAIN_REGISTER.md
+```
+
+For MVP01, the active project instance is:
 
 ```text
 12_Projects/MVP01/MVP01_ISSUE_CHAIN_REGISTER.md
