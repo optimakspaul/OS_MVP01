@@ -48,7 +48,7 @@ PR / Branch / Commit
 | Issue | Phase | Name | Depends On | Required Previous Outputs | Output For Next Issue | Status | Branch / PR / Commit | Notes |
 |---|---|---|---|---|---|---|---|---|
 | ISSUE-000 | Phase 0 | Repository and Constitution Context Verification | None | None | Unlocks ISSUE-001 after ISSUE-001 workpack is created and approved | PASS WITH WARNINGS | `feature/issue-000-repo-constitution-verification` | Founder Acceptance: Accepted. Metadata cleanup and issue-record path normalization remain follow-up governance cleanup items. |
-| ISSUE-001 | Phase 1 | Core Workspace and Tenant Foundation | ISSUE-000 | ISSUE-000_DONE_Report; verification result | Workspace / tenant model notes | Pending |  |  |
+| ISSUE-001 | Phase 1 | Core Workspace and Tenant Foundation | ISSUE-000 | ISSUE-000_DONE_Report; verification result | ISSUE-001_DONE_Report; ISSUE-001_Foundation_Assessment; ISSUE-001_Workspace_Tenant_Model. Unlocks ISSUE-002 after founder acceptance and ISSUE-002 workpack approval. | PASS WITH WARNINGS | `feature/issue-001-core-workspace-tenant-foundation` | Founder review pending. Workspace is the MVP01 tenant boundary; metadata cleanup and issue-record path normalization remain non-blocking follow-up items. |
 | ISSUE-002 | Phase 1 | Supabase Client and Environment Foundation | ISSUE-001 | ISSUE-001_DONE_Report; foundation assessment; workspace tenant model | Supabase setup notes | Pending |  |  |
 | ISSUE-003 | Phase 1 | Next.js App Foundation | ISSUE-002 | ISSUE-002_DONE_Report; Supabase setup notes | App shell / route foundation | Pending |  |  |
 | ISSUE-004 | Phase 2 | Supabase P0 Tables | ISSUE-003 | ISSUE-003_DONE_Report; app foundation notes | DB table foundation | Pending |  |  |
