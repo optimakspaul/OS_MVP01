@@ -56,7 +56,7 @@ PR / Branch / Commit
 | ISSUE-006 | Phase 1 | Auth / Profiles | ISSUE-005 | ISSUE-005_DONE_Report; index / trigger notes | ISSUE-006_DONE_Report; ISSUE-006_Profile_Model_Notes; ISSUE-006_Auth_Boundary_Notes; `supabase/migrations/0003_create_auth_profiles.sql`. Unlocks CHECKPOINT-001 and ISSUE-007 architecture alignment after founder acceptance. | PASS WITH WARNINGS | `feature/issue-006-auth-and-profiles` | Founder Acceptance: Accepted. Profile provisioning and workspace membership remain deferred. Supabase CLI unavailable; SQL validation was static only. |
 | CHECKPOINT-001 | Gate | ISSUE-000 to ISSUE-006 Foundation Review | ISSUE-006 | ISSUE-000 through ISSUE-006 accepted outputs | CHECKPOINT-001_Findings_Report; CHECKPOINT-001_Risk_Register; CHECKPOINT-001_Go_No_Go_Decision. Unlocks ISSUE-007 after founder acceptance and ISSUE-007 workpack approval. | GO WITH WARNINGS | `checkpoint/checkpoint-001-issue-000-to-006-review` | Founder Acceptance: Accepted. Non-blocking warnings accepted for architecture alignment. |
 | ISSUE-007 | Phase 0 | Architecture Alignment | CHECKPOINT-001 | CHECKPOINT-001_Go_No_Go_Decision; CHECKPOINT-001_Findings_Report; ISSUE-007_Source_Alignment_Reference | ISSUE-007_DONE_Report; ISSUE-007_Architecture_Alignment_Notes; ISSUE-007_Phase_Issue_Alignment_Notes; ISSUE-007_Flow_Alignment_Notes; ISSUE-007_Reserved_Boundary_Notes; updated MVP01 baseline docs. Unlocks ISSUE-008 after founder acceptance and ISSUE-008 workpack approval. | PASS WITH WARNINGS | `feature/issue-007-architecture-alignment` | Founder Acceptance: Accepted. ISSUE-007 is Architecture Alignment, not RLS. Legacy path residue and stale historical handoff wording remain non-blocking cleanup items. |
-| ISSUE-008 | Phase 2 | Module Library Foundation | ISSUE-007 | ISSUE-007_DONE_Report; architecture, phase/issue, flow, and reserved-boundary notes; updated baseline docs | MVP01_MODULE_LIBRARY_MATRIX; ISSUE-008_DONE_Report; ISSUE-008_Module_Library_Notes; ISSUE-008_Plan_Depth_Matrix_Notes; ISSUE-008_Included_Reserved_Rules; ISSUE-008_Handoff_to_Industry_Template. Unlocks ISSUE-009 after founder acceptance and ISSUE-009 workpack approval. | PASS WITH WARNINGS | `feature/issue-008-module-library-foundation` | Founder review pending. Module library is documentation-only; plan depth is not RLS or data isolation. Legacy path residue and stale historical handoff wording remain non-blocking cleanup items. |
+| ISSUE-008 | Phase 2 | Module Library Foundation | ISSUE-007 | ISSUE-007_DONE_Report; architecture, phase/issue, flow, and reserved-boundary notes; updated baseline docs | MVP01_MODULE_LIBRARY_MATRIX; ISSUE-008_DONE_Report; ISSUE-008_Module_Library_Notes; ISSUE-008_Plan_Depth_Matrix_Notes; ISSUE-008_Included_Reserved_Rules; ISSUE-008_Handoff_to_Industry_Template. Unlocks ISSUE-009 after founder acceptance and ISSUE-009 workpack approval. | PASS WITH WARNINGS | `feature/issue-008-module-library-foundation` | Founder Acceptance: Accepted. Module library is documentation-only; plan depth is not RLS or data isolation. Legacy path residue and stale historical handoff wording remain non-blocking cleanup items. |
 | ISSUE-009 | Phase 2 | Industry Template Foundation | ISSUE-008 | ISSUE-008_DONE_Report; module library notes | Primary industry template foundation; future multi-industry placeholders | Pending |  |  |
 | ISSUE-010 | Phase 3 | End Customer Interface Basic | ISSUE-009 | ISSUE-009_DONE_Report; industry template notes | Intent page; request form; WhatsApp/social CTA boundary | Pending |  |  |
 | ISSUE-011 | Phase 3 | Client Workspace Basic | ISSUE-010 | ISSUE-010_DONE_Report; end customer interface notes | Client dashboard; navigation; workspace entry | Pending |  |  |
@@ -97,7 +97,7 @@ PR / Branch / Commit
 | DEC-MVP01-007 | ISSUE-006 | Founder accepted ISSUE-006 as PASS WITH WARNINGS. | CHECKPOINT-001 / ISSUE-007 | CHECKPOINT-001 completed and was accepted as GO WITH WARNINGS. |
 | DEC-MVP01-008 | CHECKPOINT-001 | Founder accepted CHECKPOINT-001 as GO WITH WARNINGS. | ISSUE-007 | ISSUE-007 architecture alignment unlocked after workpack approval. |
 | DEC-MVP01-009 | ISSUE-007 | ISSUE-007 corrects architecture drift and aligns MVP01 to Starter Complete + Optimaks OS Basic. | ISSUE-008 onward | Recorded by CR-MVP01-002; founder review pending. |
-| DEC-MVP01-010 | ISSUE-008 | ISSUE-008 establishes the module library and plan-depth matrix as documentation-only baseline guidance. | ISSUE-009 onward | Recorded by CR-MVP01-003; founder review pending. |
+| DEC-MVP01-010 | ISSUE-008 | ISSUE-008 establishes the module library and plan-depth matrix as documentation-only baseline guidance. | ISSUE-009 onward | Recorded by CR-MVP01-003; founder accepted. |
 
 ---
 
@@ -106,8 +106,8 @@ PR / Branch / Commit
 ```text
 Latest completed issue: ISSUE-008 - Module Library Foundation
 Latest execution status: PASS WITH WARNINGS
-Founder Acceptance: Pending
-Next issue allowed to start? No. ISSUE-009 requires ISSUE-008 founder acceptance and ISSUE-009 workpack approval on its own branch.
+Founder Acceptance: Accepted
+Next issue allowed to start? Yes with warnings. ISSUE-009 requires ISSUE-009 workpack approval and execution on its own branch.
 Warnings carried forward:
 1. Legacy path residue remains outside normalized MVP01 records.
 2. Older DONE report handoff sections contain stale pre-acceptance wording.
