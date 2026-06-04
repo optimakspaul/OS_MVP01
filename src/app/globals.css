@@ -332,6 +332,13 @@ p {
   line-height: 1.6;
 }
 
+.workspace-notice.compact {
+  width: 100%;
+  margin: 0;
+  padding: 1rem;
+  box-shadow: none;
+}
+
 .workspace-section {
   display: grid;
   gap: 1.25rem;
@@ -353,7 +360,9 @@ p {
 .request-board,
 .workspace-grid,
 .report-grid,
-.action-list {
+.action-list,
+.lead-customer-grid,
+.lead-inbox {
   display: grid;
   gap: 1rem;
 }
@@ -362,7 +371,11 @@ p {
 .request-card,
 .workspace-panel,
 .report-card,
-.action {
+.action,
+.lead-card,
+.lead-detail-panel,
+.customer-profile-card,
+.manual-checklist-card {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -371,7 +384,10 @@ p {
 .workflow-card,
 .request-card,
 .workspace-panel,
-.report-card {
+.report-card,
+.lead-detail-panel,
+.customer-profile-card,
+.manual-checklist-card {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -436,14 +452,16 @@ p {
   margin: 0;
 }
 
-.request-card dt {
+.request-card dt,
+.lead-detail-list dt {
   color: #526079;
   font-size: 0.75rem;
   font-weight: 800;
   text-transform: uppercase;
 }
 
-.request-card dd {
+.request-card dd,
+.lead-detail-list dd {
   margin: 0.15rem 0 0;
   color: #172033;
   font-weight: 700;
@@ -471,6 +489,66 @@ p {
   white-space: nowrap;
 }
 
+.lead-card {
+  display: grid;
+  gap: 0.35rem;
+  color: #172033;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: left;
+}
+
+.lead-card:hover,
+.lead-card.selected {
+  border-color: #315bb5;
+  box-shadow: 0 0 0 3px rgb(49 91 181 / 12%);
+}
+
+.lead-card span {
+  color: #526079;
+}
+
+.lead-meta {
+  width: fit-content;
+  border-radius: 999px;
+  background: #e8f0ff;
+  color: #315bb5 !important;
+  font-size: 0.78rem;
+  font-weight: 800;
+  padding: 0.25rem 0.6rem;
+}
+
+.lead-detail-list {
+  display: grid;
+  gap: 0.7rem;
+  margin: 0;
+}
+
+.primary-action {
+  width: fit-content;
+  border: 0;
+  border-radius: 999px;
+  background: #0b5e55;
+  color: #ffffff;
+  cursor: pointer;
+  font-weight: 800;
+  padding: 0.85rem 1.1rem;
+}
+
+.primary-action:hover {
+  background: #084b44;
+}
+
+.empty-state {
+  border: 1px dashed #c8d1e2;
+  border-radius: 1rem;
+  padding: 1rem;
+}
+
+.compact-list {
+  gap: 0.65rem;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -495,7 +573,8 @@ p {
   .workflow-grid,
   .request-board,
   .workspace-grid,
-  .report-grid {
+  .report-grid,
+  .lead-customer-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

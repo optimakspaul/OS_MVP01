@@ -21,6 +21,25 @@ type DemoRequest = {
   nextStep: string;
 };
 
+type LeadStatus = "New" | "Contacted" | "Qualified" | "Converted";
+
+type LeadFilter = "All" | LeadStatus;
+
+type DemoLead = {
+  id: string;
+  customerName: string;
+  phone: string;
+  serviceAddress: string;
+  serviceIssue: string;
+  serviceContext: string;
+  status: LeadStatus;
+  source: string;
+  preferredTiming: string;
+  customerType: string;
+  customerSummary: string;
+  nextQuoteStep: string;
+};
+
 const workflowStages = [
   {
     label: "Lead",
@@ -121,9 +140,72 @@ const reportSnapshot = [
   { label: "Follow-ups due", value: "2" },
 ];
 
+const leadFilters: LeadFilter[] = [
+  "All",
+  "New",
+  "Contacted",
+  "Qualified",
+  "Converted",
+];
+
+const demoLeads: DemoLead[] = [
+  {
+    id: "LEAD-1001",
+    customerName: "Tampines HDB customer",
+    phone: "+65 9123 4567",
+    serviceAddress: "Tampines Street 21, HDB block",
+    serviceIssue: "Aircon not cold",
+    serviceContext:
+      "Bedroom unit is blowing warm air. Customer can share photos and unit count before estimate.",
+    status: "New",
+    source: "/end-customer request preview",
+    preferredTiming: "Today",
+    customerType: "New customer",
+    customerSummary:
+      "Potential new customer with urgent cooling issue and clear contact details.",
+    nextQuoteStep: "Prepare a manual estimate after confirming unit count.",
+  },
+  {
+    id: "LEAD-1002",
+    customerName: "Bukit Batok condo owner",
+    phone: "+65 9234 5678",
+    serviceAddress: "Bukit Batok condo, tower B",
+    serviceIssue: "Water leaking",
+    serviceContext:
+      "Customer reports dripping near the living room unit after overnight use.",
+    status: "Contacted",
+    source: "Manual WhatsApp follow-up",
+    preferredTiming: "Tomorrow",
+    customerType: "New customer",
+    customerSummary:
+      "Contacted customer who needs a leak check before any quote estimate.",
+    nextQuoteStep: "Ask for photos and access details before estimate guidance.",
+  },
+  {
+    id: "LEAD-1003",
+    customerName: "Hougang repeat customer",
+    phone: "+65 9345 6789",
+    serviceAddress: "Hougang Avenue 8",
+    serviceIssue: "General servicing",
+    serviceContext:
+      "Repeat customer wants recurring servicing for two wall-mounted units.",
+    status: "Qualified",
+    source: "Returning customer message",
+    preferredTiming: "This week",
+    customerType: "Repeat customer",
+    customerSummary:
+      "Qualified repeat customer with known service context and basic reminder potential.",
+    nextQuoteStep: "Prepare simple estimate for two-unit servicing.",
+  },
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
+  const [activeLeadFilter, setActiveLeadFilter] = useState<LeadFilter>("All");
+  const [selectedLeadId, setSelectedLeadId] = useState(demoLeads[0].id);
+  const [convertedLeadIds, setConvertedLeadIds] = useState<string[]>([]);
+  const [leadChecklist, setLeadChecklist] = useState<string[]>([]);
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -133,11 +215,51 @@ export default function WorkspacePage() {
     return demoRequests.filter((request) => request.stage === activeStage);
   }, [activeStage]);
 
+  const visibleLeads = useMemo(() => {
+    if (activeLeadFilter === "All") {
+      return demoLeads;
+    }
+
+    return demoLeads.filter((lead) => {
+      if (activeLeadFilter === "Converted") {
+        return convertedLeadIds.includes(lead.id);
+      }
+
+      return lead.status === activeLeadFilter;
+    });
+  }, [activeLeadFilter, convertedLeadIds]);
+
+  const selectedLead =
+    demoLeads.find((lead) => lead.id === selectedLeadId) ?? demoLeads[0];
+
+  const selectedLeadConverted = convertedLeadIds.includes(selectedLead.id);
+
+  const leadManualActions = [
+    `Review ${selectedLead.id} request context`,
+    `Contact ${selectedLead.customerName} manually`,
+    "Confirm service address and access notes",
+    "Mark lead as qualified for quote estimate",
+  ];
+
   function toggleAction(action: string) {
     setCompletedActions((current) =>
       current.includes(action)
         ? current.filter((item) => item !== action)
         : [...current, action],
+    );
+  }
+
+  function toggleLeadChecklist(action: string) {
+    setLeadChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function previewConvertToCustomer() {
+    setConvertedLeadIds((current) =>
+      current.includes(selectedLead.id) ? current : [...current, selectedLead.id],
     );
   }
 
@@ -241,6 +363,177 @@ export default function WorkspacePage() {
               <p className="next-step">{request.nextStep}</p>
             </article>
           ))}
+        </div>
+      </section>
+
+      <section
+        className="workspace-section"
+        aria-labelledby="lead-customer-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">Lead / customer flow</p>
+          <h2 id="lead-customer-title">
+            Review lead, qualify manually, preview customer profile
+          </h2>
+          <p>
+            ISSUE-012 adds the first detailed Starter operation flow inside the
+            workspace. It uses static demo leads and local browser state only.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Lead / Customer demo boundary</strong>
+          <span>
+            The convert-to-customer action is a local preview. It does not save
+            leads, create customers, submit an API request, run a server action,
+            write to Supabase, or start quote implementation.
+          </span>
+        </div>
+
+        <div className="stage-filter" aria-label="Filter lead inbox">
+          {leadFilters.map((status) => (
+            <button
+              type="button"
+              className={activeLeadFilter === status ? "active" : ""}
+              key={status}
+              onClick={() => setActiveLeadFilter(status)}
+            >
+              {status}
+            </button>
+          ))}
+        </div>
+
+        <div className="lead-customer-grid">
+          <div className="lead-inbox" aria-live="polite">
+            <p className="step-label">Lead inbox / request list</p>
+            {visibleLeads.length > 0 ? (
+              visibleLeads.map((lead) => {
+                const isSelected = lead.id === selectedLead.id;
+                const isConverted = convertedLeadIds.includes(lead.id);
+
+                return (
+                  <button
+                    type="button"
+                    className={isSelected ? "lead-card selected" : "lead-card"}
+                    key={lead.id}
+                    onClick={() => setSelectedLeadId(lead.id)}
+                  >
+                    <span className="request-id">{lead.id}</span>
+                    <strong>{lead.customerName}</strong>
+                    <span>{lead.serviceIssue}</span>
+                    <span className="lead-meta">
+                      {isConverted ? "Converted preview" : lead.status}
+                    </span>
+                  </button>
+                );
+              })
+            ) : (
+              <p className="empty-state">
+                No demo leads match this filter. Try another status.
+              </p>
+            )}
+          </div>
+
+          <article className="lead-detail-panel">
+            <div>
+              <p className="step-label">Lead detail panel</p>
+              <h3>{selectedLead.customerName}</h3>
+              <p className="status-pill">
+                {selectedLeadConverted
+                  ? "Converted preview"
+                  : selectedLead.status}
+              </p>
+            </div>
+
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Contact</dt>
+                <dd>{selectedLead.phone}</dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>{selectedLead.serviceAddress}</dd>
+              </div>
+              <div>
+                <dt>Service issue</dt>
+                <dd>{selectedLead.serviceIssue}</dd>
+              </div>
+              <div>
+                <dt>Preferred timing</dt>
+                <dd>{selectedLead.preferredTiming}</dd>
+              </div>
+              <div>
+                <dt>Source</dt>
+                <dd>{selectedLead.source}</dd>
+              </div>
+            </dl>
+
+            <p className="next-step">{selectedLead.serviceContext}</p>
+          </article>
+
+          <article className="customer-profile-card">
+            <div>
+              <p className="step-label">Customer profile summary</p>
+              <h3>
+                {selectedLeadConverted
+                  ? "Customer profile preview ready"
+                  : "Customer profile not created"}
+              </h3>
+            </div>
+            <p>{selectedLead.customerSummary}</p>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Customer type</dt>
+                <dd>{selectedLead.customerType}</dd>
+              </div>
+              <div>
+                <dt>Profile state</dt>
+                <dd>
+                  {selectedLeadConverted
+                    ? "Converted in local preview"
+                    : "Lead review pending"}
+                </dd>
+              </div>
+            </dl>
+            <button
+              type="button"
+              className="primary-action"
+              onClick={previewConvertToCustomer}
+            >
+              {selectedLeadConverted
+                ? "Customer preview active"
+                : "Preview convert to customer"}
+            </button>
+          </article>
+
+          <article className="manual-checklist-card">
+            <div>
+              <p className="step-label">Manual action checklist</p>
+              <h3>Qualify before quote estimate</h3>
+            </div>
+            <div className="action-list compact-list">
+              {leadManualActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    leadChecklist.includes(action) ? "action done" : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleLeadChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {leadChecklist.includes(action) ? "Checked" : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Next step to quote estimate: {selectedLead.nextQuoteStep} This is
+              a handoff note only; ISSUE-013 must define quote estimate behavior
+              in its own workpack.
+            </p>
+          </article>
         </div>
       </section>
 
