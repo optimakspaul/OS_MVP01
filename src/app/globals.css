@@ -362,7 +362,9 @@ p {
 .report-grid,
 .action-list,
 .lead-customer-grid,
-.lead-inbox {
+.lead-inbox,
+.quote-estimate-grid,
+.service-item-list {
   display: grid;
   gap: 1rem;
 }
@@ -373,9 +375,11 @@ p {
 .report-card,
 .action,
 .lead-card,
+.service-item,
 .lead-detail-panel,
 .customer-profile-card,
-.manual-checklist-card {
+.manual-checklist-card,
+.quote-panel {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -387,7 +391,8 @@ p {
 .report-card,
 .lead-detail-panel,
 .customer-profile-card,
-.manual-checklist-card {
+.manual-checklist-card,
+.quote-panel {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -433,7 +438,8 @@ p {
 
 .stage-filter button.active,
 .stage-filter button:hover,
-.action.done {
+.action.done,
+.service-item.selected {
   border-color: #315bb5;
   background: #315bb5;
   color: #ffffff;
@@ -453,7 +459,8 @@ p {
 }
 
 .request-card dt,
-.lead-detail-list dt {
+.lead-detail-list dt,
+.estimate-breakdown dt {
   color: #526079;
   font-size: 0.75rem;
   font-weight: 800;
@@ -461,7 +468,8 @@ p {
 }
 
 .request-card dd,
-.lead-detail-list dd {
+.lead-detail-list dd,
+.estimate-breakdown dd {
   margin: 0.15rem 0 0;
   color: #172033;
   font-weight: 700;
@@ -508,6 +516,39 @@ p {
   color: #526079;
 }
 
+.service-item {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  color: #172033;
+  cursor: pointer;
+  padding: 1rem;
+  text-align: left;
+}
+
+.service-item:hover {
+  border-color: #315bb5;
+  box-shadow: 0 0 0 3px rgb(49 91 181 / 12%);
+}
+
+.service-item span {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.service-item small {
+  color: #526079;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.service-item.selected small,
+.service-item.selected strong {
+  color: #ffffff;
+}
+
 .lead-meta {
   width: fit-content;
   border-radius: 999px;
@@ -549,6 +590,57 @@ p {
   gap: 0.65rem;
 }
 
+.estimate-panel {
+  background: linear-gradient(135deg, #ffffff, #f4f8ff);
+}
+
+.estimate-panel h3 {
+  color: #315bb5;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0;
+}
+
+.estimate-breakdown {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+}
+
+.estimate-breakdown div {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  padding-bottom: 0.65rem;
+  border-bottom: 1px solid #e6ebf4;
+}
+
+.quote-control {
+  display: grid;
+  gap: 0.65rem;
+  color: #24304a;
+  font-weight: 800;
+}
+
+.quote-control input {
+  width: 100%;
+  accent-color: #315bb5;
+}
+
+.quote-toggle {
+  gap: 0.75rem;
+  color: #24304a;
+  font-weight: 700;
+}
+
+.quote-toggle input {
+  accent-color: #315bb5;
+}
+
+.booking-handoff-panel {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -574,7 +666,8 @@ p {
   .request-board,
   .workspace-grid,
   .report-grid,
-  .lead-customer-grid {
+  .lead-customer-grid,
+  .quote-estimate-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }

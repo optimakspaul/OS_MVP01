@@ -40,6 +40,19 @@ type DemoLead = {
   nextQuoteStep: string;
 };
 
+type QuoteStatus =
+  | "Draft estimate"
+  | "Ready to send manually"
+  | "Sent manually"
+  | "Accepted conceptually";
+
+type QuoteServiceItem = {
+  id: string;
+  name: string;
+  detail: string;
+  previewAmount: number;
+};
+
 const workflowStages = [
   {
     label: "Lead",
@@ -199,6 +212,40 @@ const demoLeads: DemoLead[] = [
   },
 ];
 
+const quoteServiceItems: QuoteServiceItem[] = [
+  {
+    id: "general-service",
+    name: "General servicing visit",
+    detail: "Basic cleaning and inspection for wall-mounted aircon units.",
+    previewAmount: 80,
+  },
+  {
+    id: "troubleshoot",
+    name: "Cooling issue check",
+    detail: "Manual diagnostic visit before confirming any repair scope.",
+    previewAmount: 60,
+  },
+  {
+    id: "leak-check",
+    name: "Leak / drainage check",
+    detail: "Visual leak review and drainage condition check.",
+    previewAmount: 70,
+  },
+  {
+    id: "chemical-wash",
+    name: "Chemical wash option",
+    detail: "Optional deeper cleaning guidance for suitable unit condition.",
+    previewAmount: 150,
+  },
+];
+
+const quoteStatuses: QuoteStatus[] = [
+  "Draft estimate",
+  "Ready to send manually",
+  "Sent manually",
+  "Accepted conceptually",
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
@@ -206,6 +253,15 @@ export default function WorkspacePage() {
   const [selectedLeadId, setSelectedLeadId] = useState(demoLeads[0].id);
   const [convertedLeadIds, setConvertedLeadIds] = useState<string[]>([]);
   const [leadChecklist, setLeadChecklist] = useState<string[]>([]);
+  const [selectedQuoteItemIds, setSelectedQuoteItemIds] = useState<string[]>([
+    "general-service",
+    "troubleshoot",
+  ]);
+  const [discountPreview, setDiscountPreview] = useState(20);
+  const [gstIncluded, setGstIncluded] = useState(false);
+  const [quoteStatus, setQuoteStatus] =
+    useState<QuoteStatus>("Draft estimate");
+  const [quoteChecklist, setQuoteChecklist] = useState<string[]>([]);
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -234,11 +290,36 @@ export default function WorkspacePage() {
 
   const selectedLeadConverted = convertedLeadIds.includes(selectedLead.id);
 
+  const selectedQuoteItems = useMemo(
+    () =>
+      quoteServiceItems.filter((item) =>
+        selectedQuoteItemIds.includes(item.id),
+      ),
+    [selectedQuoteItemIds],
+  );
+
+  const subtotalPreview = selectedQuoteItems.reduce(
+    (total, item) => total + item.previewAmount,
+    0,
+  );
+  const discountedPreview = Math.max(subtotalPreview - discountPreview, 0);
+  const gstPreview = gstIncluded ? Math.round(discountedPreview * 0.09) : 0;
+  const totalPreview = discountedPreview + gstPreview;
+  const estimateLow = Math.max(totalPreview - 30, 0);
+  const estimateHigh = totalPreview + 60;
+
   const leadManualActions = [
     `Review ${selectedLead.id} request context`,
     `Contact ${selectedLead.customerName} manually`,
     "Confirm service address and access notes",
     "Mark lead as qualified for quote estimate",
+  ];
+
+  const quoteManualActions = [
+    `Review ${selectedLead.id} customer and service context`,
+    "Confirm service items manually",
+    "Check discount and GST note before sending",
+    "Send estimate outside the demo workspace",
   ];
 
   function toggleAction(action: string) {
@@ -260,6 +341,22 @@ export default function WorkspacePage() {
   function previewConvertToCustomer() {
     setConvertedLeadIds((current) =>
       current.includes(selectedLead.id) ? current : [...current, selectedLead.id],
+    );
+  }
+
+  function toggleQuoteItem(itemId: string) {
+    setSelectedQuoteItemIds((current) =>
+      current.includes(itemId)
+        ? current.filter((id) => id !== itemId)
+        : [...current, itemId],
+    );
+  }
+
+  function toggleQuoteChecklist(action: string) {
+    setQuoteChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
     );
   }
 
@@ -288,7 +385,7 @@ export default function WorkspacePage() {
         <span>
           This workspace uses static demo data and local browser state only. It
           does not save leads, create customers, write to Supabase, call APIs,
-          process payments, send WhatsApp messages, or create ISSUE-012 records.
+          process payments, send WhatsApp messages, or create persistent records.
         </span>
       </section>
 
@@ -529,9 +626,215 @@ export default function WorkspacePage() {
               ))}
             </div>
             <p className="next-step">
-              Next step to quote estimate: {selectedLead.nextQuoteStep} This is
-              a handoff note only; ISSUE-013 must define quote estimate behavior
-              in its own workpack.
+              Next step to quote estimate: {selectedLead.nextQuoteStep} This
+              section stays as lead/customer context; the Quote Estimate Basic
+              panel below remains local and non-persistent.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="workspace-section" aria-labelledby="quote-title">
+        <div className="section-heading">
+          <p className="step-label">Quote Estimate Basic</p>
+          <h2 id="quote-title">
+            Prepare a manual-assisted estimate preview
+          </h2>
+          <p>
+            ISSUE-013 adds a Starter-depth quote estimate panel for the selected
+            lead/customer. It previews service items, estimate range, discount,
+            GST note, quote status, and the next handoff to Booking Basic.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Quote estimate demo boundary</strong>
+          <span>
+            This is not a real quote engine. It does not save quote records,
+            generate invoices, create PDFs, process payment, submit APIs, run
+            server actions, write to Supabase, create bookings, or start
+            ISSUE-014.
+          </span>
+        </div>
+
+        <div className="quote-estimate-grid">
+          <article className="quote-panel customer-summary-panel">
+            <div>
+              <p className="step-label">Selected lead / customer</p>
+              <h3>{selectedLead.customerName}</h3>
+              <p className="status-pill">
+                {selectedLeadConverted
+                  ? "Customer preview"
+                  : "Lead context"}
+              </p>
+            </div>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Lead ID</dt>
+                <dd>{selectedLead.id}</dd>
+              </div>
+              <div>
+                <dt>Service issue</dt>
+                <dd>{selectedLead.serviceIssue}</dd>
+              </div>
+              <div>
+                <dt>Address</dt>
+                <dd>{selectedLead.serviceAddress}</dd>
+              </div>
+              <div>
+                <dt>Preferred timing</dt>
+                <dd>{selectedLead.preferredTiming}</dd>
+              </div>
+            </dl>
+            <p className="next-step">{selectedLead.nextQuoteStep}</p>
+          </article>
+
+          <article className="quote-panel">
+            <div>
+              <p className="step-label">Service item list</p>
+              <h3>Estimate building blocks</h3>
+            </div>
+            <div className="service-item-list">
+              {quoteServiceItems.map((item) => {
+                const selected = selectedQuoteItemIds.includes(item.id);
+
+                return (
+                  <button
+                    type="button"
+                    className={
+                      selected
+                        ? "service-item selected"
+                        : "service-item"
+                    }
+                    key={item.id}
+                    onClick={() => toggleQuoteItem(item.id)}
+                  >
+                    <span>
+                      <strong>{item.name}</strong>
+                      <small>{item.detail}</small>
+                    </span>
+                    <strong>${item.previewAmount}</strong>
+                  </button>
+                );
+              })}
+            </div>
+          </article>
+
+          <article className="quote-panel estimate-panel">
+            <div>
+              <p className="step-label">Estimate range preview</p>
+              <h3>
+                ${estimateLow} - ${estimateHigh}
+              </h3>
+              <p>
+                Preview subtotal: ${subtotalPreview}. This is simple display
+                math for demo guidance, not a pricing or quote calculation
+                engine.
+              </p>
+            </div>
+
+            <dl className="estimate-breakdown">
+              <div>
+                <dt>Discount preview</dt>
+                <dd>-${discountPreview}</dd>
+              </div>
+              <div>
+                <dt>GST preview</dt>
+                <dd>{gstIncluded ? `+$${gstPreview}` : "Info note only"}</dd>
+              </div>
+              <div>
+                <dt>Manual total preview</dt>
+                <dd>${totalPreview}</dd>
+              </div>
+            </dl>
+
+            <label className="quote-control">
+              Discount display / adjustment preview
+              <input
+                type="range"
+                min="0"
+                max="80"
+                step="10"
+                value={discountPreview}
+                onChange={(event) =>
+                  setDiscountPreview(Number(event.target.value))
+                }
+              />
+            </label>
+
+            <label className="choice-row quote-toggle">
+              <input
+                type="checkbox"
+                checked={gstIncluded}
+                onChange={(event) => setGstIncluded(event.target.checked)}
+              />
+              <span>
+                Show GST preview note. Final GST handling must be confirmed
+                manually and remains outside a compliance engine.
+              </span>
+            </label>
+          </article>
+
+          <article className="quote-panel">
+            <div>
+              <p className="step-label">Quote status</p>
+              <h3>{quoteStatus}</h3>
+            </div>
+            <div className="stage-filter" aria-label="Select quote status">
+              {quoteStatuses.map((status) => (
+                <button
+                  type="button"
+                  className={quoteStatus === status ? "active" : ""}
+                  key={status}
+                  onClick={() => setQuoteStatus(status)}
+                >
+                  {status}
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Status is local preview copy only. It does not create a quote
+              workflow, approval record, booking, invoice, or payment step.
+            </p>
+          </article>
+
+          <article className="quote-panel">
+            <div>
+              <p className="step-label">Manual follow-up checklist</p>
+              <h3>Before sending estimate</h3>
+            </div>
+            <div className="action-list compact-list">
+              {quoteManualActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    quoteChecklist.includes(action) ? "action done" : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleQuoteChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {quoteChecklist.includes(action) ? "Checked" : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="quote-panel booking-handoff-panel">
+            <div>
+              <p className="step-label">Next step to Booking Basic</p>
+              <h3>Manual booking handoff only</h3>
+            </div>
+            <p>
+              Once the customer accepts the estimate manually, ISSUE-014 can
+              define Booking Basic using the selected customer, service context,
+              quote status, and preferred timing.
+            </p>
+            <p className="next-step">
+              ISSUE-014 remains locked until ISSUE-013 founder acceptance,
+              ISSUE-014 workpack approval, and execution on its own branch.
             </p>
           </article>
         </div>
@@ -610,7 +913,8 @@ export default function WorkspacePage() {
           <h2 id="report-title">Monthly starter view</h2>
           <p>
             A light report preview for demo storytelling only. Reporting logic,
-            analytics, exports, and stored metrics remain outside ISSUE-011.
+            analytics, exports, and stored metrics remain outside this
+            frontend-only workspace demo.
           </p>
         </div>
 
