@@ -226,8 +226,8 @@ ISSUE-013 may start only after:
 ## 13. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder review pending. ISSUE-013 remains locked until ISSUE-012 founder acceptance and ISSUE-013 workpack approval.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-013 may proceed after its workpack is approved and executed on its own branch.
 ```
