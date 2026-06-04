@@ -1,16 +1,16 @@
 # MVP01 Issue Chain Register
 
-**Document Type:** MVP Issue Chain Register  
-**Version:** v1.7.9.4-project-baseline-governance  
-**Status:** Active  
-**Applies To:** MVP01 issue dependency, handoff, PR, and merge tracking  
+**Document Type:** MVP Issue Chain Register
+**Version:** v1.7.9.4-project-baseline-governance / v0.3 Flow alignment
+**Status:** Active
+**Applies To:** MVP01 issue dependency, handoff, PR, and merge tracking
 **Related Standards:** `03_Development_Standard/STD-DEV-049_MVP_Project_Baseline_and_Issue_Chain_Standard.md`, `03_Development_Standard/STD-DEV-050_Issue_Linkage_and_Handoff_Standard.md`
 
 ---
 
 ## 1. Purpose
 
-This register tracks issue sequence, dependency, handoff, validation status, and completion evidence for MVP01.
+This register tracks MVP01 issue sequence, dependency, handoff, validation status, warnings, and completion evidence.
 
 It must be read with:
 
@@ -47,65 +47,71 @@ PR / Branch / Commit
 
 | Issue | Phase | Name | Depends On | Required Previous Outputs | Output For Next Issue | Status | Branch / PR / Commit | Notes |
 |---|---|---|---|---|---|---|---|---|
-| ISSUE-000 | Phase 0 | Repository and Constitution Context Verification | None | None | Unlocks ISSUE-001 after ISSUE-001 workpack is created and approved | PASS WITH WARNINGS | `feature/issue-000-repo-constitution-verification` | Founder Acceptance: Accepted. Metadata cleanup and issue-record path normalization remain follow-up governance cleanup items. |
-| ISSUE-001 | Phase 1 | Core Workspace and Tenant Foundation | ISSUE-000 | ISSUE-000_DONE_Report; verification result | ISSUE-001_DONE_Report; ISSUE-001_Foundation_Assessment; ISSUE-001_Workspace_Tenant_Model. Unlocks ISSUE-002 after founder acceptance and ISSUE-002 workpack approval. | PASS WITH WARNINGS | `feature/issue-001-core-workspace-tenant-foundation` | Founder Acceptance: Accepted. Workspace is the MVP01 tenant boundary; metadata cleanup and issue-record path normalization remain non-blocking follow-up items. |
-| ISSUE-002 | Phase 1 | Supabase Client and Environment Foundation | ISSUE-001 | ISSUE-001_DONE_Report; foundation assessment; workspace tenant model | ISSUE-002_DONE_Report; ISSUE-002_Supabase_Setup_Notes; ISSUE-002_Env_Key_Plan; placeholder-only .env.example. Unlocks ISSUE-003 after founder acceptance and ISSUE-003 workpack approval. | PASS WITH WARNINGS | `feature/issue-002-supabase-client-environment-foundation` | Founder Acceptance: Accepted. Current Supabase guidance prefers publishable keys; required baseline anon-key variable retained as a compatibility contract pending later approved naming review. |
-| ISSUE-003 | Phase 1 | Next.js App Foundation | ISSUE-002 | ISSUE-002_DONE_Report; Supabase setup notes; environment key plan; placeholder-only .env.example | ISSUE-003_DONE_Report; ISSUE-003_App_Foundation_Notes; ISSUE-003_Validation_Notes; working Next.js App Router foundation; placeholder-only .env.example. Unlocks ISSUE-004 after founder acceptance and ISSUE-004 workpack approval. | PASS WITH WARNINGS | `feature/issue-003-nextjs-app-foundation` | Founder Acceptance: Accepted. Patched PostCSS override retained; in-app browser automation was unavailable, while build, typecheck, lint, audit, secret check, and local HTTP smoke checks passed. Issue path normalization has been manually corrected into `12_Projects/MVP01/20_Issues`. |
-| ISSUE-004 | Phase 2 | Supabase P0 Tables | ISSUE-003 | ISSUE-003_DONE_Report; app foundation notes | ISSUE-004_DONE_Report; ISSUE-004_DB_Table_Notes; ISSUE-004_Migration_Notes; `supabase/migrations/0001_create_p0_core_tables.sql`. Unlocks ISSUE-005 after founder acceptance and ISSUE-005 workpack approval. | PASS WITH WARNINGS | `feature/issue-004-supabase-p0-tables` | Founder Acceptance: Accepted. RLS is intentionally deferred to ISSUE-007; do not expose the P0 tables through production Data APIs until the approved RLS issue is complete. updated_at triggers and performance indexes remain deferred to ISSUE-005. Supabase CLI unavailable; SQL validation was static only. |
-| ISSUE-005 | Phase 2 | Indexes and updated_at Triggers | ISSUE-004 | ISSUE-004_DONE_Report; DB table notes | ISSUE-005_DONE_Report; ISSUE-005_Index_Notes; ISSUE-005_Trigger_Notes; `supabase/migrations/0002_add_indexes_and_updated_at_triggers.sql`. Unlocks ISSUE-006 after founder acceptance and ISSUE-006 workpack approval. | PASS WITH WARNINGS | `feature/issue-005-indexes-updated-at-triggers` | Founder Acceptance: Accepted. RLS remains deferred to ISSUE-007; do not expose the P0 tables through production Data APIs until the approved RLS issue is complete. Supabase CLI unavailable; SQL validation was static only. |
-| ISSUE-006 | Phase 2 | Auth and Profiles | ISSUE-005 | ISSUE-005_DONE_Report; index / trigger notes | ISSUE-006_DONE_Report; ISSUE-006_Profile_Model_Notes; ISSUE-006_Auth_Boundary_Notes; `supabase/migrations/0003_create_auth_profiles.sql`. Unlocks ISSUE-007 after founder acceptance and ISSUE-007 workpack approval. | PASS WITH WARNINGS | `feature/issue-006-auth-and-profiles` | Founder Acceptance: Accepted. RLS is intentionally deferred to ISSUE-007; do not expose `public.profiles` or the P0 tables through production Data APIs until RLS is complete. Profile provisioning and workspace membership remain deferred. Supabase CLI unavailable; SQL validation was static only. |
-| ISSUE-007 | Phase 2 | RLS Helper Functions and Policies | ISSUE-006 | ISSUE-006_DONE_Report; auth / profile notes | RLS policy foundation | Pending |  |  |
-| ISSUE-008 | Phase 3 | Client Workspace | ISSUE-007 | ISSUE-007_DONE_Report; RLS policy notes | Client workspace foundation | Pending |  |  |
-| ISSUE-009 | Phase 3 | App Shell and Shared UI | ISSUE-008 | ISSUE-008_DONE_Report; client workspace notes | Shared app UI foundation | Pending |  |  |
-| ISSUE-010 | Phase 3 | Follow-up WhatsApp | ISSUE-009 | ISSUE-009_DONE_Report; app shell notes | Manual-assisted WhatsApp follow-up | Pending |  |  |
-| ISSUE-011 | Phase 3 | Booking Calendar | ISSUE-010 | ISSUE-010_DONE_Report; WhatsApp follow-up notes | Booking calendar foundation | Pending |  |  |
-| ISSUE-012 | Phase 3 | Job Card | ISSUE-011 | ISSUE-011_DONE_Report; booking notes | Technician lightweight job card | Pending |  |  |
-| ISSUE-013 | Phase 4 | Invoice Tracker | ISSUE-012 | ISSUE-012_DONE_Report; job card notes | Invoice / payment tracker foundation | Pending |  |  |
-| ISSUE-014 | Phase 4 | Maintenance Reminder | ISSUE-013 | ISSUE-013_DONE_Report; invoice tracker notes | Maintenance reminder foundation | Pending |  |  |
-| ISSUE-015 | Phase 4 | Client Portal / Lightweight Access Boundary | ISSUE-014 | ISSUE-014_DONE_Report; reminder notes | Client access boundary | Pending |  |  |
-| ISSUE-016 | Phase 5 | GitHub Automation | ISSUE-015 | ISSUE-015_DONE_Report; client access boundary notes | GitHub automation notes | Pending |  |  |
-| ISSUE-017 | Phase 5 | Additional Gating | ISSUE-016 | ISSUE-016_DONE_Report; automation notes | Additional validation gates | Pending |  |  |
-| ISSUE-018 | Phase 5 | Deployment Checklist | ISSUE-017 | ISSUE-017_DONE_Report; gating notes | Deployment readiness checklist | Pending |  |  |
+| ISSUE-000 | Phase 0 | Repo / Constitution Verification | None | None | ISSUE-000_DONE_Report. Unlocks ISSUE-001 after ISSUE-001 workpack is created and approved. | PASS WITH WARNINGS | `feature/issue-000-repo-constitution-verification` | Founder Acceptance: Accepted. Metadata cleanup and legacy path residue remain non-blocking governance cleanup items. |
+| ISSUE-001 | Phase 0 | Project / Workspace Foundation | ISSUE-000 | ISSUE-000_DONE_Report; verification result | ISSUE-001_DONE_Report; ISSUE-001_Foundation_Assessment; ISSUE-001_Workspace_Tenant_Model. Unlocks ISSUE-002 after founder acceptance and ISSUE-002 workpack approval. | PASS WITH WARNINGS | `feature/issue-001-core-workspace-tenant-foundation` | Founder Acceptance: Accepted. Workspace remains the MVP01 tenant boundary foundation. |
+| ISSUE-002 | Phase 1 | Supabase / Env Setup | ISSUE-001 | ISSUE-001_DONE_Report; foundation assessment; workspace tenant model | ISSUE-002_DONE_Report; ISSUE-002_Supabase_Setup_Notes; ISSUE-002_Env_Key_Plan; placeholder-only .env.example. Unlocks ISSUE-003 after founder acceptance and ISSUE-003 workpack approval. | PASS WITH WARNINGS | `feature/issue-002-supabase-client-environment-foundation` | Founder Acceptance: Accepted. Current Supabase guidance prefers publishable keys; required baseline anon-key variable retained as a compatibility contract pending later approved naming review. |
+| ISSUE-003 | Phase 1 | Next.js App Foundation | ISSUE-002 | ISSUE-002_DONE_Report; Supabase setup notes; environment key plan; placeholder-only .env.example | ISSUE-003_DONE_Report; ISSUE-003_App_Foundation_Notes; ISSUE-003_Validation_Notes; working Next.js App Router foundation. Unlocks ISSUE-004 after founder acceptance and ISSUE-004 workpack approval. | PASS WITH WARNINGS | `feature/issue-003-nextjs-app-foundation` | Founder Acceptance: Accepted. Patched PostCSS override retained; in-app browser automation was unavailable, while build, typecheck, lint, audit, secret check, and local HTTP smoke checks passed. |
+| ISSUE-004 | Phase 1 | Database P0 Tables | ISSUE-003 | ISSUE-003_DONE_Report; app foundation notes | ISSUE-004_DONE_Report; ISSUE-004_DB_Table_Notes; ISSUE-004_Migration_Notes; `supabase/migrations/0001_create_p0_core_tables.sql`. Unlocks ISSUE-005 after founder acceptance and ISSUE-005 workpack approval. | PASS WITH WARNINGS | `feature/issue-004-supabase-p0-tables` | Founder Acceptance: Accepted. RLS remains intentionally deferred; do not expose P0 tables through production Data APIs until an approved RLS issue is complete. |
+| ISSUE-005 | Phase 1 | Indexes / updated_at | ISSUE-004 | ISSUE-004_DONE_Report; DB table notes | ISSUE-005_DONE_Report; ISSUE-005_Index_Notes; ISSUE-005_Trigger_Notes; `supabase/migrations/0002_add_indexes_and_updated_at_triggers.sql`. Unlocks ISSUE-006 after founder acceptance and ISSUE-006 workpack approval. | PASS WITH WARNINGS | `feature/issue-005-indexes-updated-at-triggers` | Founder Acceptance: Accepted. Supabase CLI unavailable during execution; SQL validation was static only. |
+| ISSUE-006 | Phase 1 | Auth / Profiles | ISSUE-005 | ISSUE-005_DONE_Report; index / trigger notes | ISSUE-006_DONE_Report; ISSUE-006_Profile_Model_Notes; ISSUE-006_Auth_Boundary_Notes; `supabase/migrations/0003_create_auth_profiles.sql`. Unlocks CHECKPOINT-001 and ISSUE-007 architecture alignment after founder acceptance. | PASS WITH WARNINGS | `feature/issue-006-auth-and-profiles` | Founder Acceptance: Accepted. Profile provisioning and workspace membership remain deferred. Supabase CLI unavailable; SQL validation was static only. |
+| CHECKPOINT-001 | Gate | ISSUE-000 to ISSUE-006 Foundation Review | ISSUE-006 | ISSUE-000 through ISSUE-006 accepted outputs | CHECKPOINT-001_Findings_Report; CHECKPOINT-001_Risk_Register; CHECKPOINT-001_Go_No_Go_Decision. Unlocks ISSUE-007 after founder acceptance and ISSUE-007 workpack approval. | GO WITH WARNINGS | `checkpoint/checkpoint-001-issue-000-to-006-review` | Founder Acceptance: Accepted. Non-blocking warnings accepted for architecture alignment. |
+| ISSUE-007 | Phase 0 | Architecture Alignment | CHECKPOINT-001 | CHECKPOINT-001_Go_No_Go_Decision; CHECKPOINT-001_Findings_Report; ISSUE-007_Source_Alignment_Reference | ISSUE-007_DONE_Report; ISSUE-007_Architecture_Alignment_Notes; ISSUE-007_Phase_Issue_Alignment_Notes; ISSUE-007_Flow_Alignment_Notes; ISSUE-007_Reserved_Boundary_Notes; updated MVP01 baseline docs. Unlocks ISSUE-008 after founder acceptance and ISSUE-008 workpack approval. | PASS WITH WARNINGS | `feature/issue-007-architecture-alignment` | Founder review pending. ISSUE-007 is Architecture Alignment, not RLS. Legacy path residue and stale historical handoff wording remain non-blocking cleanup items. |
+| ISSUE-008 | Phase 2 | Module Library Foundation | ISSUE-007 | ISSUE-007_DONE_Report; architecture, phase/issue, flow, and reserved-boundary notes; updated baseline docs | Module list; plan depth matrix; included/reserved module rule | Pending |  | Must implement Module Library Foundation only after ISSUE-007 founder acceptance and ISSUE-008 workpack approval. Do not start business workflow or UI expansion unless the workpack allows it. |
+| ISSUE-009 | Phase 2 | Industry Template Foundation | ISSUE-008 | ISSUE-008_DONE_Report; module library notes | Primary industry template foundation; future multi-industry placeholders | Pending |  |  |
+| ISSUE-010 | Phase 3 | End Customer Interface Basic | ISSUE-009 | ISSUE-009_DONE_Report; industry template notes | Intent page; request form; WhatsApp/social CTA boundary | Pending |  |  |
+| ISSUE-011 | Phase 3 | Client Workspace Basic | ISSUE-010 | ISSUE-010_DONE_Report; end customer interface notes | Client dashboard; navigation; workspace entry | Pending |  |  |
+| ISSUE-012 | Phase 4 | Lead / Customer Flow | ISSUE-011 | ISSUE-011_DONE_Report; client workspace notes | Lead list; lead detail; customer profile; status notes | Pending |  |  |
+| ISSUE-013 | Phase 4 | Quote Estimate Basic | ISSUE-012 | ISSUE-012_DONE_Report; lead/customer notes | Estimate; service items; discount; GST application; quote status | Pending |  |  |
+| ISSUE-014 | Phase 4 | Booking Basic | ISSUE-013 | ISSUE-013_DONE_Report; quote estimate notes | Manual booking; date/time; status; customer/quote linkage | Pending |  |  |
+| ISSUE-015 | Phase 4 | Payment Basic | ISSUE-014 | ISSUE-014_DONE_Report; booking notes | Cash; static PayNow QR; payment status; paid/outstanding tracking | Pending |  |  |
+| ISSUE-016 | Phase 5 | Admin Setting Basic | ISSUE-015 | ISSUE-015_DONE_Report; payment notes | Business info; GST setting; PayNow QR; payment terms | Pending |  |  |
+| ISSUE-017 | Phase 5 | Reminder + Basic Report | ISSUE-016 | ISSUE-016_DONE_Report; admin setting notes | Payment, follow-up, maintenance reminder basics; monthly value view | Pending |  |  |
+| ISSUE-018 | Phase 6-7 | Optimaks OS Basic + Demo / Release Pack | ISSUE-017 | ISSUE-017_DONE_Report; reminder/report notes | Client list; plan status; onboarding status; workspace link; demo pack; release pack | Pending |  |  |
 
 ---
 
 ## 4. Open Warnings
 
-| Source Issue | Warning | Impact | Follow-up Issue | Status |
+| Source | Warning | Impact | Follow-up | Status |
 |---|---|---|---|---|
-| ISSUE-000 | Metadata cleanup remains a follow-up governance cleanup item. | Non-blocking; does not prevent ISSUE-001 workpack preparation or approved execution. | Governance cleanup issue to be created separately. | Open |
-| ISSUE-003 | Patched PostCSS override retained because `next@16.2.6` pulls an advisory-affected PostCSS version without override. | Non-blocking; audit passes with zero vulnerabilities after override. | Recheck during future dependency upgrade. | Open |
-| ISSUE-003 | In-app browser automation unavailable due to Windows sandbox bootstrap issue. | Non-blocking; local HTTP smoke check passed with HTTP 200. | Optional visual browser review during founder review. | Open |
-| ISSUE-003 | Supabase key naming review remains deferred before client initialization. | Non-blocking; ISSUE-003 does not initialize Supabase client. | Supabase client integration issue. | Open |
-| ISSUE-003 | Issue path normalization was manually corrected into project-local structure. | Non-blocking; ensure all future issue references use `12_Projects/MVP01/20_Issues/...`. | ISSUE-004 workpack and future docs. | Controlled |
+| ISSUE-000 / CHECKPOINT-001 | Legacy top-level `20_Issues/PREP-000` and `20_Issues/_TEMPLATE` path residue remains. | Non-blocking; normalized MVP01 issue records use `12_Projects/MVP01/20_Issues/`. | Governance cleanup issue if founder wants repository cleanup. | Open |
+| ISSUE-001 to ISSUE-005 | Older DONE reports contain stale pre-acceptance "next issue cannot start" handoff text. | Non-blocking; Founder Review sections and this chain register record acceptance. | Optional historical report normalization issue. | Open |
+| ISSUE-003 | Patched PostCSS override retained because `next@16.2.6` pulls an advisory-affected PostCSS version without override. | Non-blocking; audit passed after override. | Recheck during future dependency upgrade. | Open |
+| ISSUE-003 | In-app browser automation unavailable due to Windows sandbox bootstrap issue. | Non-blocking; local HTTP smoke check passed. | Optional visual browser review during founder review. | Open |
+| ISSUE-002 / ISSUE-003 | Supabase key naming review remains deferred before client initialization. | Non-blocking; no Supabase client initialized yet. | Supabase client integration issue. | Open |
+| ISSUE-004 to ISSUE-006 | Supabase CLI unavailable; SQL validation was static only. | Non-blocking for documented foundation work; runtime validation still needed before production use. | Approved Supabase-enabled validation environment. | Open |
+| ISSUE-007 | CHECKPOINT-001 still contains old RLS next-gate wording in its historical report title/body. | Non-blocking; ISSUE-007 workpack and this aligned baseline supersede the old label. | Optional checkpoint wording cleanup if founder approves. | Open |
 
 ---
 
 ## 5. Cross-Issue Decisions
 
-| Decision ID | Source Issue | Decision | Affects Issues | Notes |
+| Decision ID | Source | Decision | Affects | Notes |
 |---|---|---|---|---|
-| DEC-MVP01-001 | ISSUE-000 | Founder accepted ISSUE-000 as PASS WITH WARNINGS. | ISSUE-001 | ISSUE-001 unlocks after its workpack is created and approved. |
-| DEC-MVP01-002 | ISSUE-001 | Founder accepted ISSUE-001 as PASS WITH WARNINGS. | ISSUE-002 | ISSUE-002 unlocks after its workpack is created and approved. |
-| DEC-MVP01-003 | ISSUE-002 | Founder accepted ISSUE-002 as PASS WITH WARNINGS. | ISSUE-003 | ISSUE-003 unlocks after its workpack is created and approved. |
-| DEC-MVP01-004 | ISSUE-003 | Founder accepted ISSUE-003 as PASS WITH WARNINGS. | ISSUE-004 | ISSUE-004 unlocks after ISSUE-004 workpack is created and approved on its own branch. |
+| DEC-MVP01-001 | ISSUE-000 | Founder accepted ISSUE-000 as PASS WITH WARNINGS. | ISSUE-001 | ISSUE-001 unlocked after workpack approval. |
+| DEC-MVP01-002 | ISSUE-001 | Founder accepted ISSUE-001 as PASS WITH WARNINGS. | ISSUE-002 | ISSUE-002 unlocked after workpack approval. |
+| DEC-MVP01-003 | ISSUE-002 | Founder accepted ISSUE-002 as PASS WITH WARNINGS. | ISSUE-003 | ISSUE-003 unlocked after workpack approval. |
+| DEC-MVP01-004 | ISSUE-003 | Founder accepted ISSUE-003 as PASS WITH WARNINGS. | ISSUE-004 | ISSUE-004 unlocked after workpack approval. |
+| DEC-MVP01-005 | ISSUE-004 | Founder accepted ISSUE-004 as PASS WITH WARNINGS. | ISSUE-005 | ISSUE-005 unlocked after workpack approval. |
+| DEC-MVP01-006 | ISSUE-005 | Founder accepted ISSUE-005 as PASS WITH WARNINGS. | ISSUE-006 | ISSUE-006 unlocked after workpack approval. |
+| DEC-MVP01-007 | ISSUE-006 | Founder accepted ISSUE-006 as PASS WITH WARNINGS. | CHECKPOINT-001 / ISSUE-007 | CHECKPOINT-001 completed and was accepted as GO WITH WARNINGS. |
+| DEC-MVP01-008 | CHECKPOINT-001 | Founder accepted CHECKPOINT-001 as GO WITH WARNINGS. | ISSUE-007 | ISSUE-007 architecture alignment unlocked after workpack approval. |
+| DEC-MVP01-009 | ISSUE-007 | ISSUE-007 corrects architecture drift and aligns MVP01 to Starter Complete + Optimaks OS Basic. | ISSUE-008 onward | Recorded by CR-MVP01-002; founder review pending. |
 
 ---
 
 ## 6. Handoff Review Notes
 
-Use this section after every issue merge or accepted PASS WITH WARNINGS.
-
 ```text
-Latest completed issue: ISSUE-003 - Next.js App Foundation
-Latest accepted status: PASS WITH WARNINGS
-Founder Acceptance: Accepted
-Next issue allowed to start? Yes with warnings, after ISSUE-004 workpack is created and approved on its own branch.
+Latest completed issue: ISSUE-007 - Architecture Alignment
+Latest execution status: PASS WITH WARNINGS
+Founder Acceptance: Pending
+Next issue allowed to start? No. ISSUE-008 requires ISSUE-007 founder acceptance and ISSUE-008 workpack approval on its own branch.
 Warnings carried forward:
-1. Patched PostCSS override retained; recheck during future dependency upgrade.
-2. In-app browser automation unavailable; HTTP smoke check passed with HTTP 200.
-3. Supabase key naming review remains deferred before client initialization.
-4. Issue path normalization has been manually corrected into 12_Projects/MVP01/20_Issues; future docs must use the normalized path.
+1. Legacy path residue remains outside normalized MVP01 records.
+2. Older DONE report handoff sections contain stale pre-acceptance wording.
+3. CHECKPOINT-001 historical wording still references the old RLS next-gate label.
+4. Supabase CLI remained unavailable for prior SQL runtime validation.
 
 Required files next issue must read:
 - AGENTS.md
@@ -116,10 +122,11 @@ Required files next issue must read:
 - 12_Projects/MVP01/00_Project_Baseline/MVP01_PHASE_AND_ISSUE_BASELINE.md
 - 12_Projects/MVP01/00_Project_Baseline/MVP01_CHANGE_CONTROL_LOG.md
 - 12_Projects/MVP01/00_Project_Baseline/MVP01_ISSUE_CHAIN_REGISTER.md
-- 12_Projects/MVP01/20_Issues/ISSUE-003-nextjs-app-foundation/ISSUE-003_DONE_Report.md
-- 12_Projects/MVP01/20_Issues/ISSUE-003-nextjs-app-foundation/ISSUE-003_App_Foundation_Notes.md
-- 12_Projects/MVP01/20_Issues/ISSUE-003-nextjs-app-foundation/ISSUE-003_Validation_Notes.md
-- .env.example
+- 12_Projects/MVP01/20_Issues/ISSUE-007-architecture-alignment/ISSUE-007_DONE_Report.md
+- 12_Projects/MVP01/20_Issues/ISSUE-007-architecture-alignment/ISSUE-007_Architecture_Alignment_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-007-architecture-alignment/ISSUE-007_Phase_Issue_Alignment_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-007-architecture-alignment/ISSUE-007_Flow_Alignment_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-007-architecture-alignment/ISSUE-007_Reserved_Boundary_Notes.md
 ```
 
 ---
@@ -131,55 +138,12 @@ Use these paths for MVP01 project baseline and issue execution records:
 ```text
 12_Projects/MVP01/00_Project_Baseline/
 12_Projects/MVP01/20_Issues/
+12_Projects/MVP01/30_Checkpoints/
 ```
 
-Project baseline files belong in:
-
-```text
-12_Projects/MVP01/00_Project_Baseline/README_MVP01.md
-12_Projects/MVP01/00_Project_Baseline/MVP01_SCOPE_BASELINE.md
-12_Projects/MVP01/00_Project_Baseline/MVP01_PHASE_AND_ISSUE_BASELINE.md
-12_Projects/MVP01/00_Project_Baseline/MVP01_CHANGE_CONTROL_LOG.md
-12_Projects/MVP01/00_Project_Baseline/MVP01_ISSUE_CHAIN_REGISTER.md
-```
-
-Issue execution records belong in:
-
-```text
-12_Projects/MVP01/20_Issues/ISSUE-000/
-12_Projects/MVP01/20_Issues/ISSUE-001-core-workspace-tenant-foundation/
-12_Projects/MVP01/20_Issues/ISSUE-002-supabase-client-environment-foundation/
-12_Projects/MVP01/20_Issues/ISSUE-003-nextjs-app-foundation/
-```
-
-Deprecated paths must not be used for new work:
+Deprecated paths must not be used for new MVP01 work:
 
 ```text
 20_Issues/MVP01/...
 12_Projects/MVP01/ISSUE-xxx...
-```
-
----
-
-## 8. 3–5 Issue Harness Review Input
-
-After ISSUE-003 to ISSUE-005, use this register to support review of:
-
-```text
-TEST-CORE-001
-TEST-AIRCON-001
-STD-DEV-049
-CHK-DEV-020
-PROD-006
-```
-
-Review Questions:
-
-```text
-1. Which issues had repeated warnings?
-2. Which issues lacked validation evidence?
-3. Which issue dependencies were unclear?
-4. Which file boundaries were insufficient?
-5. Which checks should be automated?
-6. Which business or RLS test cases should be added?
 ```
