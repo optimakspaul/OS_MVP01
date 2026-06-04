@@ -9,6 +9,7 @@ This log records all changes to MVP01 scope, phase baseline, issue baseline, iss
 | Change ID | Date | Request | Request Type | Affected Project / Phase / Issue | Impact Review | Decision | Status | Files Updated | Follow-up Required |
 |---|---|---|---|---|---|---|---|---|---|
 | CR-MVP01-001 | 2026-05-30 | Establish v1.7.9.4 project baseline contract files for MVP01 | Constitution / Standard Change | MVP01 / all phases / all issues | Required by STD-DEV-049; fixes missing project baseline files | Approved | Closed | README_MVP01.md; MVP01_SCOPE_BASELINE.md; MVP01_PHASE_AND_ISSUE_BASELINE.md; MVP01_ISSUE_CHAIN_REGISTER.md; MVP01_CHANGE_CONTROL_LOG.md | Founder to update issue status after each PASS / FAIL review |
+| CR-MVP01-002 | 2026-06-04 | Align MVP01 to v0.3 Flow package as Starter Complete + Optimaks OS Basic | Scope Clarification | MVP01 / Phase 0-7 / ISSUE-000-018 | Replaces old DB/RLS-centered post-ISSUE-006 chain with Starter Complete + Optimaks OS Basic architecture, Phase 0-7, ISSUE-007 Architecture Alignment, and ISSUE-008 Module Library Foundation | Approved by ISSUE-007 workpack and founder execution request | Closed | README_MVP01.md; MVP01_SCOPE_BASELINE.md; MVP01_PHASE_AND_ISSUE_BASELINE.md; MVP01_ISSUE_CHAIN_REGISTER.md; MVP01_CHANGE_CONTROL_LOG.md; ISSUE-007 alignment notes; ISSUE-007_DONE_Report.md | Founder review of ISSUE-007; ISSUE-008 workpack approval before Module Library Foundation execution |
 
 ## 3. Request Types
 
