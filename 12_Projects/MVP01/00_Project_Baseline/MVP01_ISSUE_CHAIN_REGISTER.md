@@ -59,7 +59,7 @@ PR / Branch / Commit
 | ISSUE-008 | Phase 2 | Module Library Foundation | ISSUE-007 | ISSUE-007_DONE_Report; architecture, phase/issue, flow, and reserved-boundary notes; updated baseline docs | MVP01_MODULE_LIBRARY_MATRIX; ISSUE-008_DONE_Report; ISSUE-008_Module_Library_Notes; ISSUE-008_Plan_Depth_Matrix_Notes; ISSUE-008_Included_Reserved_Rules; ISSUE-008_Handoff_to_Industry_Template. Unlocks ISSUE-009 after founder acceptance and ISSUE-009 workpack approval. | PASS WITH WARNINGS | `feature/issue-008-module-library-foundation` | Founder Acceptance: Accepted. Module library is documentation-only; plan depth is not RLS or data isolation. Legacy path residue and stale historical handoff wording remain non-blocking cleanup items. |
 | ISSUE-009 | Phase 2 | Industry Template Foundation | ISSUE-008 | ISSUE-008_DONE_Report; module library notes; MVP01_MODULE_LIBRARY_MATRIX; ISSUE-008 handoff to industry template | MVP01_INDUSTRY_TEMPLATE_FOUNDATION.md; ISSUE-009_DONE_Report.md; ISSUE-009_Industry_Template_Notes.md; ISSUE-009_Template_Module_Mapping.md; ISSUE-009_Template_Flow_Notes.md; ISSUE-009_Handoff_to_End_Customer_Interface.md. Unlocks ISSUE-010 after founder acceptance and ISSUE-010 workpack approval. | PASS WITH WARNINGS | `feature/issue-009-industry-template-foundation` | Founder Acceptance: Accepted. Industry template foundation is documentation-only; Aircon / Home Service Starter Template is the MVP01 primary template. ISSUE-010 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-010 | Phase 3 | End Customer Interface Basic | ISSUE-009 | ISSUE-009_DONE_Report; industry template notes; MVP01_INDUSTRY_TEMPLATE_FOUNDATION; ISSUE-009 handoff to End Customer Interface | src/app/end-customer/page.tsx; ISSUE-010_DONE_Report.md; ISSUE-010_Interface_Scope_Notes.md; ISSUE-010_UX_Flow_Notes.md; ISSUE-010_Implementation_Notes.md; ISSUE-010_Handoff_to_Client_Workspace.md. Unlocks ISSUE-011 after founder acceptance and ISSUE-011 workpack approval. | PASS WITH WARNINGS | `feature/issue-010-end-customer-interface-basic` | Founder Acceptance: Accepted. End Customer Interface Basic is local and non-persistent; WhatsApp CTA is manual-assisted only. ISSUE-011 may proceed after workpack approval and execution on its own branch. |
-| ISSUE-011 | Phase 3 | Client Workspace Basic | ISSUE-010 | ISSUE-010_DONE_Report; end customer interface notes | Client dashboard; navigation; workspace entry | Pending |  | Locked until ISSUE-011 workpack approval and execution on its own branch. |
+| ISSUE-011 | Phase 3 | Client Workspace Basic | ISSUE-010 | ISSUE-010_DONE_Report; end customer interface notes; src/app/end-customer/page.tsx; ISSUE-010 handoff to Client Workspace | src/app/workspace/page.tsx; ISSUE-011_DONE_Report.md; ISSUE-011_Workspace_Scope_Notes.md; ISSUE-011_Client_Workspace_UX_Notes.md; ISSUE-011_Implementation_Notes.md; ISSUE-011_Handoff_to_Lead_Customer_Flow.md. Unlocks ISSUE-012 after founder acceptance and ISSUE-012 workpack approval. | PASS WITH WARNINGS | `feature/issue-011-client-workspace-basic` | Founder review pending. Client Workspace Basic is static and non-persistent; manual action queue is local preview only. No backend persistence, auth, Supabase writes, API routes, server actions, RLS, payment gateway, WhatsApp API, Optimaks OS UI, technician portal, or ISSUE-012 work created. |
 | ISSUE-012 | Phase 4 | Lead / Customer Flow | ISSUE-011 | ISSUE-011_DONE_Report; client workspace notes | Lead list; lead detail; customer profile; status notes | Pending |  |  |
 | ISSUE-013 | Phase 4 | Quote Estimate Basic | ISSUE-012 | ISSUE-012_DONE_Report; lead/customer notes | Estimate; service items; discount; GST application; quote status | Pending |  |  |
 | ISSUE-014 | Phase 4 | Booking Basic | ISSUE-013 | ISSUE-013_DONE_Report; quote estimate notes | Manual booking; date/time; status; customer/quote linkage | Pending |  |  |
@@ -100,22 +100,24 @@ PR / Branch / Commit
 | DEC-MVP01-010 | ISSUE-008 | ISSUE-008 establishes the module library and plan-depth matrix as documentation-only baseline guidance. | ISSUE-009 onward | Recorded by CR-MVP01-003; founder accepted. |
 | DEC-MVP01-011 | ISSUE-009 | ISSUE-009 establishes the Aircon / Home Service Starter Template foundation as documentation-only template guidance. | ISSUE-010 onward | Recorded by CR-MVP01-004; founder accepted. |
 | DEC-MVP01-012 | ISSUE-010 | ISSUE-010 establishes the public End Customer Interface Basic route for the Aircon / Home Service Starter Template. | ISSUE-011 onward | Recorded by CR-MVP01-005; founder accepted. |
+| DEC-MVP01-013 | ISSUE-011 | ISSUE-011 establishes the Client Workspace Basic route for the Aircon / Home Service Starter Template. | ISSUE-012 onward | Recorded by CR-MVP01-006; founder review pending. |
 
 ---
 
 ## 6. Handoff Review Notes
 
 ```text
-Latest completed issue: ISSUE-010 - End Customer Interface Basic
+Latest completed issue: ISSUE-011 - Client Workspace Basic
 Latest execution status: PASS WITH WARNINGS
-Founder Acceptance: Accepted
-Next issue allowed to start? Yes with warnings. ISSUE-011 requires ISSUE-011 workpack approval and execution on its own branch.
+Founder Acceptance: Pending
+Next issue allowed to start? No. ISSUE-012 requires ISSUE-011 founder acceptance and ISSUE-012 workpack approval on its own branch.
 Warnings carried forward:
 1. Legacy path residue remains outside normalized MVP01 records.
 2. Older DONE report handoff sections contain stale pre-acceptance wording.
 3. CHECKPOINT-001 historical wording still references the old RLS next-gate label.
 4. Supabase CLI remained unavailable for prior SQL runtime validation.
 5. ISSUE-010 is local and non-persistent; Client Workspace intake, persistence, API routes, server actions, Supabase writes, auth, payment gateway, and WhatsApp API remain forbidden until later approved workpacks.
+6. ISSUE-011 is static and non-persistent; Lead / Customer persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-012 implementation remain forbidden until later approved workpacks.
 
 Required files next issue must read:
 - AGENTS.md
@@ -132,6 +134,12 @@ Required files next issue must read:
 - 12_Projects/MVP01/20_Issues/ISSUE-010-end-customer-interface-basic/ISSUE-010_UX_Flow_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-010-end-customer-interface-basic/ISSUE-010_Implementation_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-010-end-customer-interface-basic/ISSUE-010_Handoff_to_Client_Workspace.md
+- src/app/workspace/page.tsx
+- 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_DONE_Report.md
+- 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Workspace_Scope_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Client_Workspace_UX_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Implementation_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Handoff_to_Lead_Customer_Flow.md
 ```
 
 ---
