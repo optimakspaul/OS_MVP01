@@ -104,8 +104,8 @@ Secret check: PASS - placeholder-only .env.example, no tracked .env.local, no re
 ## 8. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: CHECKPOINT-001 is ready for founder review. ISSUE-007 may proceed after this checkpoint is accepted, the ISSUE-007 workpack is approved, and ISSUE-007 execution starts on its own branch.
+Founder Acceptance: Accepted
+Accepted Status: GO WITH WARNINGS
+Decision: Accepted as GO WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-007 may proceed after its workpack is approved and executed on its own branch.
 ```
