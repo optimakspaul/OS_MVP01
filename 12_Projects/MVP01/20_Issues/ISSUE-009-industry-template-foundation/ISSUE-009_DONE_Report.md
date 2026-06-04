@@ -218,8 +218,8 @@ Handoff rule recorded as: ISSUE-010 unlocks after founder acceptance and ISSUE-0
 ## 14. Handoff to ISSUE-010
 
 ```text
-Can ISSUE-010 start? No
-Reason: ISSUE-009 execution is complete with warnings, but ISSUE-010 requires founder acceptance of ISSUE-009 and ISSUE-010 workpack approval on its own branch.
+Can ISSUE-010 start? Yes with warnings
+Reason: ISSUE-009 founder acceptance is recorded. ISSUE-010 may proceed after its workpack is approved and executed on its own branch.
 ```
 
 ISSUE-010 may start only after:
@@ -235,8 +235,8 @@ ISSUE-010 may start only after:
 ## 15. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder review pending. ISSUE-010 remains locked until ISSUE-009 founder acceptance and ISSUE-010 workpack approval.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-010 may proceed after its workpack is approved and executed on its own branch.
 ```
