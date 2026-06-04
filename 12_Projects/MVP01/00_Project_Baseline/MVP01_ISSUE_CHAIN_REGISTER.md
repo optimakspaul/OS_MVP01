@@ -61,8 +61,8 @@ PR / Branch / Commit
 | ISSUE-010 | Phase 3 | End Customer Interface Basic | ISSUE-009 | ISSUE-009_DONE_Report; industry template notes; MVP01_INDUSTRY_TEMPLATE_FOUNDATION; ISSUE-009 handoff to End Customer Interface | src/app/end-customer/page.tsx; ISSUE-010_DONE_Report.md; ISSUE-010_Interface_Scope_Notes.md; ISSUE-010_UX_Flow_Notes.md; ISSUE-010_Implementation_Notes.md; ISSUE-010_Handoff_to_Client_Workspace.md. Unlocks ISSUE-011 after founder acceptance and ISSUE-011 workpack approval. | PASS WITH WARNINGS | `feature/issue-010-end-customer-interface-basic` | Founder Acceptance: Accepted. End Customer Interface Basic is local and non-persistent; WhatsApp CTA is manual-assisted only. ISSUE-011 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-011 | Phase 3 | Client Workspace Basic | ISSUE-010 | ISSUE-010_DONE_Report; end customer interface notes | src/app/workspace/page.tsx; ISSUE-011_DONE_Report.md; ISSUE-011_Workspace_Scope_Notes.md; ISSUE-011_Client_Workspace_UX_Notes.md; ISSUE-011_Implementation_Notes.md; ISSUE-011_Handoff_to_Lead_Customer_Flow.md. Unlocks ISSUE-012 after founder acceptance and ISSUE-012 workpack approval. | PASS WITH WARNINGS | `feature/issue-011-client-workspace-basic` | Founder Acceptance: Accepted. Client Workspace Basic is static and non-persistent; manual-assisted workflow only. ISSUE-012 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-012 | Phase 4 | Lead / Customer Flow | ISSUE-011 | ISSUE-011_DONE_Report; client workspace notes; src/app/workspace/page.tsx; ISSUE-011 handoff to Lead / Customer Flow | src/app/workspace/page.tsx; ISSUE-012_DONE_Report.md; ISSUE-012_Lead_Customer_Scope_Notes.md; ISSUE-012_UX_Flow_Notes.md; ISSUE-012_Implementation_Notes.md; ISSUE-012_Handoff_to_Quote_Estimate.md. Unlocks ISSUE-013 after founder acceptance and ISSUE-013 workpack approval. | PASS WITH WARNINGS | `feature/issue-012-lead-customer-flow` | Founder Acceptance: Accepted. Lead / Customer Flow is static and non-persistent; convert-to-customer is local preview only. ISSUE-013 may proceed after workpack approval and execution on its own branch. |
-| ISSUE-013 | Phase 4 | Quote Estimate Basic | ISSUE-012 | ISSUE-012_DONE_Report; lead/customer notes | Estimate; service items; discount; GST application; quote status | Pending |  | Locked until ISSUE-013 workpack approval and execution on its own branch. |
-| ISSUE-014 | Phase 4 | Booking Basic | ISSUE-013 | ISSUE-013_DONE_Report; quote estimate notes | Manual booking; date/time; status; customer/quote linkage | Pending |  |  |
+| ISSUE-013 | Phase 4 | Quote Estimate Basic | ISSUE-012 | ISSUE-012_DONE_Report; lead/customer notes; src/app/workspace/page.tsx; ISSUE-012 handoff to Quote Estimate | src/app/workspace/page.tsx; ISSUE-013_DONE_Report.md; ISSUE-013_Quote_Estimate_Scope_Notes.md; ISSUE-013_UX_Flow_Notes.md; ISSUE-013_Implementation_Notes.md; ISSUE-013_Handoff_to_Booking_Basic.md. Unlocks ISSUE-014 after founder acceptance and ISSUE-014 workpack approval. | PASS WITH WARNINGS | `feature/issue-013-quote-estimate-basic` | Founder review pending. Quote Estimate Basic is static and non-persistent; estimate range, discount, GST, and quote status are local preview only. No real quote engine, invoice, PDF, payment gateway, booking implementation, backend persistence, API routes, server actions, Supabase writes, RLS, Optimaks OS UI, technician portal, or ISSUE-014 work created. |
+| ISSUE-014 | Phase 4 | Booking Basic | ISSUE-013 | ISSUE-013_DONE_Report; quote estimate notes | Manual booking; date/time; status; customer/quote linkage | Pending |  | Locked until ISSUE-014 workpack approval and execution on its own branch. |
 | ISSUE-015 | Phase 4 | Payment Basic | ISSUE-014 | ISSUE-014_DONE_Report; booking notes | Cash; static PayNow QR; payment status; paid/outstanding tracking | Pending |  |  |
 | ISSUE-016 | Phase 5 | Admin Setting Basic | ISSUE-015 | ISSUE-015_DONE_Report; payment notes | Business info; GST setting; PayNow QR; payment terms | Pending |  |  |
 | ISSUE-017 | Phase 5 | Reminder + Basic Report | ISSUE-016 | ISSUE-016_DONE_Report; admin setting notes | Payment, follow-up, maintenance reminder basics; monthly value view | Pending |  |  |
@@ -101,17 +101,18 @@ PR / Branch / Commit
 | DEC-MVP01-011 | ISSUE-009 | ISSUE-009 establishes the Aircon / Home Service Starter Template foundation as documentation-only template guidance. | ISSUE-010 onward | Recorded by CR-MVP01-004; founder accepted. |
 | DEC-MVP01-012 | ISSUE-010 | ISSUE-010 establishes the public End Customer Interface Basic route for the Aircon / Home Service Starter Template. | ISSUE-011 onward | Recorded by CR-MVP01-005; founder accepted. |
 | DEC-MVP01-013 | ISSUE-011 | ISSUE-011 establishes the Client Workspace Basic route for the Aircon / Home Service Starter Template. | ISSUE-012 onward | Recorded by CR-MVP01-006; founder accepted. |
-| DEC-MVP01-014 | ISSUE-012 | ISSUE-012 establishes the Lead / Customer Flow inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-013 onward | Recorded by CR-MVP01-007; founder review pending. |
+| DEC-MVP01-014 | ISSUE-012 | ISSUE-012 establishes the Lead / Customer Flow inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-013 onward | Recorded by CR-MVP01-007; founder accepted. |
+| DEC-MVP01-015 | ISSUE-013 | ISSUE-013 establishes Quote Estimate Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-014 onward | Recorded by CR-MVP01-008; founder review pending. |
 
 ---
 
 ## 6. Handoff Review Notes
 
 ```text
-Latest completed issue: ISSUE-012 - Lead / Customer Flow
+Latest completed issue: ISSUE-013 - Quote Estimate Basic
 Latest execution status: PASS WITH WARNINGS
 Founder Acceptance: Pending
-Next issue allowed to start? No. ISSUE-013 requires ISSUE-012 founder acceptance and ISSUE-013 workpack approval on its own branch.
+Next issue allowed to start? No. ISSUE-014 requires ISSUE-013 founder acceptance and ISSUE-014 workpack approval on its own branch.
 Warnings carried forward:
 1. Legacy path residue remains outside normalized MVP01 records.
 2. Older DONE report handoff sections contain stale pre-acceptance wording.
@@ -119,7 +120,8 @@ Warnings carried forward:
 4. Supabase CLI remained unavailable for prior SQL runtime validation.
 5. ISSUE-010 is local and non-persistent; Client Workspace intake, persistence, API routes, server actions, Supabase writes, auth, payment gateway, and WhatsApp API remain forbidden until later approved workpacks.
 6. ISSUE-011 is static and non-persistent; Lead / Customer persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-012 implementation remain forbidden until later approved workpacks.
-7. ISSUE-012 is static and non-persistent; quote estimate implementation, booking, payment, reminder, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-013 implementation remain forbidden until later approved workpacks.
+7. ISSUE-012 is static and non-persistent; quote estimate persistence, booking, payment, reminder, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and future issue work remain forbidden until later approved workpacks.
+8. ISSUE-013 is static and non-persistent; real quote engine, invoice generation, PDF generation, payment gateway, booking implementation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-014 implementation remain forbidden until later approved workpacks.
 
 Required files next issue must read:
 - AGENTS.md
@@ -142,11 +144,11 @@ Required files next issue must read:
 - 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Client_Workspace_UX_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Implementation_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-011-client-workspace-basic/ISSUE-011_Handoff_to_Lead_Customer_Flow.md
-- 12_Projects/MVP01/20_Issues/ISSUE-012-lead-customer-flow/ISSUE-012_DONE_Report.md
-- 12_Projects/MVP01/20_Issues/ISSUE-012-lead-customer-flow/ISSUE-012_Lead_Customer_Scope_Notes.md
-- 12_Projects/MVP01/20_Issues/ISSUE-012-lead-customer-flow/ISSUE-012_UX_Flow_Notes.md
-- 12_Projects/MVP01/20_Issues/ISSUE-012-lead-customer-flow/ISSUE-012_Implementation_Notes.md
-- 12_Projects/MVP01/20_Issues/ISSUE-012-lead-customer-flow/ISSUE-012_Handoff_to_Quote_Estimate.md
+- 12_Projects/MVP01/20_Issues/ISSUE-013-quote-estimate-basic/ISSUE-013_DONE_Report.md
+- 12_Projects/MVP01/20_Issues/ISSUE-013-quote-estimate-basic/ISSUE-013_Quote_Estimate_Scope_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-013-quote-estimate-basic/ISSUE-013_UX_Flow_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-013-quote-estimate-basic/ISSUE-013_Implementation_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-013-quote-estimate-basic/ISSUE-013_Handoff_to_Booking_Basic.md
 ```
 
 ---
