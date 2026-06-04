@@ -229,8 +229,8 @@ Updated MVP01 issue chain register
 ```
 
 ```text
-Can ISSUE-008 start? No
-Reason: ISSUE-007 outputs are complete with non-blocking warnings, but founder acceptance of ISSUE-007 and ISSUE-008 workpack approval are still required before ISSUE-008 execution begins.
+Can ISSUE-008 start? Yes with warnings
+Reason: Founder accepts the non-blocking warnings. ISSUE-008 may proceed after its workpack is approved and executed on its own branch.
 ```
 
 ---
@@ -238,8 +238,8 @@ Reason: ISSUE-007 outputs are complete with non-blocking warnings, but founder a
 ## 15. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: ISSUE-007 is ready for founder review. ISSUE-008 may proceed only after ISSUE-007 founder acceptance, ISSUE-008 workpack approval, and ISSUE-008 execution on its own branch.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-008 may proceed after its workpack is approved and executed on its own branch.
 ```
