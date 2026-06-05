@@ -196,8 +196,8 @@ MVP02 remains locked until final checkpoint founder acceptance? Yes
 ## 13. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder may accept MVP01 Final Checkpoint as PASS WITH WARNINGS. MVP02 remains locked until this final checkpoint is accepted and any MVP02 workpack is separately approved.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. MVP01 is accepted as Starter Complete + Optimaks OS Basic. MVP02 planning may proceed only after this checkpoint PR is merged and MVP02 workpack is separately approved.
 ```
