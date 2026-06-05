@@ -859,6 +859,161 @@ p {
   font-weight: 800;
 }
 
+.optimaks-os-page {
+  display: grid;
+  min-height: 100vh;
+  place-items: stretch;
+  gap: 1.25rem;
+  padding: clamp(1rem, 3vw, 2.5rem);
+  background:
+    radial-gradient(circle at top left, rgb(49 91 181 / 14%), transparent 32rem),
+    radial-gradient(circle at top right, rgb(20 139 130 / 14%), transparent 30rem),
+    #f5f7fb;
+}
+
+.optimaks-hero,
+.optimaks-section,
+.optimaks-closeout {
+  width: min(100%, 78rem);
+  margin: 0 auto;
+  border: 1px solid #d9dfeb;
+  border-radius: 1.25rem;
+  background: rgb(255 255 255 / 96%);
+  box-shadow: 0 1rem 2.5rem rgb(23 32 51 / 8%);
+}
+
+.optimaks-hero,
+.optimaks-section,
+.optimaks-closeout {
+  padding: clamp(1.25rem, 4vw, 2.5rem);
+}
+
+.optimaks-hero,
+.optimaks-section,
+.optimaks-closeout,
+.optimaks-boundary-note,
+.client-preview-card,
+.optimaks-status-card,
+.optimaks-checklist-card,
+.optimaks-boundary-card {
+  display: grid;
+  gap: 1rem;
+}
+
+.optimaks-boundary-note {
+  align-content: start;
+  border: 1px solid #f1c46b;
+  border-radius: 1rem;
+  background: #fff7e6;
+  color: #6c4b05;
+  line-height: 1.6;
+  padding: 1rem;
+}
+
+.optimaks-boundary-note span {
+  color: inherit;
+}
+
+.client-preview-list,
+.optimaks-status-grid,
+.optimaks-checklist-grid,
+.optimaks-boundary-grid {
+  display: grid;
+  gap: 1rem;
+}
+
+.client-preview-card,
+.optimaks-status-card,
+.optimaks-checklist-card,
+.optimaks-boundary-card {
+  align-content: start;
+  border: 1px solid #d9dfeb;
+  border-radius: 1rem;
+  background: #ffffff;
+  padding: 1.1rem;
+}
+
+.client-preview-card h3,
+.optimaks-status-card h3,
+.optimaks-checklist-card h3,
+.optimaks-boundary-card h3,
+.optimaks-closeout h2 {
+  margin: 0;
+}
+
+.optimaks-link {
+  display: inline-flex;
+  width: fit-content;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #315bb5;
+  color: #ffffff;
+  font-weight: 800;
+  padding: 0.85rem 1rem;
+  text-decoration: none;
+}
+
+.optimaks-link:hover {
+  background: #23458f;
+}
+
+.optimaks-checklist-card ul,
+.optimaks-boundary-card ul {
+  display: grid;
+  gap: 0.65rem;
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.optimaks-checklist-card li,
+.optimaks-boundary-card li {
+  color: #526079;
+  line-height: 1.6;
+}
+
+.optimaks-flow-list {
+  display: grid;
+  gap: 0.75rem;
+  margin: 0;
+  padding: 0;
+}
+
+.optimaks-flow-list li {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border: 1px solid #d9dfeb;
+  border-radius: 1rem;
+  background: #ffffff;
+  color: #172033;
+  padding: 1rem;
+}
+
+.optimaks-flow-list span {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  flex: 0 0 auto;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #ecfbf8;
+  color: #0b5e55;
+  font-weight: 800;
+}
+
+.optimaks-boundary-card.included {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
+.optimaks-boundary-card.reserved,
+.optimaks-closeout {
+  border-color: #f1c46b;
+  background: #fff7e6;
+}
+
 @media (min-width: 760px) {
   .workspace-hero {
     grid-template-columns: 1.7fr 1fr;
@@ -871,9 +1026,12 @@ p {
   .lead-customer-grid,
   .quote-estimate-grid,
   .booking-basic-grid,
-  .payment-basic-grid,
-  .admin-setting-grid,
-  .reminder-report-grid {
+    .payment-basic-grid,
+    .admin-setting-grid,
+    .reminder-report-grid,
+    .optimaks-hero,
+    .optimaks-checklist-grid,
+    .optimaks-boundary-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -885,6 +1043,14 @@ p {
 
   .workspace-grid,
   .report-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+
+  .client-preview-list {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .optimaks-status-grid {
     grid-template-columns: repeat(4, 1fr);
   }
 }
