@@ -75,6 +75,27 @@ type ReportPreference =
   | "Payment and follow-up focus"
   | "Lead to booking summary";
 
+type ReminderStatus =
+  | "Prepare manually"
+  | "Ready to contact"
+  | "Contacted manually"
+  | "Logged for demo review";
+
+type ReminderPreview = {
+  id: string;
+  title: string;
+  customer: string;
+  timing: string;
+  channel: string;
+  message: string;
+};
+
+type StarterKpi = {
+  label: string;
+  value: string;
+  note: string;
+};
+
 const workflowStages = [
   {
     label: "Lead",
@@ -294,6 +315,57 @@ const reportPreferences: ReportPreference[] = [
   "Lead to booking summary",
 ];
 
+const reminderStatuses: ReminderStatus[] = [
+  "Prepare manually",
+  "Ready to contact",
+  "Contacted manually",
+  "Logged for demo review",
+];
+
+const reminderPreviews: ReminderPreview[] = [
+  {
+    id: "REM-PAY-001",
+    title: "Payment follow-up reminder preview",
+    customer: "Jurong West landed home",
+    timing: "Today after manual payment check",
+    channel: "Manual call or message",
+    message:
+      "Hi, this is a gentle reminder to confirm your service payment status. Please send proof if PayNow was used.",
+  },
+  {
+    id: "REM-MAINT-001",
+    title: "Maintenance reminder preview",
+    customer: "Hougang repeat customer",
+    timing: reminderDefaults[1],
+    channel: "Manual maintenance follow-up",
+    message:
+      "Hi, your next aircon maintenance check is due soon. Reply here if you would like us to arrange a service slot.",
+  },
+];
+
+const starterKpis: StarterKpi[] = [
+  {
+    label: "Leads reviewed",
+    value: "3",
+    note: "Static count from demo lead cards.",
+  },
+  {
+    label: "Bookings confirmed",
+    value: "1",
+    note: "Manual booking preview only.",
+  },
+  {
+    label: "Payments to follow up",
+    value: "1",
+    note: "Derived from local payment status copy.",
+  },
+  {
+    label: "Maintenance reminders",
+    value: "2",
+    note: "Manual reminder queue preview.",
+  },
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
@@ -325,6 +397,14 @@ export default function WorkspacePage() {
     "Monthly owner snapshot",
   );
   const [adminChecklist, setAdminChecklist] = useState<string[]>([]);
+  const [reminderStatus, setReminderStatus] =
+    useState<ReminderStatus>("Prepare manually");
+  const [customerFollowUpChecklist, setCustomerFollowUpChecklist] = useState<
+    string[]
+  >([]);
+  const [manualReportChecklist, setManualReportChecklist] = useState<string[]>(
+    [],
+  );
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -413,6 +493,20 @@ export default function WorkspacePage() {
     "Confirm reminder and report preview defaults",
   ];
 
+  const customerFollowUpActions = [
+    `Check ${selectedLead.customerName} payment or service context`,
+    "Choose payment or maintenance follow-up copy",
+    "Contact customer manually outside the workspace",
+    "Update local reminder status preview",
+  ];
+
+  const manualReportActions = [
+    "Review open leads and quotes",
+    "Check booking and payment status previews",
+    "Review reminder queue copy",
+    "Prepare monthly value talking points manually",
+  ];
+
   function toggleAction(action: string) {
     setCompletedActions((current) =>
       current.includes(action)
@@ -469,6 +563,22 @@ export default function WorkspacePage() {
 
   function toggleAdminChecklist(action: string) {
     setAdminChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function toggleCustomerFollowUpChecklist(action: string) {
+    setCustomerFollowUpChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function toggleManualReportChecklist(action: string) {
+    setManualReportChecklist((current) =>
       current.includes(action)
         ? current.filter((item) => item !== action)
         : [...current, action],
@@ -1378,7 +1488,7 @@ export default function WorkspacePage() {
             business settings, upload PayNow QR images, run GST compliance,
             configure payment gateways, automate reminders, generate reports,
             submit APIs, run server actions, write to Supabase, or start
-            ISSUE-017.
+            backend reminder/report work.
           </span>
         </div>
 
@@ -1560,14 +1670,216 @@ export default function WorkspacePage() {
               <h3>Reminder/report handoff only</h3>
             </div>
             <p>
-              ISSUE-017 can define Reminder + Basic Report using these static
-              admin setting assumptions after founder acceptance and workpack
-              approval.
+              ISSUE-017 defines Reminder + Basic Report below using these
+              static admin setting assumptions after founder acceptance and
+              workpack approval.
             </p>
             <p className="next-step">
-              ISSUE-016 does not implement reminders, report generation,
-              Optimaks OS UI, technician portal, tenant settings persistence,
-              APIs, server actions, Supabase writes, or ISSUE-017 work.
+              The Reminder + Basic Report section remains local and
+              non-persistent. It does not implement real reminder automation,
+              report generation engines, Optimaks OS UI, technician portal,
+              APIs, server actions, or Supabase writes.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        className="workspace-section"
+        aria-labelledby="reminder-report-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">Reminder + Basic Report</p>
+          <h2 id="reminder-report-title">
+            Preview manual reminders and monthly value snapshot
+          </h2>
+          <p>
+            ISSUE-017 adds Starter-depth reminder and basic report previews for
+            the selected customer flow. It keeps payment follow-up,
+            maintenance follow-up, customer checklist, reminder status, and
+            monthly value reporting manual-assisted and non-persistent.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Reminder/report demo boundary</strong>
+          <span>
+            This section does not automate reminders, schedule jobs, send
+            WhatsApp, email, or SMS messages, generate reports, export files,
+            query analytics, write to Supabase, submit APIs, run server
+            actions, create RLS/auth changes, create Optimaks OS admin console
+            features, or start ISSUE-018.
+          </span>
+        </div>
+
+        <div className="reminder-report-grid">
+          <article className="reminder-panel reminder-summary-panel">
+            <div>
+              <p className="step-label">Reminder panel</p>
+              <h3>{reminderStatus}</h3>
+            </div>
+            <p>
+              Reminder status is a local preview only. It helps the owner or
+              admin narrate whether the next customer contact is being prepared,
+              ready, contacted manually, or logged for demo review.
+            </p>
+            <div className="stage-filter" aria-label="Select reminder status">
+              {reminderStatuses.map((status) => (
+                <button
+                  type="button"
+                  className={reminderStatus === status ? "active" : ""}
+                  key={status}
+                  onClick={() => setReminderStatus(status)}
+                >
+                  {status}
+                </button>
+              ))}
+            </div>
+          </article>
+
+          {reminderPreviews.map((reminder) => (
+            <article className="reminder-panel" key={reminder.id}>
+              <div>
+                <p className="request-id">{reminder.id}</p>
+                <h3>{reminder.title}</h3>
+              </div>
+              <dl className="lead-detail-list">
+                <div>
+                  <dt>Customer</dt>
+                  <dd>{reminder.customer}</dd>
+                </div>
+                <div>
+                  <dt>Timing</dt>
+                  <dd>{reminder.timing}</dd>
+                </div>
+                <div>
+                  <dt>Channel</dt>
+                  <dd>{reminder.channel}</dd>
+                </div>
+              </dl>
+              <p className="next-step">{reminder.message}</p>
+            </article>
+          ))}
+
+          <article className="reminder-panel">
+            <div>
+              <p className="step-label">Customer follow-up checklist</p>
+              <h3>Manual contact preparation</h3>
+            </div>
+            <div className="action-list compact-list">
+              {customerFollowUpActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    customerFollowUpChecklist.includes(action)
+                      ? "action done"
+                      : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleCustomerFollowUpChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {customerFollowUpChecklist.includes(action)
+                      ? "Checked"
+                      : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="reminder-panel monthly-value-panel">
+            <div>
+              <p className="step-label">Basic monthly value report snapshot</p>
+              <h3>Starter month view</h3>
+              <p>
+                This snapshot is static demo copy for owner review. It is not
+                generated from analytics, stored metrics, report queries, or
+                export logic.
+              </p>
+            </div>
+            <dl className="estimate-breakdown">
+              <div>
+                <dt>Revenue visibility</dt>
+                <dd>${paidPreview} paid preview</dd>
+              </div>
+              <div>
+                <dt>Outstanding follow-up</dt>
+                <dd>${outstandingPreview} outstanding preview</dd>
+              </div>
+              <div>
+                <dt>Reminder preference</dt>
+                <dd>{reminderDefault}</dd>
+              </div>
+              <div>
+                <dt>Report view</dt>
+                <dd>{reportPreference}</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article className="reminder-panel starter-kpi-panel">
+            <div>
+              <p className="step-label">Starter KPI summary</p>
+              <h3>Manual value signals</h3>
+            </div>
+            <div className="starter-kpi-grid">
+              {starterKpis.map((kpi) => (
+                <div className="starter-kpi-card" key={kpi.label}>
+                  <strong>{kpi.value}</strong>
+                  <span>{kpi.label}</span>
+                  <small>{kpi.note}</small>
+                </div>
+              ))}
+            </div>
+          </article>
+
+          <article className="reminder-panel">
+            <div>
+              <p className="step-label">Manual report checklist</p>
+              <h3>Before monthly owner review</h3>
+            </div>
+            <div className="action-list compact-list">
+              {manualReportActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    manualReportChecklist.includes(action)
+                      ? "action done"
+                      : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleManualReportChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {manualReportChecklist.includes(action)
+                      ? "Checked"
+                      : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="reminder-panel demo-release-handoff-panel">
+            <div>
+              <p className="step-label">
+                Next step to Optimaks OS Basic + Demo / Release Pack
+              </p>
+              <h3>Demo/release handoff only</h3>
+            </div>
+            <p>
+              ISSUE-018 may prepare Optimaks OS Basic, demo readiness, and
+              release handover using this static reminder/report flow after
+              ISSUE-017 founder acceptance and ISSUE-018 workpack approval.
+            </p>
+            <p className="next-step">
+              ISSUE-017 does not create Optimaks OS full admin console,
+              technician portal, analytics database, report generation engine,
+              exports, scheduled jobs, notification automation, or ISSUE-018
+              files.
             </p>
           </article>
         </div>

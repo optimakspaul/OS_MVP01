@@ -369,7 +369,9 @@ p {
 .booking-field-grid,
 .payment-basic-grid,
 .payment-method-list,
-.admin-setting-grid {
+.admin-setting-grid,
+.reminder-report-grid,
+.starter-kpi-grid {
   display: grid;
   gap: 1rem;
 }
@@ -389,7 +391,9 @@ p {
 .payment-panel,
 .payment-method-card,
 .admin-panel,
-.admin-setting-preview {
+.admin-setting-preview,
+.reminder-panel,
+.starter-kpi-card {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -407,7 +411,9 @@ p {
 .payment-panel,
 .payment-method-card,
 .admin-panel,
-.admin-setting-preview {
+.admin-setting-preview,
+.reminder-panel,
+.starter-kpi-card {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -789,6 +795,54 @@ p {
   line-height: 1.6;
 }
 
+.reminder-summary-panel,
+.demo-release-handoff-panel {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
+.monthly-value-panel {
+  background: linear-gradient(135deg, #ffffff, #f4f8ff);
+}
+
+.monthly-value-panel h3,
+.reminder-summary-panel h3 {
+  color: #315bb5;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0;
+}
+
+.starter-kpi-panel {
+  border-color: #f1c46b;
+  background: #fff7e6;
+}
+
+.starter-kpi-grid {
+  grid-template-columns: repeat(2, 1fr);
+}
+
+.starter-kpi-card {
+  align-content: start;
+  background: rgb(255 255 255 / 78%);
+}
+
+.starter-kpi-card strong {
+  color: #172033;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  line-height: 1;
+}
+
+.starter-kpi-card span {
+  color: #315bb5;
+  font-weight: 800;
+}
+
+.starter-kpi-card small {
+  color: #526079;
+  font-size: 0.82rem;
+  line-height: 1.5;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -818,7 +872,8 @@ p {
   .quote-estimate-grid,
   .booking-basic-grid,
   .payment-basic-grid,
-  .admin-setting-grid {
+  .admin-setting-grid,
+  .reminder-report-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
