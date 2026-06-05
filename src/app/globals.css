@@ -361,12 +361,14 @@ p {
 .workspace-grid,
 .report-grid,
 .action-list,
-.lead-customer-grid,
-.lead-inbox,
-.quote-estimate-grid,
-.service-item-list,
-.booking-basic-grid,
-.booking-field-grid {
+  .lead-customer-grid,
+  .lead-inbox,
+  .quote-estimate-grid,
+  .service-item-list,
+  .booking-basic-grid,
+  .booking-field-grid,
+  .payment-basic-grid,
+  .payment-method-list {
   display: grid;
   gap: 1rem;
 }
@@ -379,10 +381,12 @@ p {
 .lead-card,
 .service-item,
 .lead-detail-panel,
-.customer-profile-card,
-.manual-checklist-card,
-.quote-panel,
-.booking-panel {
+  .customer-profile-card,
+  .manual-checklist-card,
+  .quote-panel,
+  .booking-panel,
+  .payment-panel,
+  .payment-method-card {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -393,10 +397,12 @@ p {
 .workspace-panel,
 .report-card,
 .lead-detail-panel,
-.customer-profile-card,
-.manual-checklist-card,
-.quote-panel,
-.booking-panel {
+  .customer-profile-card,
+  .manual-checklist-card,
+  .quote-panel,
+  .booking-panel,
+  .payment-panel,
+  .payment-method-card {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -686,6 +692,68 @@ p {
   background: #ecfbf8;
 }
 
+.payment-total-panel {
+  background: linear-gradient(135deg, #ffffff, #f4f8ff);
+}
+
+.payment-total-panel h3 {
+  color: #315bb5;
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  margin: 0;
+}
+
+.payment-method-card {
+  align-content: start;
+}
+
+.payment-method-card strong {
+  color: #172033;
+}
+
+.payment-method-card span {
+  color: #526079;
+  line-height: 1.6;
+}
+
+.paynow-panel {
+  border-color: #f1c46b;
+  background: #fff7e6;
+}
+
+.paynow-placeholder {
+  display: grid;
+  width: min(100%, 12rem);
+  aspect-ratio: 1;
+  place-items: center;
+  justify-self: start;
+  border: 0.5rem solid #172033;
+  border-radius: 1rem;
+  background:
+    linear-gradient(90deg, #172033 10%, transparent 10% 90%, #172033 90%),
+    linear-gradient(#172033 10%, transparent 10% 90%, #172033 90%),
+    #ffffff;
+  color: #172033;
+  text-align: center;
+}
+
+.paynow-placeholder span,
+.paynow-placeholder small {
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.paynow-placeholder strong {
+  font-size: 2.4rem;
+  line-height: 1;
+}
+
+.payment-copy-card {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -713,7 +781,8 @@ p {
   .report-grid,
   .lead-customer-grid,
   .quote-estimate-grid,
-  .booking-basic-grid {
+  .booking-basic-grid,
+  .payment-basic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
