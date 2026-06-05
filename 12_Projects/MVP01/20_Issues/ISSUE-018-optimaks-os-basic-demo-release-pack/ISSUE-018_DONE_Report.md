@@ -187,8 +187,8 @@ Warning: Git reported LF-to-CRLF normalization warnings for edited tracked files
 Impact: Non-blocking repository line-ending normalization warning; no whitespace errors were reported.
 Blocking? No
 
-Warning: MVP01 final checkpoint is still gated.
-Impact: Final checkpoint cannot start until ISSUE-018 founder acceptance and final checkpoint workpack approval are recorded.
+Warning: MVP01 final checkpoint is still gated by its own workpack.
+Impact: ISSUE-018 founder acceptance is recorded, but final checkpoint execution still requires final checkpoint workpack approval.
 Blocking? No for ISSUE-018 execution; yes for final checkpoint start.
 ```
 
@@ -208,17 +208,16 @@ MVP02 locked until final checkpoint: Yes
 ## 13. Handoff to MVP01 Final Checkpoint
 
 ```text
-Can MVP01 final checkpoint start? No
-Reason: ISSUE-018 execution is complete, but founder acceptance is still pending and the MVP01 final checkpoint workpack must be approved before execution.
+Can MVP01 final checkpoint start? Yes, after final checkpoint workpack approval and execution on its own branch.
+Reason: ISSUE-018 founder acceptance is recorded. The MVP01 final checkpoint remains gated by its own approved workpack and execution branch.
 ```
 
 MVP01 final checkpoint may start only after:
 
 ```text
 1. ISSUE-018 founder acceptance is recorded.
-2. ISSUE-018 PR is merged.
-3. main is pulled.
-4. MVP01 final checkpoint workpack is approved.
+2. MVP01 final checkpoint workpack is approved.
+3. MVP01 final checkpoint is executed on its own branch.
 ```
 
 MVP02 must not start until MVP01 final checkpoint is accepted.
@@ -228,8 +227,8 @@ MVP02 must not start until MVP01 final checkpoint is accepted.
 ## 14. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder review should confirm whether ISSUE-018 PASS WITH WARNINGS is accepted. If accepted, MVP01 final checkpoint may proceed after its workpack is approved and executed on its own branch. MVP02 remains locked until MVP01 final checkpoint acceptance.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. MVP01 final checkpoint may proceed after its workpack is approved and executed on its own branch. MVP02 remains locked until MVP01 final checkpoint acceptance.
 ```
