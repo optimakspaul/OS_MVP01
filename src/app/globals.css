@@ -364,7 +364,9 @@ p {
 .lead-customer-grid,
 .lead-inbox,
 .quote-estimate-grid,
-.service-item-list {
+.service-item-list,
+.booking-basic-grid,
+.booking-field-grid {
   display: grid;
   gap: 1rem;
 }
@@ -379,7 +381,8 @@ p {
 .lead-detail-panel,
 .customer-profile-card,
 .manual-checklist-card,
-.quote-panel {
+.quote-panel,
+.booking-panel {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -392,7 +395,8 @@ p {
 .lead-detail-panel,
 .customer-profile-card,
 .manual-checklist-card,
-.quote-panel {
+.quote-panel,
+.booking-panel {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -641,6 +645,47 @@ p {
   background: #ecfbf8;
 }
 
+.booking-time-panel {
+  background: linear-gradient(135deg, #ffffff, #f8fbf6);
+}
+
+.booking-time-panel h3 {
+  color: #0b5e55;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0;
+}
+
+.booking-control {
+  display: grid;
+  gap: 0.5rem;
+  color: #24304a;
+  font-weight: 800;
+}
+
+.booking-control input {
+  width: 100%;
+  border: 1px solid #c8d1e2;
+  border-radius: 0.85rem;
+  background: #ffffff;
+  color: #172033;
+  padding: 0.85rem 1rem;
+}
+
+.booking-control input:focus {
+  border-color: #0b5e55;
+  outline: 3px solid rgb(11 94 85 / 18%);
+}
+
+.confirmation-panel {
+  border-color: #f1c46b;
+  background: #fff7e6;
+}
+
+.payment-handoff-panel {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -667,7 +712,8 @@ p {
   .workspace-grid,
   .report-grid,
   .lead-customer-grid,
-  .quote-estimate-grid {
+  .quote-estimate-grid,
+  .booking-basic-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
