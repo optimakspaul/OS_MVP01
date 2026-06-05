@@ -229,8 +229,8 @@ ISSUE-015 may start only after:
 ## 14. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder review pending. ISSUE-015 remains locked until ISSUE-014 founder acceptance and ISSUE-015 workpack approval.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-015 may proceed after its workpack is approved and executed on its own branch.
 ```
