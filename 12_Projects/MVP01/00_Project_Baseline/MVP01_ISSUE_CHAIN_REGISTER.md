@@ -66,7 +66,7 @@ PR / Branch / Commit
 | ISSUE-015 | Phase 4 | Payment Basic | ISSUE-014 | ISSUE-014_DONE_Report; booking notes | src/app/workspace/page.tsx; ISSUE-015_DONE_Report.md; ISSUE-015_Payment_Scope_Notes.md; ISSUE-015_UX_Flow_Notes.md; ISSUE-015_Implementation_Notes.md; ISSUE-015_Handoff_to_Admin_Setting_Basic.md. Unlocks ISSUE-016 after founder acceptance and ISSUE-016 workpack approval. | PASS WITH WARNINGS | `feature/issue-015-payment-basic` | Founder Acceptance: Accepted. Payment Basic is static and non-persistent; cash and PayNow are manual instruction/status previews only. ISSUE-016 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-016 | Phase 5 | Admin Setting Basic | ISSUE-015 | ISSUE-015_DONE_Report; payment notes | src/app/workspace/page.tsx; ISSUE-016_DONE_Report.md; ISSUE-016_Admin_Setting_Scope_Notes.md; ISSUE-016_UX_Flow_Notes.md; ISSUE-016_Implementation_Notes.md; ISSUE-016_Handoff_to_Reminder_Report.md. Unlocks ISSUE-017 after founder acceptance and ISSUE-017 workpack approval. | PASS WITH WARNINGS | `feature/issue-016-admin-setting-basic` | Founder Acceptance: Accepted. Admin Setting Basic is static and non-persistent; business info, GST, PayNow, payment terms, reminder, and report settings are local previews only. ISSUE-017 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-017 | Phase 5 | Reminder + Basic Report | ISSUE-016 | ISSUE-016_DONE_Report; admin setting notes | src/app/workspace/page.tsx; ISSUE-017_DONE_Report.md; ISSUE-017_Reminder_Report_Scope_Notes.md; ISSUE-017_UX_Flow_Notes.md; ISSUE-017_Implementation_Notes.md; ISSUE-017_Handoff_to_Demo_Release.md. Unlocks ISSUE-018 after founder acceptance and ISSUE-018 workpack approval. | PASS WITH WARNINGS | `feature/issue-017-reminder-basic-report` | Founder Acceptance: Accepted. Reminder + Basic Report is static and non-persistent; payment follow-up, maintenance reminders, monthly value snapshot, Starter KPI summary, and manual report checklist are local previews only. ISSUE-018 may proceed after workpack approval and execution on its own branch. |
-| ISSUE-018 | Phase 6-7 | Optimaks OS Basic + Demo / Release Pack | ISSUE-017 | ISSUE-017_DONE_Report; reminder/report notes | Client list; plan status; onboarding status; workspace link; demo pack; release pack | Pending |  | Locked until ISSUE-018 workpack approval and execution on its own branch. |
+| ISSUE-018 | Phase 6-7 | Optimaks OS Basic + Demo / Release Pack | ISSUE-017 | ISSUE-017_DONE_Report; reminder/report notes | src/app/optimaks-os/page.tsx; ISSUE-018_DONE_Report.md; ISSUE-018_Optimaks_OS_Basic_Scope_Notes.md; ISSUE-018_Demo_Pack_Notes.md; ISSUE-018_Release_Pack_Notes.md; ISSUE-018_MVP01_Closeout_Notes.md. Unlocks MVP01 final checkpoint after founder acceptance and final checkpoint workpack approval. | PASS WITH WARNINGS | `feature/issue-018-optimaks-os-basic-demo-release-pack` | Founder review pending. Optimaks OS Basic + Demo / Release Pack is static and non-persistent; client list, plan status, onboarding status, workspace link, demo pack, and release pack are local previews only. MVP02 remains locked until MVP01 final checkpoint is accepted. |
 
 ---
 
@@ -82,6 +82,7 @@ PR / Branch / Commit
 | ISSUE-004 to ISSUE-006 | Supabase CLI unavailable; SQL validation was static only. | Non-blocking for documented foundation work; runtime validation still needed before production use. | Approved Supabase-enabled validation environment. | Open |
 | ISSUE-007 | CHECKPOINT-001 still contains old RLS next-gate wording in its historical report title/body. | Non-blocking; ISSUE-007 workpack and this aligned baseline supersede the old label. | Optional checkpoint wording cleanup if founder approves. | Open |
 | ISSUE-017 | Reminder + Basic Report is static and non-persistent. | Non-blocking; no reminder automation, scheduled jobs, messaging integration, report generation, exports, analytics database, Optimaks OS full admin console, or technician portal was created. | ISSUE-018 must treat reminders/reports as demo inputs only unless a later approved workpack expands scope. | Open |
+| ISSUE-018 | Optimaks OS Basic + Demo / Release Pack is static and non-persistent. | Non-blocking; no real Optimaks OS admin console, client management backend, tenant provisioning, billing/subscriptions, deployment automation, module entitlement logic, MVP02 files, or MVP02 execution was created. | MVP01 final checkpoint must review ISSUE-018 after founder acceptance; MVP02 remains locked until final checkpoint acceptance. | Open |
 
 ---
 
@@ -108,16 +109,17 @@ PR / Branch / Commit
 | DEC-MVP01-017 | ISSUE-015 | ISSUE-015 establishes Payment Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-016 onward | Recorded by CR-MVP01-010; founder review pending. |
 | DEC-MVP01-018 | ISSUE-016 | ISSUE-016 establishes Admin Setting Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-017 onward | Recorded by CR-MVP01-011; founder review pending. |
 | DEC-MVP01-019 | ISSUE-017 | ISSUE-017 establishes Reminder + Basic Report inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-018 onward | Recorded by CR-MVP01-012; Founder Acceptance: Accepted. |
+| DEC-MVP01-020 | ISSUE-018 | ISSUE-018 establishes Optimaks OS Basic + Demo / Release Pack as the final MVP01 static preview and closeout handoff. | MVP01 final checkpoint / MVP02 planning | Recorded by CR-MVP01-013; founder review pending. |
 
 ---
 
 ## 6. Handoff Review Notes
 
 ```text
-Latest completed issue: ISSUE-017 - Reminder + Basic Report
+Latest completed issue: ISSUE-018 - Optimaks OS Basic + Demo / Release Pack
 Latest execution status: PASS WITH WARNINGS
-Founder Acceptance: Accepted
-Next issue allowed to start? Yes, ISSUE-018 may proceed after ISSUE-018 workpack approval and execution on its own branch.
+Founder Acceptance: Pending
+Next issue allowed to start? No, MVP01 final checkpoint requires ISSUE-018 founder acceptance and final checkpoint workpack approval before execution.
 Warnings carried forward:
 1. Legacy path residue remains outside normalized MVP01 records.
 2. Older DONE report handoff sections contain stale pre-acceptance wording.
@@ -131,6 +133,7 @@ Warnings carried forward:
 10. ISSUE-015 is static and non-persistent; real payment gateway, PayNow API / QR generation, Stripe / HitPay integration, invoice generation, receipt generation, accounting integration, GST compliance engine, reminder implementation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-016 implementation remain forbidden until later approved workpacks.
 11. ISSUE-016 is static and non-persistent; real tenant settings, role-based admin permissions, GST compliance engine, PayNow QR generation / upload storage, payment gateway settings, reminder automation, report generation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-017 implementation remain forbidden until later approved workpacks.
 12. ISSUE-017 is static and non-persistent; real reminder automation, scheduled jobs, WhatsApp / email / SMS automation, notification queue, report generation engine, PDF / CSV export, analytics database, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS full admin console, technician portal, and ISSUE-018 implementation remain forbidden until later approved workpacks.
+13. ISSUE-018 is static and non-persistent; real Optimaks OS admin console, client management backend, tenant provisioning, billing/subscriptions, deployment automation, module entitlement logic, MVP02 files, MVP02 execution, persistence, API routes, server actions, Supabase writes, auth, and RLS remain forbidden until later approved workpacks.
 
 Required files next issue must read:
 - AGENTS.md
@@ -158,6 +161,12 @@ Required files next issue must read:
 - 12_Projects/MVP01/20_Issues/ISSUE-014-booking-basic/ISSUE-014_UX_Flow_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-014-booking-basic/ISSUE-014_Implementation_Notes.md
 - 12_Projects/MVP01/20_Issues/ISSUE-014-booking-basic/ISSUE-014_Handoff_to_Payment_Basic.md
+- src/app/optimaks-os/page.tsx
+- 12_Projects/MVP01/20_Issues/ISSUE-018-optimaks-os-basic-demo-release-pack/ISSUE-018_DONE_Report.md
+- 12_Projects/MVP01/20_Issues/ISSUE-018-optimaks-os-basic-demo-release-pack/ISSUE-018_Optimaks_OS_Basic_Scope_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-018-optimaks-os-basic-demo-release-pack/ISSUE-018_Demo_Pack_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-018-optimaks-os-basic-demo-release-pack/ISSUE-018_Release_Pack_Notes.md
+- 12_Projects/MVP01/20_Issues/ISSUE-018-optimaks-os-basic-demo-release-pack/ISSUE-018_MVP01_Closeout_Notes.md
 ```
 
 ---
