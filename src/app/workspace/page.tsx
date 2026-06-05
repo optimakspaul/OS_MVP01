@@ -65,6 +65,16 @@ type PaymentStatus =
   | "Paid"
   | "Follow-up needed";
 
+type ReminderDefault =
+  | "No default reminder"
+  | "3-month service follow-up"
+  | "6-month maintenance reminder";
+
+type ReportPreference =
+  | "Monthly owner snapshot"
+  | "Payment and follow-up focus"
+  | "Lead to booking summary";
+
 const workflowStages = [
   {
     label: "Lead",
@@ -272,6 +282,18 @@ const paymentStatuses: PaymentStatus[] = [
   "Follow-up needed",
 ];
 
+const reminderDefaults: ReminderDefault[] = [
+  "No default reminder",
+  "3-month service follow-up",
+  "6-month maintenance reminder",
+];
+
+const reportPreferences: ReportPreference[] = [
+  "Monthly owner snapshot",
+  "Payment and follow-up focus",
+  "Lead to booking summary",
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
@@ -295,6 +317,14 @@ export default function WorkspacePage() {
   const [bookingChecklist, setBookingChecklist] = useState<string[]>([]);
   const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>("Unpaid");
   const [paymentChecklist, setPaymentChecklist] = useState<string[]>([]);
+  const [gstSettingPreview, setGstSettingPreview] = useState(false);
+  const [reminderDefault, setReminderDefault] = useState<ReminderDefault>(
+    "3-month service follow-up",
+  );
+  const [reportPreference, setReportPreference] = useState<ReportPreference>(
+    "Monthly owner snapshot",
+  );
+  const [adminChecklist, setAdminChecklist] = useState<string[]>([]);
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -376,6 +406,13 @@ export default function WorkspacePage() {
     "Share payment instruction copy with the customer",
   ];
 
+  const adminManualActions = [
+    "Review business information copy",
+    "Confirm GST display setting with founder or owner",
+    "Check static PayNow instruction wording",
+    "Confirm reminder and report preview defaults",
+  ];
+
   function toggleAction(action: string) {
     setCompletedActions((current) =>
       current.includes(action)
@@ -424,6 +461,14 @@ export default function WorkspacePage() {
 
   function togglePaymentChecklist(action: string) {
     setPaymentChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function toggleAdminChecklist(action: string) {
+    setAdminChecklist((current) =>
       current.includes(action)
         ? current.filter((item) => item !== action)
         : [...current, action],
@@ -1303,8 +1348,226 @@ export default function WorkspacePage() {
               copy after founder acceptance and workpack approval.
             </p>
             <p className="next-step">
-              ISSUE-015 does not implement admin settings, reminders, real
-              payments, GST compliance, invoice generation, or receipts.
+              The Admin Setting Basic section below remains local and
+              non-persistent. It does not create real tenant settings,
+              payment gateway settings, GST compliance, or reminder automation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        className="workspace-section"
+        aria-labelledby="admin-setting-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">Admin Setting Basic</p>
+          <h2 id="admin-setting-title">Preview starter admin settings</h2>
+          <p>
+            ISSUE-016 adds a Starter-depth admin setting panel for business
+            information, GST display, static PayNow instructions, payment
+            terms, reminder defaults, report preferences, and the next handoff
+            to Reminder + Basic Report.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Admin setting demo boundary</strong>
+          <span>
+            This is not a real tenant settings system. It does not save
+            business settings, upload PayNow QR images, run GST compliance,
+            configure payment gateways, automate reminders, generate reports,
+            submit APIs, run server actions, write to Supabase, or start
+            ISSUE-017.
+          </span>
+        </div>
+
+        <div className="admin-setting-grid">
+          <article className="admin-panel business-info-panel">
+            <div>
+              <p className="step-label">Business information card</p>
+              <h3>Demo Aircon Services Pte. Ltd.</h3>
+            </div>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Template</dt>
+                <dd>Aircon / Home Service Starter Template</dd>
+              </div>
+              <div>
+                <dt>Contact display</dt>
+                <dd>+65 6123 4567</dd>
+              </div>
+              <div>
+                <dt>Service area</dt>
+                <dd>Tampines, Hougang, Bukit Batok, Jurong West</dd>
+              </div>
+            </dl>
+            <p className="next-step">
+              This is static business information copy only. It does not create
+              a tenant, workspace setting, profile setting, or admin permission.
+            </p>
+          </article>
+
+          <article className="admin-panel gst-panel">
+            <div>
+              <p className="step-label">GST setting preview / toggle</p>
+              <h3>{gstSettingPreview ? "GST display on" : "GST display off"}</h3>
+            </div>
+            <label className="choice-row quote-toggle">
+              <input
+                type="checkbox"
+                checked={gstSettingPreview}
+                onChange={(event) =>
+                  setGstSettingPreview(event.target.checked)
+                }
+              />
+              <span>
+                Show GST wording in quote/payment previews. This is display
+                copy only and is not a GST compliance engine.
+              </span>
+            </label>
+            <p className="next-step">
+              Preview copy:{" "}
+              {gstSettingPreview
+                ? "GST display can be shown on manual estimate/payment copy."
+                : "GST display is hidden from manual estimate/payment copy."}
+            </p>
+          </article>
+
+          <article className="admin-panel">
+            <div>
+              <p className="step-label">Static PayNow instruction setting</p>
+              <h3>PayNow display instructions</h3>
+            </div>
+            <div className="admin-setting-preview">
+              <strong>PayNow to UEN / mobile number shared by owner</strong>
+              <span>
+                Please include customer name and service date in the transfer
+                note. QR image upload and QR generation are reserved.
+              </span>
+            </div>
+            <p className="next-step">
+              This setting is static instruction copy only. No upload storage,
+              QR generation, validation, or provider integration is created.
+            </p>
+          </article>
+
+          <article className="admin-panel">
+            <div>
+              <p className="step-label">Payment terms preview</p>
+              <h3>Due on service completion</h3>
+            </div>
+            <dl className="estimate-breakdown">
+              <div>
+                <dt>Cash</dt>
+                <dd>Collect manually after service</dd>
+              </div>
+              <div>
+                <dt>PayNow</dt>
+                <dd>Confirm proof outside the app</dd>
+              </div>
+              <div>
+                <dt>Status</dt>
+                <dd>{paymentStatus}</dd>
+              </div>
+            </dl>
+            <p className="next-step">
+              Payment terms are preview copy only and do not create invoices,
+              receipts, payment plans, refunds, or gateway settings.
+            </p>
+          </article>
+
+          <article className="admin-panel">
+            <div>
+              <p className="step-label">Default reminder setting preview</p>
+              <h3>{reminderDefault}</h3>
+            </div>
+            <div
+              className="stage-filter"
+              aria-label="Select reminder default preview"
+            >
+              {reminderDefaults.map((setting) => (
+                <button
+                  type="button"
+                  className={reminderDefault === setting ? "active" : ""}
+                  key={setting}
+                  onClick={() => setReminderDefault(setting)}
+                >
+                  {setting}
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Reminder defaults are local preview preferences only. No reminder
+              automation, notifications, WhatsApp API, or reminder records are
+              created.
+            </p>
+          </article>
+
+          <article className="admin-panel">
+            <div>
+              <p className="step-label">Basic report preference preview</p>
+              <h3>{reportPreference}</h3>
+            </div>
+            <div
+              className="stage-filter"
+              aria-label="Select report preference preview"
+            >
+              {reportPreferences.map((preference) => (
+                <button
+                  type="button"
+                  className={reportPreference === preference ? "active" : ""}
+                  key={preference}
+                  onClick={() => setReportPreference(preference)}
+                >
+                  {preference}
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Report preference is local preview copy only. No analytics query,
+              report generation, export, or stored metric is created.
+            </p>
+          </article>
+
+          <article className="admin-panel">
+            <div>
+              <p className="step-label">Manual admin setup checklist</p>
+              <h3>Before reminder and report setup</h3>
+            </div>
+            <div className="action-list compact-list">
+              {adminManualActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    adminChecklist.includes(action) ? "action done" : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleAdminChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {adminChecklist.includes(action) ? "Checked" : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="admin-panel admin-handoff-panel">
+            <div>
+              <p className="step-label">Next step to Reminder + Basic Report</p>
+              <h3>Reminder/report handoff only</h3>
+            </div>
+            <p>
+              ISSUE-017 can define Reminder + Basic Report using these static
+              admin setting assumptions after founder acceptance and workpack
+              approval.
+            </p>
+            <p className="next-step">
+              ISSUE-016 does not implement reminders, report generation,
+              Optimaks OS UI, technician portal, tenant settings persistence,
+              APIs, server actions, Supabase writes, or ISSUE-017 work.
             </p>
           </article>
         </div>
