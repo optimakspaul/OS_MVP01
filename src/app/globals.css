@@ -361,14 +361,15 @@ p {
 .workspace-grid,
 .report-grid,
 .action-list,
-  .lead-customer-grid,
-  .lead-inbox,
-  .quote-estimate-grid,
-  .service-item-list,
-  .booking-basic-grid,
-  .booking-field-grid,
-  .payment-basic-grid,
-  .payment-method-list {
+.lead-customer-grid,
+.lead-inbox,
+.quote-estimate-grid,
+.service-item-list,
+.booking-basic-grid,
+.booking-field-grid,
+.payment-basic-grid,
+.payment-method-list,
+.admin-setting-grid {
   display: grid;
   gap: 1rem;
 }
@@ -381,12 +382,14 @@ p {
 .lead-card,
 .service-item,
 .lead-detail-panel,
-  .customer-profile-card,
-  .manual-checklist-card,
-  .quote-panel,
-  .booking-panel,
-  .payment-panel,
-  .payment-method-card {
+.customer-profile-card,
+.manual-checklist-card,
+.quote-panel,
+.booking-panel,
+.payment-panel,
+.payment-method-card,
+.admin-panel,
+.admin-setting-preview {
   border: 1px solid #d9dfeb;
   border-radius: 1rem;
   background: #ffffff;
@@ -397,12 +400,14 @@ p {
 .workspace-panel,
 .report-card,
 .lead-detail-panel,
-  .customer-profile-card,
-  .manual-checklist-card,
-  .quote-panel,
-  .booking-panel,
-  .payment-panel,
-  .payment-method-card {
+.customer-profile-card,
+.manual-checklist-card,
+.quote-panel,
+.booking-panel,
+.payment-panel,
+.payment-method-card,
+.admin-panel,
+.admin-setting-preview {
   display: grid;
   gap: 0.75rem;
   padding: 1.1rem;
@@ -754,6 +759,36 @@ p {
   background: #ecfbf8;
 }
 
+.business-info-panel,
+.admin-handoff-panel {
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
+.gst-panel {
+  background: linear-gradient(135deg, #ffffff, #f4f8ff);
+}
+
+.gst-panel h3 {
+  color: #315bb5;
+  font-size: clamp(1.5rem, 3vw, 2rem);
+  margin: 0;
+}
+
+.admin-setting-preview {
+  align-content: start;
+  background: #f8fbff;
+}
+
+.admin-setting-preview strong {
+  color: #172033;
+}
+
+.admin-setting-preview span {
+  color: #526079;
+  line-height: 1.6;
+}
+
 .report-card {
   align-content: center;
   text-align: center;
@@ -782,7 +817,8 @@ p {
   .lead-customer-grid,
   .quote-estimate-grid,
   .booking-basic-grid,
-  .payment-basic-grid {
+  .payment-basic-grid,
+  .admin-setting-grid {
     grid-template-columns: repeat(2, 1fr);
   }
 }
