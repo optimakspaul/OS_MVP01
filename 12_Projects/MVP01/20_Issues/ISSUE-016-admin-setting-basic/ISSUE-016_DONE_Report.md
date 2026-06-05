@@ -255,8 +255,8 @@ ISSUE-017 may start only after:
 ## 15. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder review is required before ISSUE-017 may proceed.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. ISSUE-017 may proceed after its workpack is approved and executed on its own branch.
 ```
