@@ -59,6 +59,12 @@ type BookingStatus =
   | "Confirmed manually"
   | "Ready for payment tracking";
 
+type PaymentStatus =
+  | "Unpaid"
+  | "Partially paid"
+  | "Paid"
+  | "Follow-up needed";
+
 const workflowStages = [
   {
     label: "Lead",
@@ -259,6 +265,13 @@ const bookingStatuses: BookingStatus[] = [
   "Ready for payment tracking",
 ];
 
+const paymentStatuses: PaymentStatus[] = [
+  "Unpaid",
+  "Partially paid",
+  "Paid",
+  "Follow-up needed",
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
@@ -280,6 +293,8 @@ export default function WorkspacePage() {
   const [bookingStatus, setBookingStatus] =
     useState<BookingStatus>("Timing proposed");
   const [bookingChecklist, setBookingChecklist] = useState<string[]>([]);
+  const [paymentStatus, setPaymentStatus] = useState<PaymentStatus>("Unpaid");
+  const [paymentChecklist, setPaymentChecklist] = useState<string[]>([]);
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -325,6 +340,13 @@ export default function WorkspacePage() {
   const totalPreview = discountedPreview + gstPreview;
   const estimateLow = Math.max(totalPreview - 30, 0);
   const estimateHigh = totalPreview + 60;
+  const paidPreview =
+    paymentStatus === "Paid"
+      ? totalPreview
+      : paymentStatus === "Partially paid"
+        ? Math.round(totalPreview / 2)
+        : 0;
+  const outstandingPreview = Math.max(totalPreview - paidPreview, 0);
 
   const leadManualActions = [
     `Review ${selectedLead.id} request context`,
@@ -345,6 +367,13 @@ export default function WorkspacePage() {
     "Check access notes and service address",
     "Agree preferred date and time outside the app",
     "Send customer confirmation manually",
+  ];
+
+  const paymentManualActions = [
+    `Confirm ${selectedLead.customerName} payment method manually`,
+    "Check cash or PayNow proof outside the app",
+    "Update payment status preview after manual confirmation",
+    "Share payment instruction copy with the customer",
   ];
 
   function toggleAction(action: string) {
@@ -387,6 +416,14 @@ export default function WorkspacePage() {
 
   function toggleBookingChecklist(action: string) {
     setBookingChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function togglePaymentChecklist(action: string) {
+    setPaymentChecklist((current) =>
       current.includes(action)
         ? current.filter((item) => item !== action)
         : [...current, action],
@@ -1060,8 +1097,214 @@ export default function WorkspacePage() {
               and preferred timing.
             </p>
             <p className="next-step">
-              ISSUE-015 remains locked until ISSUE-014 founder acceptance,
-              ISSUE-015 workpack approval, and execution on its own branch.
+              The Payment Basic section below remains local and non-persistent,
+              and does not create payment records, receipts, payment provider
+              calls, or PayNow QR generation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="workspace-section" aria-labelledby="payment-title">
+        <div className="section-heading">
+          <p className="step-label">Payment Basic</p>
+          <h2 id="payment-title">Track manual payment status</h2>
+          <p>
+            ISSUE-015 adds a Starter-depth payment panel for the selected
+            booking/customer/quote context. It shows cash and static PayNow
+            instruction options, payment status, paid/outstanding preview, and
+            the next handoff to Admin Setting Basic.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Payment demo boundary</strong>
+          <span>
+            This is not a real payment gateway. It does not move money, generate
+            PayNow QR codes, call Stripe or HitPay, create invoices, issue
+            receipts, submit APIs, run server actions, write to Supabase, or
+            start ISSUE-016.
+          </span>
+        </div>
+
+        <div className="payment-basic-grid">
+          <article className="payment-panel">
+            <div>
+              <p className="step-label">Selected booking / customer / quote</p>
+              <h3>{selectedLead.customerName}</h3>
+              <p className="status-pill">{bookingStatus}</p>
+            </div>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Booking preview</dt>
+                <dd>
+                  {bookingDate} at {bookingTime}
+                </dd>
+              </div>
+              <div>
+                <dt>Quote preview</dt>
+                <dd>
+                  ${estimateLow} - ${estimateHigh}; manual total display $
+                  {totalPreview}
+                </dd>
+              </div>
+              <div>
+                <dt>Customer contact</dt>
+                <dd>{selectedLead.phone}</dd>
+              </div>
+            </dl>
+            <p className="next-step">
+              Payment tracking starts only after booking is confirmed manually.
+              No payment record exists in this demo workspace.
+            </p>
+          </article>
+
+          <article className="payment-panel">
+            <div>
+              <p className="step-label">Payment method display</p>
+              <h3>Cash or static PayNow instruction</h3>
+            </div>
+            <div className="payment-method-list">
+              <div className="payment-method-card">
+                <strong>Cash option</strong>
+                <span>
+                  Accept cash during or after service and update the status
+                  preview manually after counting and confirming payment.
+                </span>
+              </div>
+              <div className="payment-method-card">
+                <strong>PayNow instruction card</strong>
+                <span>
+                  Show the customer a static placeholder instruction. Real QR
+                  upload, QR generation, and provider integration are reserved
+                  for approved settings or payment issues.
+                </span>
+              </div>
+            </div>
+          </article>
+
+          <article className="payment-panel paynow-panel">
+            <div>
+              <p className="step-label">Static PayNow QR placeholder</p>
+              <h3>Display instruction only</h3>
+            </div>
+            <div className="paynow-placeholder" aria-hidden="true">
+              <span>PAYNOW</span>
+              <strong>QR</strong>
+              <small>placeholder</small>
+            </div>
+            <p>
+              Replace this in a later approved issue with client-configured
+              static PayNow details. ISSUE-015 does not generate or validate QR
+              codes.
+            </p>
+          </article>
+
+          <article className="payment-panel">
+            <div>
+              <p className="step-label">Payment status selector / preview</p>
+              <h3>{paymentStatus}</h3>
+            </div>
+            <div className="stage-filter" aria-label="Select payment status">
+              {paymentStatuses.map((status) => (
+                <button
+                  type="button"
+                  className={paymentStatus === status ? "active" : ""}
+                  key={status}
+                  onClick={() => setPaymentStatus(status)}
+                >
+                  {status}
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Status is local preview copy only. It does not create invoice,
+              receipt, transaction, refund, gateway, or accounting state.
+            </p>
+          </article>
+
+          <article className="payment-panel payment-total-panel">
+            <div>
+              <p className="step-label">Paid / outstanding summary</p>
+              <h3>${outstandingPreview} outstanding</h3>
+              <p>
+                Paid preview: ${paidPreview}. This display is derived from the
+                local payment status selector and the manual estimate preview.
+              </p>
+            </div>
+            <dl className="estimate-breakdown">
+              <div>
+                <dt>Manual total preview</dt>
+                <dd>${totalPreview}</dd>
+              </div>
+              <div>
+                <dt>Paid preview</dt>
+                <dd>${paidPreview}</dd>
+              </div>
+              <div>
+                <dt>Outstanding preview</dt>
+                <dd>${outstandingPreview}</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article className="payment-panel">
+            <div>
+              <p className="step-label">Manual payment checklist</p>
+              <h3>Before marking paid</h3>
+            </div>
+            <div className="action-list compact-list">
+              {paymentManualActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    paymentChecklist.includes(action)
+                      ? "action done"
+                      : "action"
+                  }
+                  key={action}
+                  onClick={() => togglePaymentChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {paymentChecklist.includes(action) ? "Checked" : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="payment-panel payment-copy-card">
+            <div>
+              <p className="step-label">Customer payment instruction copy</p>
+              <h3>Manual message preview</h3>
+            </div>
+            <p>
+              Hi {selectedLead.customerName}, thanks for confirming your
+              service booking. Payment can be made by cash or PayNow using the
+              business details shared by our team. Current payment status:
+              {" "}{paymentStatus.toLowerCase()}. Outstanding preview: $
+              {outstandingPreview}.
+            </p>
+            <p className="next-step">
+              This copy is not sent automatically and does not create a receipt
+              or invoice.
+            </p>
+          </article>
+
+          <article className="payment-panel payment-handoff-panel">
+            <div>
+              <p className="step-label">Next step to Admin Setting Basic</p>
+              <h3>Settings handoff only</h3>
+            </div>
+            <p>
+              ISSUE-016 can define Admin Setting Basic for business info, GST
+              setting, static PayNow QR / payment terms, and workspace setup
+              copy after founder acceptance and workpack approval.
+            </p>
+            <p className="next-step">
+              ISSUE-015 does not implement admin settings, reminders, real
+              payments, GST compliance, invoice generation, or receipts.
             </p>
           </article>
         </div>
