@@ -53,6 +53,12 @@ type QuoteServiceItem = {
   previewAmount: number;
 };
 
+type BookingStatus =
+  | "Timing proposed"
+  | "Awaiting customer confirmation"
+  | "Confirmed manually"
+  | "Ready for payment tracking";
+
 const workflowStages = [
   {
     label: "Lead",
@@ -246,6 +252,13 @@ const quoteStatuses: QuoteStatus[] = [
   "Accepted conceptually",
 ];
 
+const bookingStatuses: BookingStatus[] = [
+  "Timing proposed",
+  "Awaiting customer confirmation",
+  "Confirmed manually",
+  "Ready for payment tracking",
+];
+
 export default function WorkspacePage() {
   const [activeStage, setActiveStage] = useState<WorkspaceStage>("All");
   const [completedActions, setCompletedActions] = useState<string[]>([]);
@@ -262,6 +275,11 @@ export default function WorkspacePage() {
   const [quoteStatus, setQuoteStatus] =
     useState<QuoteStatus>("Draft estimate");
   const [quoteChecklist, setQuoteChecklist] = useState<string[]>([]);
+  const [bookingDate, setBookingDate] = useState("2026-06-08");
+  const [bookingTime, setBookingTime] = useState("10:00");
+  const [bookingStatus, setBookingStatus] =
+    useState<BookingStatus>("Timing proposed");
+  const [bookingChecklist, setBookingChecklist] = useState<string[]>([]);
 
   const visibleRequests = useMemo(() => {
     if (activeStage === "All") {
@@ -322,6 +340,13 @@ export default function WorkspacePage() {
     "Send estimate outside the demo workspace",
   ];
 
+  const bookingManualActions = [
+    `Confirm ${selectedLead.customerName} accepted the estimate manually`,
+    "Check access notes and service address",
+    "Agree preferred date and time outside the app",
+    "Send customer confirmation manually",
+  ];
+
   function toggleAction(action: string) {
     setCompletedActions((current) =>
       current.includes(action)
@@ -354,6 +379,14 @@ export default function WorkspacePage() {
 
   function toggleQuoteChecklist(action: string) {
     setQuoteChecklist((current) =>
+      current.includes(action)
+        ? current.filter((item) => item !== action)
+        : [...current, action],
+    );
+  }
+
+  function toggleBookingChecklist(action: string) {
+    setBookingChecklist((current) =>
       current.includes(action)
         ? current.filter((item) => item !== action)
         : [...current, action],
@@ -652,8 +685,7 @@ export default function WorkspacePage() {
           <span>
             This is not a real quote engine. It does not save quote records,
             generate invoices, create PDFs, process payment, submit APIs, run
-            server actions, write to Supabase, create bookings, or start
-            ISSUE-014.
+            server actions, write to Supabase, or create persistent bookings.
           </span>
         </div>
 
@@ -833,8 +865,203 @@ export default function WorkspacePage() {
               quote status, and preferred timing.
             </p>
             <p className="next-step">
-              ISSUE-014 remains locked until ISSUE-013 founder acceptance,
-              ISSUE-014 workpack approval, and execution on its own branch.
+              The Booking Basic section below remains local and
+              non-persistent, and does not create a scheduler or booking
+              record.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section className="workspace-section" aria-labelledby="booking-title">
+        <div className="section-heading">
+          <p className="step-label">Booking Basic</p>
+          <h2 id="booking-title">Coordinate a manual booking preview</h2>
+          <p>
+            ISSUE-014 adds a Starter-depth booking panel for the selected
+            quote/customer context. It previews preferred timing, booking
+            status, manual scheduling steps, customer confirmation copy, and the
+            next handoff to Payment Basic.
+          </p>
+        </div>
+
+        <div className="workspace-notice compact" role="note">
+          <strong>Booking demo boundary</strong>
+          <span>
+            This is not a real scheduler engine. It does not save bookings,
+            check calendar conflicts, connect to Google Calendar, use Calendly
+            or Cal.com, assign technicians, submit APIs, run server actions,
+            write to Supabase, process payment, send reminders, or start
+            ISSUE-015.
+          </span>
+        </div>
+
+        <div className="booking-basic-grid">
+          <article className="booking-panel">
+            <div>
+              <p className="step-label">Selected quote / customer</p>
+              <h3>{selectedLead.customerName}</h3>
+              <p className="status-pill">{quoteStatus}</p>
+            </div>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Quote context</dt>
+                <dd>
+                  ${estimateLow} - ${estimateHigh} estimate preview
+                </dd>
+              </div>
+              <div>
+                <dt>Service items</dt>
+                <dd>
+                  {selectedQuoteItems.length > 0
+                    ? selectedQuoteItems.map((item) => item.name).join(", ")
+                    : "No service item selected"}
+                </dd>
+              </div>
+              <div>
+                <dt>Customer contact</dt>
+                <dd>{selectedLead.phone}</dd>
+              </div>
+            </dl>
+            <p className="next-step">
+              Booking can be coordinated only after the estimate is accepted
+              manually. This page does not create a booking record.
+            </p>
+          </article>
+
+          <article className="booking-panel">
+            <div>
+              <p className="step-label">Service address / area</p>
+              <h3>{selectedLead.serviceAddress}</h3>
+            </div>
+            <dl className="lead-detail-list">
+              <div>
+                <dt>Service issue</dt>
+                <dd>{selectedLead.serviceIssue}</dd>
+              </div>
+              <div>
+                <dt>Customer preferred timing</dt>
+                <dd>{selectedLead.preferredTiming}</dd>
+              </div>
+              <div>
+                <dt>Access note</dt>
+                <dd>{selectedLead.serviceContext}</dd>
+              </div>
+            </dl>
+          </article>
+
+          <article className="booking-panel booking-time-panel">
+            <div>
+              <p className="step-label">Preferred date / time preview</p>
+              <h3>
+                {bookingDate} at {bookingTime}
+              </h3>
+              <p>
+                These fields are local preview controls only. Availability,
+                technician routing, and calendar conflict checks are not
+                implemented.
+              </p>
+            </div>
+            <div className="booking-field-grid">
+              <label className="booking-control">
+                Preferred date
+                <input
+                  type="date"
+                  value={bookingDate}
+                  onChange={(event) => setBookingDate(event.target.value)}
+                />
+              </label>
+              <label className="booking-control">
+                Preferred time
+                <input
+                  type="time"
+                  value={bookingTime}
+                  onChange={(event) => setBookingTime(event.target.value)}
+                />
+              </label>
+            </div>
+          </article>
+
+          <article className="booking-panel">
+            <div>
+              <p className="step-label">Booking status</p>
+              <h3>{bookingStatus}</h3>
+            </div>
+            <div className="stage-filter" aria-label="Select booking status">
+              {bookingStatuses.map((status) => (
+                <button
+                  type="button"
+                  className={bookingStatus === status ? "active" : ""}
+                  key={status}
+                  onClick={() => setBookingStatus(status)}
+                >
+                  {status}
+                </button>
+              ))}
+            </div>
+            <p className="next-step">
+              Status is local preview copy only. It does not create scheduling
+              rules, booking persistence, technician assignment, or payment
+              state.
+            </p>
+          </article>
+
+          <article className="booking-panel">
+            <div>
+              <p className="step-label">Manual scheduling checklist</p>
+              <h3>Before confirming booking</h3>
+            </div>
+            <div className="action-list compact-list">
+              {bookingManualActions.map((action) => (
+                <button
+                  type="button"
+                  className={
+                    bookingChecklist.includes(action)
+                      ? "action done"
+                      : "action"
+                  }
+                  key={action}
+                  onClick={() => toggleBookingChecklist(action)}
+                >
+                  <span>{action}</span>
+                  <strong>
+                    {bookingChecklist.includes(action) ? "Checked" : "Manual"}
+                  </strong>
+                </button>
+              ))}
+            </div>
+          </article>
+
+          <article className="booking-panel confirmation-panel">
+            <div>
+              <p className="step-label">Customer confirmation copy</p>
+              <h3>Manual message preview</h3>
+            </div>
+            <p>
+              Hi {selectedLead.customerName}, your aircon service booking is
+              pencilled in for {bookingDate} at {bookingTime}. We will confirm
+              manually before the visit. Payment status will be tracked after
+              the service.
+            </p>
+            <p className="next-step">
+              Calendar integration is reserved. No Google Calendar, Calendly,
+              Cal.com, technician assignment, or automated reminder is created.
+            </p>
+          </article>
+
+          <article className="booking-panel payment-handoff-panel">
+            <div>
+              <p className="step-label">Next step to Payment Basic</p>
+              <h3>Manual payment handoff only</h3>
+            </div>
+            <p>
+              Once the booking is confirmed manually, ISSUE-015 can define
+              Payment Basic using the customer, service context, booking status,
+              and preferred timing.
+            </p>
+            <p className="next-step">
+              ISSUE-015 remains locked until ISSUE-014 founder acceptance,
+              ISSUE-015 workpack approval, and execution on its own branch.
             </p>
           </article>
         </div>
