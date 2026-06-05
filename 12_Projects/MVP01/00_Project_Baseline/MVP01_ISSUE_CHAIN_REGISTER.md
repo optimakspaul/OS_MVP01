@@ -65,8 +65,8 @@ PR / Branch / Commit
 | ISSUE-014 | Phase 4 | Booking Basic | ISSUE-013 | ISSUE-013_DONE_Report; quote estimate notes; src/app/workspace/page.tsx; ISSUE-013 handoff to Booking Basic | src/app/workspace/page.tsx; ISSUE-014_DONE_Report.md; ISSUE-014_Booking_Scope_Notes.md; ISSUE-014_UX_Flow_Notes.md; ISSUE-014_Implementation_Notes.md; ISSUE-014_Handoff_to_Payment_Basic.md. Unlocks ISSUE-015 after founder acceptance and ISSUE-015 workpack approval. | PASS WITH WARNINGS | `feature/issue-014-booking-basic` | Founder Acceptance: Accepted. Booking Basic is static and non-persistent; date/time, booking status, and confirmation copy are local preview only. ISSUE-015 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-015 | Phase 4 | Payment Basic | ISSUE-014 | ISSUE-014_DONE_Report; booking notes | src/app/workspace/page.tsx; ISSUE-015_DONE_Report.md; ISSUE-015_Payment_Scope_Notes.md; ISSUE-015_UX_Flow_Notes.md; ISSUE-015_Implementation_Notes.md; ISSUE-015_Handoff_to_Admin_Setting_Basic.md. Unlocks ISSUE-016 after founder acceptance and ISSUE-016 workpack approval. | PASS WITH WARNINGS | `feature/issue-015-payment-basic` | Founder Acceptance: Accepted. Payment Basic is static and non-persistent; cash and PayNow are manual instruction/status previews only. ISSUE-016 may proceed after workpack approval and execution on its own branch. |
 | ISSUE-016 | Phase 5 | Admin Setting Basic | ISSUE-015 | ISSUE-015_DONE_Report; payment notes | src/app/workspace/page.tsx; ISSUE-016_DONE_Report.md; ISSUE-016_Admin_Setting_Scope_Notes.md; ISSUE-016_UX_Flow_Notes.md; ISSUE-016_Implementation_Notes.md; ISSUE-016_Handoff_to_Reminder_Report.md. Unlocks ISSUE-017 after founder acceptance and ISSUE-017 workpack approval. | PASS WITH WARNINGS | `feature/issue-016-admin-setting-basic` | Founder Acceptance: Accepted. Admin Setting Basic is static and non-persistent; business info, GST, PayNow, payment terms, reminder, and report settings are local previews only. ISSUE-017 may proceed after workpack approval and execution on its own branch. |
-| ISSUE-017 | Phase 5 | Reminder + Basic Report | ISSUE-016 | ISSUE-016_DONE_Report; admin setting notes | Payment, follow-up, maintenance reminder basics; monthly value view | Pending |  | Locked until ISSUE-017 workpack approval and execution on its own branch. |
-| ISSUE-018 | Phase 6-7 | Optimaks OS Basic + Demo / Release Pack | ISSUE-017 | ISSUE-017_DONE_Report; reminder/report notes | Client list; plan status; onboarding status; workspace link; demo pack; release pack | Pending |  |  |
+| ISSUE-017 | Phase 5 | Reminder + Basic Report | ISSUE-016 | ISSUE-016_DONE_Report; admin setting notes | src/app/workspace/page.tsx; ISSUE-017_DONE_Report.md; ISSUE-017_Reminder_Report_Scope_Notes.md; ISSUE-017_UX_Flow_Notes.md; ISSUE-017_Implementation_Notes.md; ISSUE-017_Handoff_to_Demo_Release.md. Unlocks ISSUE-018 after founder acceptance and ISSUE-018 workpack approval. | PASS WITH WARNINGS | `feature/issue-017-reminder-basic-report` | Founder Acceptance: Accepted. Reminder + Basic Report is static and non-persistent; payment follow-up, maintenance reminders, monthly value snapshot, Starter KPI summary, and manual report checklist are local previews only. ISSUE-018 may proceed after workpack approval and execution on its own branch. |
+| ISSUE-018 | Phase 6-7 | Optimaks OS Basic + Demo / Release Pack | ISSUE-017 | ISSUE-017_DONE_Report; reminder/report notes | Client list; plan status; onboarding status; workspace link; demo pack; release pack | Pending |  | Locked until ISSUE-018 workpack approval and execution on its own branch. |
 
 ---
 
@@ -81,6 +81,7 @@ PR / Branch / Commit
 | ISSUE-002 / ISSUE-003 | Supabase key naming review remains deferred before client initialization. | Non-blocking; no Supabase client initialized yet. | Supabase client integration issue. | Open |
 | ISSUE-004 to ISSUE-006 | Supabase CLI unavailable; SQL validation was static only. | Non-blocking for documented foundation work; runtime validation still needed before production use. | Approved Supabase-enabled validation environment. | Open |
 | ISSUE-007 | CHECKPOINT-001 still contains old RLS next-gate wording in its historical report title/body. | Non-blocking; ISSUE-007 workpack and this aligned baseline supersede the old label. | Optional checkpoint wording cleanup if founder approves. | Open |
+| ISSUE-017 | Reminder + Basic Report is static and non-persistent. | Non-blocking; no reminder automation, scheduled jobs, messaging integration, report generation, exports, analytics database, Optimaks OS full admin console, or technician portal was created. | ISSUE-018 must treat reminders/reports as demo inputs only unless a later approved workpack expands scope. | Open |
 
 ---
 
@@ -106,16 +107,17 @@ PR / Branch / Commit
 | DEC-MVP01-016 | ISSUE-014 | ISSUE-014 establishes Booking Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-015 onward | Recorded by CR-MVP01-009; founder review pending. |
 | DEC-MVP01-017 | ISSUE-015 | ISSUE-015 establishes Payment Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-016 onward | Recorded by CR-MVP01-010; founder review pending. |
 | DEC-MVP01-018 | ISSUE-016 | ISSUE-016 establishes Admin Setting Basic inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-017 onward | Recorded by CR-MVP01-011; founder review pending. |
+| DEC-MVP01-019 | ISSUE-017 | ISSUE-017 establishes Reminder + Basic Report inside Client Workspace Basic for the Aircon / Home Service Starter Template. | ISSUE-018 onward | Recorded by CR-MVP01-012; Founder Acceptance: Accepted. |
 
 ---
 
 ## 6. Handoff Review Notes
 
 ```text
-Latest completed issue: ISSUE-016 - Admin Setting Basic
+Latest completed issue: ISSUE-017 - Reminder + Basic Report
 Latest execution status: PASS WITH WARNINGS
 Founder Acceptance: Accepted
-Next issue allowed to start? Yes, ISSUE-017 may proceed after ISSUE-017 workpack approval and execution on its own branch.
+Next issue allowed to start? Yes, ISSUE-018 may proceed after ISSUE-018 workpack approval and execution on its own branch.
 Warnings carried forward:
 1. Legacy path residue remains outside normalized MVP01 records.
 2. Older DONE report handoff sections contain stale pre-acceptance wording.
@@ -128,6 +130,7 @@ Warnings carried forward:
 9. ISSUE-014 is static and non-persistent; real scheduler engine, calendar integration, technician assignment, payment implementation, reminder implementation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-015 implementation remain forbidden until later approved workpacks.
 10. ISSUE-015 is static and non-persistent; real payment gateway, PayNow API / QR generation, Stripe / HitPay integration, invoice generation, receipt generation, accounting integration, GST compliance engine, reminder implementation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-016 implementation remain forbidden until later approved workpacks.
 11. ISSUE-016 is static and non-persistent; real tenant settings, role-based admin permissions, GST compliance engine, PayNow QR generation / upload storage, payment gateway settings, reminder automation, report generation, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS UI, technician portal, and ISSUE-017 implementation remain forbidden until later approved workpacks.
+12. ISSUE-017 is static and non-persistent; real reminder automation, scheduled jobs, WhatsApp / email / SMS automation, notification queue, report generation engine, PDF / CSV export, analytics database, persistence, API routes, server actions, Supabase writes, auth, RLS, Optimaks OS full admin console, technician portal, and ISSUE-018 implementation remain forbidden until later approved workpacks.
 
 Required files next issue must read:
 - AGENTS.md
