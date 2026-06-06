@@ -190,8 +190,8 @@ Any future hardening or MVP02 planning/execution requires its own approved workp
 ## 12. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder can accept HARDEN-002 as PASS WITH WARNINGS. The /end-customer route is clearer and safer while remaining static, local-only, and non-persistent.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. HARDEN-002 confirms the /end-customer route is clearer, safer, and more suitable for founder-guided or limited self-guided preview. Visual browser automation warning is non-blocking. MVP02 remains locked until separate MVP02 planning/workpack approval.
 ```
