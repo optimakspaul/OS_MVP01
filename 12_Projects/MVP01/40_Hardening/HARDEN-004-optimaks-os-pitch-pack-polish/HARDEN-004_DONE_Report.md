@@ -210,8 +210,8 @@ Any future hardening or MVP02 planning/execution requires its own approved workp
 ## 14. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: HARDEN-004 is ready for founder review as PASS WITH WARNINGS. The warnings are limited to unavailable visual browser automation and standalone live-server startup in the sandbox.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. HARDEN-004 confirms the /optimaks-os route and pitch pack are clearer, safer, and more suitable for founder-led demos. Visual browser automation and standalone live-server warnings are non-blocking. MVP02 remains locked until separate MVP02 planning/workpack approval.
 ```
