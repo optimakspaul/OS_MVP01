@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useMemo, useState } from "react";
 
 type WorkspaceStage =
@@ -382,7 +383,7 @@ export default function WorkspacePage() {
   const [quoteStatus, setQuoteStatus] =
     useState<QuoteStatus>("Draft estimate");
   const [quoteChecklist, setQuoteChecklist] = useState<string[]>([]);
-  const [bookingDate, setBookingDate] = useState("2026-06-08");
+  const [bookingDate, setBookingDate] = useState("");
   const [bookingTime, setBookingTime] = useState("10:00");
   const [bookingStatus, setBookingStatus] =
     useState<BookingStatus>("Timing proposed");
@@ -589,24 +590,35 @@ export default function WorkspacePage() {
     <main className="workspace-page">
       <section className="workspace-hero" aria-labelledby="workspace-title">
         <div>
-          <p className="eyebrow">Client Workspace Basic</p>
-          <h1 id="workspace-title">Manage customer requests</h1>
+          <nav className="demo-route-nav" aria-label="MVP01 demo routes">
+            <span>Demo preview</span>
+            <div>
+              <Link href="/end-customer">Customer request</Link>
+              <Link className="active" href="/workspace" aria-current="page">
+                Business workspace
+              </Link>
+              <Link href="/optimaks-os">Demo overview</Link>
+            </div>
+          </nav>
+          <p className="eyebrow">Starter owner workspace</p>
+          <h1 id="workspace-title">See what needs attention next</h1>
           <p className="workspace-hero-copy">
-            A demo workspace for an Aircon / Home Service SME owner or admin.
-            It shows the Starter flow from incoming lead to customer, quote,
-            booking, payment status, reminder, and basic report.
+            Review incoming service requests, follow each customer through the
+            manual Starter workflow, and finish with a simple owner snapshot.
+            Every control on this page is a local preview for demo purposes.
           </p>
         </div>
 
         <aside className="workspace-context" aria-label="Workspace context">
           <strong>Aircon / Home Service Starter Template</strong>
-          <span>Plan depth: Starter Complete</span>
-          <span>Mode: manual-assisted and non-persistent</span>
+          <span>View: owner / admin walkthrough</span>
+          <span>Plan: Starter Complete</span>
+          <span>Mode: local-only and non-persistent</span>
         </aside>
       </section>
 
       <section className="workspace-notice" role="note">
-        <strong>Demo boundary</strong>
+        <strong>Preview only: changes stay in this browser session</strong>
         <span>
           This workspace uses static demo data and local browser state only. It
           does not save leads, create customers, write to Supabase, call APIs,
@@ -614,13 +626,45 @@ export default function WorkspacePage() {
         </span>
       </section>
 
-      <section className="workspace-section" aria-labelledby="workflow-title">
+      <section
+        className="workspace-section workspace-demo-guide"
+        aria-labelledby="demo-guide-title"
+      >
         <div className="section-heading">
-          <p className="step-label">Starter workflow overview</p>
+          <p className="step-label">How to demo this workspace</p>
+          <h2 id="demo-guide-title">Follow one customer from request to report</h2>
+          <p>
+            Use the links below to move through the page. Select a lead first,
+            then preview the manual quote, booking, payment, settings, and
+            follow-up steps before closing with the owner summary.
+          </p>
+        </div>
+        <nav className="workspace-section-nav" aria-label="Workspace demo sections">
+          <a href="#requests">1. Requests</a>
+          <a href="#customers">2. Lead and customer</a>
+          <a href="#quote">3. Quote</a>
+          <a href="#booking">4. Booking</a>
+          <a href="#payment">5. Payment</a>
+          <a href="#settings">6. Settings</a>
+          <a href="#follow-up">7. Reminder and report</a>
+          <a href="#owner-summary">8. Owner summary</a>
+        </nav>
+      </section>
+
+      <section
+        className="workspace-section"
+        id="workflow"
+        aria-labelledby="workflow-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">Starter workflow map</p>
           <h2 id="workflow-title">
-            Lead to Customer to Quote to Booking to Payment to Reminder to
-            Report
+            Request → Lead → Customer → Quote → Booking → Payment → Reminder → Report
           </h2>
+          <p>
+            Counts and statuses are sample signals for the walkthrough. They do
+            not represent live business records.
+          </p>
         </div>
 
         <div className="workflow-grid">
@@ -635,14 +679,18 @@ export default function WorkspacePage() {
         </div>
       </section>
 
-      <section className="workspace-section" aria-labelledby="intake-title">
+      <section
+        className="workspace-section"
+        id="requests"
+        aria-labelledby="intake-title"
+      >
         <div className="section-heading">
-          <p className="step-label">Lead / customer intake overview</p>
+          <p className="step-label">Step 1: Review requests</p>
           <h2 id="intake-title">Incoming request board</h2>
           <p>
             These cards show how requests from the end-customer route may be
-            reviewed conceptually before ISSUE-012 defines real lead and
-            customer records.
+            reviewed before the owner decides who to contact next. No real lead
+            or customer record is created.
           </p>
         </div>
 
@@ -690,16 +738,17 @@ export default function WorkspacePage() {
 
       <section
         className="workspace-section"
+        id="customers"
         aria-labelledby="lead-customer-title"
       >
         <div className="section-heading">
-          <p className="step-label">Lead / customer flow</p>
+          <p className="step-label">Step 2: Review lead and customer context</p>
           <h2 id="lead-customer-title">
             Review lead, qualify manually, preview customer profile
           </h2>
           <p>
-            ISSUE-012 adds the first detailed Starter operation flow inside the
-            workspace. It uses static demo leads and local browser state only.
+            Select a sample lead, review the service context, and preview how an
+            owner may qualify the request before preparing an estimate.
           </p>
         </div>
 
@@ -845,7 +894,9 @@ export default function WorkspacePage() {
                 >
                   <span>{action}</span>
                   <strong>
-                    {leadChecklist.includes(action) ? "Checked" : "Manual"}
+                    {leadChecklist.includes(action)
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -859,16 +910,20 @@ export default function WorkspacePage() {
         </div>
       </section>
 
-      <section className="workspace-section" aria-labelledby="quote-title">
+      <section
+        className="workspace-section"
+        id="quote"
+        aria-labelledby="quote-title"
+      >
         <div className="section-heading">
-          <p className="step-label">Quote Estimate Basic</p>
+          <p className="step-label">Step 3: Prepare estimate guidance</p>
           <h2 id="quote-title">
             Prepare a manual-assisted estimate preview
           </h2>
           <p>
-            ISSUE-013 adds a Starter-depth quote estimate panel for the selected
-            lead/customer. It previews service items, estimate range, discount,
-            GST note, quote status, and the next handoff to Booking Basic.
+            Use the selected customer context to preview service items, an
+            estimate range, discount and GST display notes, and a local quote
+            status before discussing booking.
           </p>
         </div>
 
@@ -1039,7 +1094,9 @@ export default function WorkspacePage() {
                 >
                   <span>{action}</span>
                   <strong>
-                    {quoteChecklist.includes(action) ? "Checked" : "Manual"}
+                    {quoteChecklist.includes(action)
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1048,13 +1105,13 @@ export default function WorkspacePage() {
 
           <article className="quote-panel booking-handoff-panel">
             <div>
-              <p className="step-label">Next step to Booking Basic</p>
-              <h3>Manual booking handoff only</h3>
+              <p className="step-label">Continue to booking preview</p>
+              <h3>Confirm the estimate before discussing a time</h3>
             </div>
             <p>
-              Once the customer accepts the estimate manually, ISSUE-014 can
-              define Booking Basic using the selected customer, service context,
-              quote status, and preferred timing.
+              Once the customer accepts the estimate manually, use the selected
+              customer, service context, quote status, and preferred timing to
+              preview the next conversation.
             </p>
             <p className="next-step">
               The Booking Basic section below remains local and
@@ -1065,15 +1122,18 @@ export default function WorkspacePage() {
         </div>
       </section>
 
-      <section className="workspace-section" aria-labelledby="booking-title">
+      <section
+        className="workspace-section"
+        id="booking"
+        aria-labelledby="booking-title"
+      >
         <div className="section-heading">
-          <p className="step-label">Booking Basic</p>
+          <p className="step-label">Step 4: Coordinate booking</p>
           <h2 id="booking-title">Coordinate a manual booking preview</h2>
           <p>
-            ISSUE-014 adds a Starter-depth booking panel for the selected
-            quote/customer context. It previews preferred timing, booking
-            status, manual scheduling steps, customer confirmation copy, and the
-            next handoff to Payment Basic.
+            Preview preferred timing, local booking status, manual scheduling
+            checks, and customer confirmation wording. Availability still has
+            to be confirmed outside this demo.
           </p>
         </div>
 
@@ -1083,8 +1143,7 @@ export default function WorkspacePage() {
             This is not a real scheduler engine. It does not save bookings,
             check calendar conflicts, connect to Google Calendar, use Calendly
             or Cal.com, assign technicians, submit APIs, run server actions,
-            write to Supabase, process payment, send reminders, or start
-            ISSUE-015.
+            write to Supabase, process payment, or send reminders.
           </span>
         </div>
 
@@ -1146,7 +1205,9 @@ export default function WorkspacePage() {
             <div>
               <p className="step-label">Preferred date / time preview</p>
               <h3>
-                {bookingDate} at {bookingTime}
+                {bookingDate
+                  ? `${bookingDate} at ${bookingTime}`
+                  : "Choose a demo date and time"}
               </h3>
               <p>
                 These fields are local preview controls only. Availability,
@@ -1217,7 +1278,9 @@ export default function WorkspacePage() {
                 >
                   <span>{action}</span>
                   <strong>
-                    {bookingChecklist.includes(action) ? "Checked" : "Manual"}
+                    {bookingChecklist.includes(action)
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1231,9 +1294,9 @@ export default function WorkspacePage() {
             </div>
             <p>
               Hi {selectedLead.customerName}, your aircon service booking is
-              pencilled in for {bookingDate} at {bookingTime}. We will confirm
-              manually before the visit. Payment status will be tracked after
-              the service.
+              pencilled in for {bookingDate || "[preferred date]"} at{" "}
+              {bookingTime}. We will confirm manually before the visit.
+              Payment status will be tracked after the service.
             </p>
             <p className="next-step">
               Calendar integration is reserved. No Google Calendar, Calendly,
@@ -1243,13 +1306,13 @@ export default function WorkspacePage() {
 
           <article className="booking-panel payment-handoff-panel">
             <div>
-              <p className="step-label">Next step to Payment Basic</p>
-              <h3>Manual payment handoff only</h3>
+              <p className="step-label">Continue to payment preview</p>
+              <h3>Track status only after manual confirmation</h3>
             </div>
             <p>
-              Once the booking is confirmed manually, ISSUE-015 can define
-              Payment Basic using the customer, service context, booking status,
-              and preferred timing.
+              Once the booking is confirmed manually, carry the customer,
+              service context, booking status, and preferred timing into the
+              payment-status preview below.
             </p>
             <p className="next-step">
               The Payment Basic section below remains local and non-persistent,
@@ -1260,15 +1323,18 @@ export default function WorkspacePage() {
         </div>
       </section>
 
-      <section className="workspace-section" aria-labelledby="payment-title">
+      <section
+        className="workspace-section"
+        id="payment"
+        aria-labelledby="payment-title"
+      >
         <div className="section-heading">
-          <p className="step-label">Payment Basic</p>
+          <p className="step-label">Step 5: Track payment status</p>
           <h2 id="payment-title">Track manual payment status</h2>
           <p>
-            ISSUE-015 adds a Starter-depth payment panel for the selected
-            booking/customer/quote context. It shows cash and static PayNow
-            instruction options, payment status, paid/outstanding preview, and
-            the next handoff to Admin Setting Basic.
+            Review cash or placeholder PayNow instructions, choose a local
+            payment status, and preview paid or outstanding amounts. No money
+            moves through this workspace.
           </p>
         </div>
 
@@ -1278,7 +1344,7 @@ export default function WorkspacePage() {
             This is not a real payment gateway. It does not move money, generate
             PayNow QR codes, call Stripe or HitPay, create invoices, issue
             receipts, submit APIs, run server actions, write to Supabase, or
-            start ISSUE-016.
+            confirm a real transaction.
           </span>
         </div>
 
@@ -1293,7 +1359,9 @@ export default function WorkspacePage() {
               <div>
                 <dt>Booking preview</dt>
                 <dd>
-                  {bookingDate} at {bookingTime}
+                  {bookingDate
+                    ? `${bookingDate} at ${bookingTime}`
+                    : "Demo date not selected"}
                 </dd>
               </div>
               <div>
@@ -1340,18 +1408,17 @@ export default function WorkspacePage() {
 
           <article className="payment-panel paynow-panel">
             <div>
-              <p className="step-label">Static PayNow QR placeholder</p>
-              <h3>Display instruction only</h3>
+              <p className="step-label">Non-scannable PayNow placeholder</p>
+              <h3>Demo display only</h3>
             </div>
             <div className="paynow-placeholder" aria-hidden="true">
-              <span>PAYNOW</span>
-              <strong>QR</strong>
-              <small>placeholder</small>
+              <span>DEMO ONLY</span>
+              <strong>NOT</strong>
+              <small>scannable</small>
             </div>
             <p>
-              Replace this in a later approved issue with client-configured
-              static PayNow details. ISSUE-015 does not generate or validate QR
-              codes.
+              This visual is intentionally not a QR code. No payment details,
+              transfer destination, QR generation, or validation are present.
             </p>
           </article>
 
@@ -1422,7 +1489,9 @@ export default function WorkspacePage() {
                 >
                   <span>{action}</span>
                   <strong>
-                    {paymentChecklist.includes(action) ? "Checked" : "Manual"}
+                    {paymentChecklist.includes(action)
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1449,13 +1518,13 @@ export default function WorkspacePage() {
 
           <article className="payment-panel payment-handoff-panel">
             <div>
-              <p className="step-label">Next step to Admin Setting Basic</p>
-              <h3>Settings handoff only</h3>
+              <p className="step-label">Continue to settings preview</p>
+              <h3>Review the owner&apos;s display preferences</h3>
             </div>
             <p>
-              ISSUE-016 can define Admin Setting Basic for business info, GST
-              setting, static PayNow QR / payment terms, and workspace setup
-              copy after founder acceptance and workpack approval.
+              The next section shows business information, GST wording,
+              placeholder PayNow instructions, payment terms, reminder defaults,
+              and report preferences as local display choices.
             </p>
             <p className="next-step">
               The Admin Setting Basic section below remains local and
@@ -1468,16 +1537,16 @@ export default function WorkspacePage() {
 
       <section
         className="workspace-section"
+        id="settings"
         aria-labelledby="admin-setting-title"
       >
         <div className="section-heading">
-          <p className="step-label">Admin Setting Basic</p>
-          <h2 id="admin-setting-title">Preview starter admin settings</h2>
+          <p className="step-label">Step 6: Review display settings</p>
+          <h2 id="admin-setting-title">Preview Starter owner settings</h2>
           <p>
-            ISSUE-016 adds a Starter-depth admin setting panel for business
-            information, GST display, static PayNow instructions, payment
-            terms, reminder defaults, report preferences, and the next handoff
-            to Reminder + Basic Report.
+            Review static business information, GST wording, placeholder PayNow
+            instructions, payment terms, reminder defaults, and report
+            preferences. These choices affect this preview only.
           </p>
         </div>
 
@@ -1657,7 +1726,9 @@ export default function WorkspacePage() {
                 >
                   <span>{action}</span>
                   <strong>
-                    {adminChecklist.includes(action) ? "Checked" : "Manual"}
+                    {adminChecklist.includes(action)
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1666,13 +1737,12 @@ export default function WorkspacePage() {
 
           <article className="admin-panel admin-handoff-panel">
             <div>
-              <p className="step-label">Next step to Reminder + Basic Report</p>
-              <h3>Reminder/report handoff only</h3>
+              <p className="step-label">Continue to follow-up preview</p>
+              <h3>Prepare the owner&apos;s manual follow-up view</h3>
             </div>
             <p>
-              ISSUE-017 defines Reminder + Basic Report below using these
-              static admin setting assumptions after founder acceptance and
-              workpack approval.
+              The next section uses the selected local preferences to preview
+              customer follow-up preparation and a simple monthly owner view.
             </p>
             <p className="next-step">
               The Reminder + Basic Report section remains local and
@@ -1686,18 +1756,18 @@ export default function WorkspacePage() {
 
       <section
         className="workspace-section"
+        id="follow-up"
         aria-labelledby="reminder-report-title"
       >
         <div className="section-heading">
-          <p className="step-label">Reminder + Basic Report</p>
+          <p className="step-label">Step 7: Prepare follow-up and review</p>
           <h2 id="reminder-report-title">
             Preview manual reminders and monthly value snapshot
           </h2>
           <p>
-            ISSUE-017 adds Starter-depth reminder and basic report previews for
-            the selected customer flow. It keeps payment follow-up,
-            maintenance follow-up, customer checklist, reminder status, and
-            monthly value reporting manual-assisted and non-persistent.
+            Prepare payment or maintenance follow-up copy, update a local
+            reminder status, and review static monthly value signals. Nothing
+            is scheduled, sent, queried, or generated.
           </p>
         </div>
 
@@ -1708,7 +1778,7 @@ export default function WorkspacePage() {
             WhatsApp, email, or SMS messages, generate reports, export files,
             query analytics, write to Supabase, submit APIs, run server
             actions, create RLS/auth changes, create Optimaks OS admin console
-            features, or start ISSUE-018.
+            features, or create persistent records.
           </span>
         </div>
 
@@ -1781,8 +1851,8 @@ export default function WorkspacePage() {
                   <span>{action}</span>
                   <strong>
                     {customerFollowUpChecklist.includes(action)
-                      ? "Checked"
-                      : "Manual"}
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1855,8 +1925,8 @@ export default function WorkspacePage() {
                   <span>{action}</span>
                   <strong>
                     {manualReportChecklist.includes(action)
-                      ? "Checked"
-                      : "Manual"}
+                      ? "Preview checked"
+                      : "Mark in preview"}
                   </strong>
                 </button>
               ))}
@@ -1865,27 +1935,31 @@ export default function WorkspacePage() {
 
           <article className="reminder-panel demo-release-handoff-panel">
             <div>
-              <p className="step-label">
-                Next step to Optimaks OS Basic + Demo / Release Pack
-              </p>
-              <h3>Demo/release handoff only</h3>
+              <p className="step-label">Continue to demo overview</p>
+              <h3>Close the walkthrough in Optimaks OS Basic</h3>
             </div>
             <p>
-              ISSUE-018 may prepare Optimaks OS Basic, demo readiness, and
-              release handover using this static reminder/report flow after
-              ISSUE-017 founder acceptance and ISSUE-018 workpack approval.
+              Use the demo overview to explain the sample client list, plan and
+              onboarding status, workspace links, and the MVP01 release
+              boundary.
             </p>
             <p className="next-step">
-              ISSUE-017 does not create Optimaks OS full admin console,
-              technician portal, analytics database, report generation engine,
-              exports, scheduled jobs, notification automation, or ISSUE-018
-              files.
+              This workspace does not create an Optimaks OS admin backend,
+              technician portal, analytics database, report engine, exports,
+              scheduled jobs, or notification automation.
             </p>
+            <Link className="optimaks-link" href="/optimaks-os">
+              Open the demo overview
+            </Link>
           </article>
         </div>
       </section>
 
-      <section className="workspace-grid" aria-label="Workspace status panels">
+      <section
+        className="workspace-grid"
+        id="owner-summary"
+        aria-label="Workspace status panels"
+      >
         <article className="workspace-panel">
           <p className="step-label">Quote estimate status</p>
           <h2>2 estimates need manual review</h2>
@@ -1945,7 +2019,9 @@ export default function WorkspacePage() {
             >
               <span>{action}</span>
               <strong>
-                {completedActions.includes(action) ? "Preview done" : "To do"}
+                {completedActions.includes(action)
+                  ? "Preview checked"
+                  : "Mark in preview"}
               </strong>
             </button>
           ))}
