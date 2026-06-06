@@ -90,8 +90,66 @@ p {
   gap: 1.5rem;
 }
 
+.demo-route-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #e6ebf4;
+}
+
+.demo-route-nav > span {
+  color: #526079;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.demo-route-nav div {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+}
+
+.demo-route-nav a {
+  border: 1px solid #c8d1e2;
+  border-radius: 999px;
+  color: #24304a;
+  font-size: 0.85rem;
+  font-weight: 800;
+  padding: 0.55rem 0.8rem;
+  text-decoration: none;
+}
+
+.demo-route-nav a:hover,
+.demo-route-nav a.active {
+  border-color: #315bb5;
+  background: #e8f0ff;
+  color: #315bb5;
+}
+
 .hero-copy {
   max-width: 48rem;
+}
+
+.trust-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.trust-row span {
+  border-radius: 999px;
+  background: #ecfbf8;
+  color: #0b5e55;
+  font-size: 0.8rem;
+  font-weight: 800;
+  padding: 0.45rem 0.7rem;
 }
 
 .demo-boundary {
@@ -113,6 +171,50 @@ p {
 .end-customer-card {
   display: grid;
   gap: 1.25rem;
+}
+
+.end-customer-page .section-heading p {
+  max-width: 52rem;
+}
+
+.customer-journey {
+  display: grid;
+  gap: 0.85rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.customer-journey li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.85rem;
+  align-items: start;
+  padding: 1rem;
+  border: 1px solid #d9dfeb;
+  border-radius: 1rem;
+  background: #f8fbff;
+}
+
+.customer-journey li > span {
+  display: inline-flex;
+  width: 2rem;
+  height: 2rem;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #315bb5;
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.customer-journey div {
+  display: grid;
+  gap: 0.25rem;
+}
+
+.customer-journey strong {
+  color: #172033;
 }
 
 .step-label {
@@ -188,7 +290,8 @@ p {
 }
 
 .request-form button,
-.whatsapp-link {
+.whatsapp-link,
+.demo-next-link {
   display: inline-flex;
   width: fit-content;
   align-items: center;
@@ -204,8 +307,21 @@ p {
 }
 
 .request-form button:hover,
-.whatsapp-link:hover {
+.whatsapp-link:hover,
+.demo-next-link:hover {
   background: #23458f;
+}
+
+.form-action,
+.handoff-action {
+  display: grid;
+  justify-items: start;
+  gap: 0.5rem;
+}
+
+.form-action p,
+.handoff-action p {
+  font-size: 0.85rem;
 }
 
 .support-grid {
@@ -218,6 +334,7 @@ p {
   align-content: start;
   gap: 0.75rem;
   padding: 1.25rem;
+  box-shadow: none;
 }
 
 .support-card h2,
@@ -255,14 +372,35 @@ p {
   margin-top: 0.25rem;
 }
 
+.boundary-caption {
+  color: #6c4b05;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.handoff-card {
+  grid-template-columns: 1fr;
+  border-color: #b9e2dc;
+  background: #ecfbf8;
+}
+
 @media (min-width: 760px) {
   .hero-grid,
   .form-grid {
     grid-template-columns: 1fr 1fr;
   }
 
-  .support-grid {
+  .customer-journey {
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .support-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .handoff-card {
+    grid-template-columns: 1.5fr auto;
+    align-items: center;
   }
 }
 
