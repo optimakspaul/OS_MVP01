@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { FormEvent, useMemo, useState } from "react";
 
 type RequestPreview = {
@@ -67,21 +68,41 @@ export default function EndCustomerPage() {
   return (
     <main className="end-customer-page">
       <section className="end-customer-hero" aria-labelledby="request-title">
-        <p className="eyebrow">Aircon / Home Service Starter Template</p>
+        <nav className="demo-route-nav" aria-label="MVP01 demo routes">
+          <span>Demo preview</span>
+          <div>
+            <Link className="active" href="/end-customer" aria-current="page">
+              Customer request
+            </Link>
+            <Link href="/workspace">Business workspace</Link>
+            <Link href="/optimaks-os">Demo overview</Link>
+          </div>
+        </nav>
+
         <div className="hero-grid">
           <div>
-            <h1 id="request-title">Request a home service estimate</h1>
+            <p className="eyebrow">Aircon / Home Service Starter</p>
+            <h1 id="request-title">
+              Get clear next steps for your home service request
+            </h1>
             <p className="hero-copy">
-              Share the service issue, preferred timing, and contact details.
-              This MVP01 demo shows the manual-assisted path from request to
-              quote estimate, booking interest, payment status, and reminder.
+              Tell us what is happening, where service is needed, and when you
+              would like help. This preview shows how a business can review
+              your request and guide you manually toward an estimate and
+              suitable service time.
             </p>
+            <div className="trust-row" aria-label="Preview reassurances">
+              <span>No account needed</span>
+              <span>No payment collected</span>
+              <span>No automatic messages</span>
+            </div>
           </div>
-          <div className="demo-boundary" role="note">
-            <strong>Demo boundary</strong>
+          <div className="demo-boundary" role="note" aria-label="Demo notice">
+            <strong>Preview only: nothing is sent or saved</strong>
             <span>
-              This form does not save data, create a lead, process payment, or
-              call WhatsApp APIs. It previews the customer journey only.
+              Reviewing this form only creates a summary on this page. It does
+              not contact a business, create a lead or booking, process a
+              payment, or schedule a reminder.
             </span>
           </div>
         </div>
@@ -89,11 +110,58 @@ export default function EndCustomerPage() {
 
       <section
         className="end-customer-card"
+        aria-labelledby="customer-journey-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">What happens next</p>
+          <h2 id="customer-journey-title">
+            A simple request, followed by a real conversation
+          </h2>
+          <p>
+            The business reviews the details first. Any estimate, appointment,
+            payment instruction, or follow-up is confirmed manually outside
+            this preview.
+          </p>
+        </div>
+        <ol className="customer-journey">
+          <li>
+            <span>1</span>
+            <div>
+              <strong>Describe the service issue</strong>
+              <p>Share the problem, location, contact details, and timing.</p>
+            </div>
+          </li>
+          <li>
+            <span>2</span>
+            <div>
+              <strong>The business reviews your request</strong>
+              <p>They may ask for photos, unit details, or site information.</p>
+            </div>
+          </li>
+          <li>
+            <span>3</span>
+            <div>
+              <strong>Confirm the next step together</strong>
+              <p>
+                Estimate and booking details are agreed before any payment or
+                reminder follow-up.
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <section
+        className="end-customer-card"
         aria-labelledby="request-form-title"
       >
-        <div>
-          <p className="step-label">Request entry</p>
-          <h2 id="request-form-title">Tell us what you need help with</h2>
+        <div className="section-heading">
+          <p className="step-label">Step 1: Request details</p>
+          <h2 id="request-form-title">What can the service team help with?</h2>
+          <p>
+            Add enough detail for a useful first conversation. You can review
+            your answers before choosing any manual handoff.
+          </p>
         </div>
 
         <form className="request-form" onSubmit={handleSubmit}>
@@ -138,7 +206,7 @@ export default function EndCustomerPage() {
           </label>
 
           <fieldset>
-            <legend>Booking interest / preferred timing</legend>
+            <legend>When would you prefer the business to contact you?</legend>
             <div className="radio-stack">
               {["Today", "Tomorrow", "This week", "Need advice first"].map(
                 (timing) => (
@@ -167,52 +235,97 @@ export default function EndCustomerPage() {
           <label className="choice-row">
             <input name="reminderConsent" type="checkbox" />
             <span>
-              I want a maintenance reminder or follow-up after this request.
+              I am interested in a future maintenance reminder or service
+              follow-up.
             </span>
           </label>
 
-          <button type="submit">Preview request summary</button>
+          <div className="form-action">
+            <button type="submit">Review my request preview</button>
+            <p>This does not submit or send your details.</p>
+          </div>
         </form>
       </section>
 
-      <section className="support-grid" aria-label="Request support details">
-        <article className="support-card">
-          <p className="step-label">Quote estimate guidance</p>
-          <h2>{serviceIssue}</h2>
-          <p>{quoteGuidance[serviceIssue]}</p>
-        </article>
+      <section
+        className="end-customer-card"
+        aria-labelledby="service-boundaries-title"
+      >
+        <div className="section-heading">
+          <p className="step-label">Before you continue</p>
+          <h2 id="service-boundaries-title">
+            What this preview does and does not confirm
+          </h2>
+        </div>
+        <div className="support-grid" aria-label="Request support details">
+          <article className="support-card">
+            <p className="step-label">Estimate guidance</p>
+            <h2>{serviceIssue}</h2>
+            <p>{quoteGuidance[serviceIssue]}</p>
+            <strong className="boundary-caption">
+              No instant or binding quote is created.
+            </strong>
+          </article>
 
-        <article className="support-card">
-          <p className="step-label">Payment status</p>
-          <h2>Manual payment confirmation</h2>
-          <p>
-            MVP01 does not process payments here. The business can explain cash,
-            PayNow, or manual payment status after reviewing the request.
-          </p>
-        </article>
+          <article className="support-card">
+            <p className="step-label">Booking</p>
+            <h2>Timing is a preference</h2>
+            <p>
+              The business must review availability and confirm a service date
+              with you. This page does not reserve or schedule a slot.
+            </p>
+          </article>
 
-        <article className="support-card">
-          <p className="step-label">Manual-assisted handoff</p>
-          <h2>Continue through WhatsApp</h2>
+          <article className="support-card">
+            <p className="step-label">Payment</p>
+            <h2>Payment comes after confirmation</h2>
+            <p>
+              No money, card details, PayNow transfer, or payment status is
+              handled here. The business provides instructions manually.
+            </p>
+          </article>
+
+          <article className="support-card">
+            <p className="step-label">Reminder</p>
+            <h2>Follow-up is an interest only</h2>
+            <p>
+              Selecting reminder interest does not schedule a message. Any
+              maintenance follow-up must be arranged manually by the business.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section
+        className="end-customer-card handoff-card"
+        aria-labelledby="manual-handoff-title"
+      >
+        <div>
+          <p className="step-label">Optional manual handoff</p>
+          <h2 id="manual-handoff-title">Open a draft message in WhatsApp</h2>
           <p>
-            Use the CTA as a manual handoff placeholder. No WhatsApp API or
-            automated message sending is implemented.
+            This opens WhatsApp with draft wording only. No business recipient
+            is configured, no message is sent automatically, and this page
+            does not use the WhatsApp API.
           </p>
+        </div>
+        <div className="handoff-action">
           <a
             className="whatsapp-link"
             href={`https://wa.me/?text=${whatsappMessage}`}
             target="_blank"
             rel="noreferrer"
           >
-            Open WhatsApp handoff
+            Open WhatsApp draft
           </a>
-        </article>
+          <p>You choose the recipient and whether to send the message.</p>
+        </div>
       </section>
 
       {preview ? (
         <section className="end-customer-card" aria-live="polite">
-          <p className="step-label">Non-persistent submit preview</p>
-          <h2>Request summary</h2>
+          <p className="step-label">Local review only</p>
+          <h2>Your request preview</h2>
           <dl className="summary-list">
             <div>
               <dt>Name</dt>
@@ -240,9 +353,13 @@ export default function EndCustomerPage() {
             </div>
           </dl>
           <p className="demo-note">
-            This summary is local to the browser session. It is not saved,
-            submitted to an API, or connected to a client workspace.
+            This summary exists only on this page for the current browser
+            session. It has not been sent to a business or connected to the
+            business workspace.
           </p>
+          <Link className="demo-next-link" href="/workspace">
+            Continue the demo in the business workspace
+          </Link>
         </section>
       ) : null}
     </main>
