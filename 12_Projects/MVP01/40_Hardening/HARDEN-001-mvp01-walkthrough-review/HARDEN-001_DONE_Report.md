@@ -208,8 +208,8 @@ MVP02 planning and execution remain subject to their separately approved workpac
 ## 13. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: Founder may accept HARDEN-001 as PASS WITH WARNINGS. Recommended implementation changes require separate approved workpacks.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. HARDEN-001 confirms MVP01 is ready for founder-guided walkthrough. Self-guided preview still needs navigation/copy hardening before broader public demo. MVP02 remains locked until separate MVP02 planning/workpack approval.
 ```
