@@ -206,8 +206,8 @@ MVP02 planning workpack may proceed only after HARDEN-005 founder acceptance and
 ## 15. Founder Review
 
 ```text
-Founder Acceptance: Pending
-Accepted Status: Pending
-Decision: Pending founder review
-Notes: HARDEN-005 is ready for founder review as PASS WITH WARNINGS. The warnings are non-blocking for founder-guided demo and sales-pitch use.
+Founder Acceptance: Accepted
+Accepted Status: PASS WITH WARNINGS
+Decision: Accepted as GO WITH WARNINGS / PASS WITH WARNINGS
+Notes: Founder accepts the non-blocking warnings. HARDEN-005 confirms MVP01 is ready for founder-guided demo and limited self-guided preview as GO WITH WARNINGS. Visual browser automation warning, long workspace flow, generic WhatsApp draft, and static/non-persistent route limitations are non-blocking. MVP02 remains locked until separate MVP02 planning/workpack approval.
 ```
